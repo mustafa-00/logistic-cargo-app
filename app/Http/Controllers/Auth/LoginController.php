@@ -33,6 +33,14 @@ class LoginController extends Controller
      *
      * @return void
      */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'email' => ['required','min:5','max:255'],
+            'password' => ['required', 'min:5','max:255']
+        ]);
+    }
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
