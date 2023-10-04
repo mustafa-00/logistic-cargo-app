@@ -4,7 +4,7 @@
 
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="{{ route('dashboard') }}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -136,7 +136,7 @@
 
         {{-- profile --}}
         <li class="nav-item">
-            <a class="nav-link " href="users-profile.html">
+            <a class="nav-link " href="{{ route('profile') }}">
               <i class="bi bi-person"></i>
               <span>Profile</span>
             </a>

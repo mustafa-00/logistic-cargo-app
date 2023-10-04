@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\landing\LandingController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,5 @@ Auth::routes();
 Route::get('/', [LandingController::class, 'index']);
 
 // Dashboard controllers
-Route::get('/', [DashboardController:: class, 'dashboard']);
+Route::get('/', [DashboardController:: class, 'dashboard'])->name('dashboard');
+Route::get('profile', [ProfileController:: class, 'index'])->name('profile');
