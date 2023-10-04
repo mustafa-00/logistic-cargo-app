@@ -133,6 +133,14 @@
             </li>
             </ul>
         </li><!-- End Tables Nav -->
+
+        {{-- profile --}}
+        <li class="nav-item">
+            <a class="nav-link " href="users-profile.html">
+              <i class="bi bi-person"></i>
+              <span>Profile</span>
+            </a>
+        </li>
         @else
 
         <li class="nav-item">

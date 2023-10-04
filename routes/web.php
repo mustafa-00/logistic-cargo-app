@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\landing\LandingController;
+use App\Http\Controllers\admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +16,10 @@ use App\Http\Controllers\landing\LandingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
 
 // lanidng controllers
 Route::get('/', [LandingController::class, 'index']);
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Dashboard controllers
+Route::get('/', [DashboardController:: class, 'dashboard']);
