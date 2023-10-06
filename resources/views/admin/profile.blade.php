@@ -52,10 +52,6 @@
                 </li>
 
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
-                </li>
-
-                <li class="nav-item">
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
                 </li>
 
@@ -113,10 +109,7 @@
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </div>
+                        <input type="file" class="form-control" id="image" accept="image/*">
                       </div>
                     </div>
 
@@ -135,23 +128,9 @@
                     </div>
 
                     <div class="row mb-3">
-                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
                       </div>
                     </div>
 
@@ -207,56 +186,13 @@
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
-                  </form><!-- End Profile Edit Form -->
-
+                  </form>
                 </div>
+                <!-- End Profile Edit Form -->
 
-                <div class="tab-pane fade pt-3" id="profile-settings">
-
-                  <!-- Settings Form -->
-                  <form>
-
-                    <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
-                      <div class="col-md-8 col-lg-9">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
-                          <label class="form-check-label" for="changesMade">
-                            Changes made to your account
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="newProducts" checked>
-                          <label class="form-check-label" for="newProducts">
-                            Information on new products and services
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="proOffers">
-                          <label class="form-check-label" for="proOffers">
-                            Marketing and promo offers
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="securityNotify" checked disabled>
-                          <label class="form-check-label" for="securityNotify">
-                            Security alerts
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form><!-- End settings Form -->
-
-                </div>
-
+                <!-- Change Password Form -->
                 <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <!-- Change Password Form -->
                   <form>
-
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
                       <div class="col-md-8 col-lg-9">
@@ -281,19 +217,16 @@
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Change Password</button>
                     </div>
-                  </form><!-- End Change Password Form -->
-
+                  </form>
+                  <!-- End Change Password Form -->
                 </div>
-
-              </div><!-- End Bordered Tabs -->
-
+              </div>
+              <!-- End Bordered Tabs -->
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </main>
 
 @endsection

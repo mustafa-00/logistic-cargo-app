@@ -24,4 +24,4 @@ Route::get('/', [LandingController::class, 'index']);
 
 // Dashboard controllers
 Route::get('/', [DashboardController:: class, 'dashboard'])->name('dashboard');
-Route::get('profile', [ProfileController:: class, 'index'])->name('profile');
+Route::resource('profile', ProfileController::class);
