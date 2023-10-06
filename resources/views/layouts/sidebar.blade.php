@@ -159,6 +159,13 @@
                 </a>
             </li>
             </ul>
+            {{-- profile --}}
+            <li class="nav-item">
+                <a class="nav-link " href="{{ route('profile.index') }}">
+                <i class="bi bi-person"></i>
+                <span>Profile</span>
+                </a>
+            </li>
         </li><!-- End Tables Nav -->
 
         @endif

@@ -1,4 +1,5 @@
 @extends('layouts.guest')
+
 @section('content')
 <main>
     <div class="container">

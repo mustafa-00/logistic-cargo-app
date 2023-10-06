@@ -104,14 +104,15 @@
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
-                    <div class="row mb-3">
+                  <form method="POST" action="{{ route('profile.store') }}">
+                    @csrf
+                    {{-- <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src="assets/img/profile-img.jpg" alt="Profile">
                         <input type="file" class="form-control" id="image" accept="image/*">
                       </div>
-                    </div>
+                    </div> --}}
 
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
@@ -123,7 +124,7 @@
                     <div class="row mb-3">
                       <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
                       <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                        <textarea name="about" type="text" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
                       </div>
                     </div>
 
@@ -144,7 +145,7 @@
                     <div class="row mb-3">
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                        <input name="phone" type="number" class="form-control" id="Phone" value="(436) 486-3538 x29071">
                       </div>
                     </div>
 

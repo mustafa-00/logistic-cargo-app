@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -27,7 +28,8 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Profile::create($request->all());
+        return back();
     }
 
     /**
