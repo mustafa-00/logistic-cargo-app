@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -12,6 +13,7 @@ class ProfileController extends Controller
      * Display a listing of the resource.
      */
     public function index(){
+        $user_id = Auth::user()->id;
         $profiles = User::all();
         return view('admin.profile',compact('profiles'));
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
  use App\Http\Controllers\Controller;
+ use Illuminate\Support\Facades\Auth;
  use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,7 +15,7 @@ class DashboardController extends Controller
     }
 
     public function dashboard(){
-        if(\Auth::user()->role === 'admin'){
+        if(Auth::user()->role === 'admin'){
             return view('admin.dashboard');
         }
         return view('employee.dashboard');
