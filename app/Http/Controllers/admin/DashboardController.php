@@ -8,13 +8,13 @@ namespace App\Http\Controllers\admin;
 class DashboardController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function dashboard(){
-        if(\Auth::user()->role === 'admin'){
+        if(auth()->user()->role === 'admin'){
             return view('admin.dashboard');
         }
         return view('employee.dashboard');
