@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -12,7 +12,8 @@ class ProfileController extends Controller
      * Display a listing of the resource.
      */
     public function index(){
-        return view('admin.profile');
+        $profiles = User::all();
+        return view('admin.profile',compact('profiles'));
     }
 
     /**
@@ -28,8 +29,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        Profile::create($request->all());
-        return back();
+
     }
 
     /**
