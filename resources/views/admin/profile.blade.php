@@ -13,7 +13,8 @@
           <li class="breadcrumb-item active">Profile</li>
         </ol>
       </nav>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
 
     <section class="section profile">
       <div class="row">
@@ -61,44 +62,45 @@
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
                   <h5 class="card-title">Profile Details</h5>
 
-                  @foreach ($profiles as $item)
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label ">Name</div>
-                        <div class="col-lg-9 col-md-8">{{$item->name}}</div>
+                        <div class="col-lg-9 col-md-8">{{ $profile[0]->name }}</div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">Email</div>
-                        <div class="col-lg-9 col-md-8">{{$item->email}}</div>
+                        <div class="col-lg-9 col-md-8">{{$profile[0]->email}}</div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">Phone</div>
-                        <div class="col-lg-9 col-md-8">{{$item->phone}}</div>
+                        <div class="col-lg-9 col-md-8">{{$profile[0]->phone}}</div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">DoB</div>
-                        <div class="col-lg-9 col-md-8">{{$item->DoB}}</div>
+                        <div class="col-lg-9 col-md-8">{{$profile[0]->DoB}}</div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">role</div>
-                        <div class="col-lg-9 col-md-8">{{$item->role}}</div>
+                        <div class="col-lg-9 col-md-8">{{$profile[0]->role}}</div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">zone_id</div>
-                        <div class="col-lg-9 col-md-8">{{$item->zone_id}}</div>
+                        <div class="col-lg-9 col-md-8">{{$profile[0]->zone_id}}</div>
                     </div>
-                  @endforeach
                 </div>
 
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form method="POST" action="{{ route('profile.store') }}">
+                  <form method="POST" action="{{ route('profile.update', $profile[0]->id) }}">
                     @csrf
+                    @if (isset($profile))
+                        @method('put')
+                    @endif
                     {{-- <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
@@ -108,73 +110,45 @@
                     </div> --}}
 
                     <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                        <input name="name" type="text" class="form-control" id="fullName" value="{{ $profile[0]->name }}">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
+                        <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="email" type="email" class="form-control" id="Email" value="{{$profile[0]->email}}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="phone" type="number" class="form-control" id="Phone" value="{{$profile[0]->phone}}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">DoB</label>
                       <div class="col-md-8 col-lg-9">
-                        <textarea name="about" type="text" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                        <input name="DoB" type="date" class="form-control" id="Job" value="{{$profile[0]->DoB}}">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-                      </div>
+                        <label for="Job" class="col-md-4 col-lg-3 col-form-label">role</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="role" type="text" class="form-control" id="Job" value="{{$profile[0]->role}}">
+                        </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="number" class="form-control" id="Phone" value="(436) 486-3538 x29071">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
-                      </div>
+                        <label for="Job" class="col-md-4 col-lg-3 col-form-label">zone_id</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="zone_id" type="text" class="form-control" id="Job" value="{{$profile[0]->zone_id}}">
+                        </div>
                     </div>
 
                     <div class="text-center">
@@ -186,7 +160,8 @@
 
                 <!-- Change Password Form -->
                 <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <form>
+                  <form method="POST" action="{{ route('change', $profile[0]->id) }}">
+                    @csrf
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
                       <div class="col-md-8 col-lg-9">

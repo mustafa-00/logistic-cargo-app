@@ -24,8 +24,8 @@ use App\Http\Controllers\Auth\LogoutController;
 Route::get('/', [LandingController::class, 'index']);
 
 // Dashboard controllers
-
 Route::resource('profile', ProfileController::class);
+Route::post('change_password/{id}', [ProfileController::class, 'change'])->name('change');
 
 Auth::routes();
 Route::get('/dashboard', [DashboardController:: class, 'dashboard'])->name('dashboard');
