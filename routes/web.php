@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\landing\LandingController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\EmployesController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -26,6 +27,7 @@ Route::get('/', [LandingController::class, 'index']);
 // Dashboard controllers
 Route::resource('profile', ProfileController::class);
 Route::post('change_password/{id}', [ProfileController::class, 'change'])->name('change');
+Route::get('employe', [EmployesController::class, 'index'])->name('employe');
 
 Auth::routes();
 Route::get('/dashboard', [DashboardController:: class, 'dashboard'])->name('dashboard');

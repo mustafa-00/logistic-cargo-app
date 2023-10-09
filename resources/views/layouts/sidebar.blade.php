@@ -136,11 +136,21 @@
 
         {{-- profile --}}
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('profile.index') }}">
+            <a class="nav-link collapsed" href="{{ route('profile.index') }}">
               <i class="bi bi-person"></i>
               <span>Profile</span>
             </a>
         </li>
+
+        {{-- employes --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('employe') }}">
+              <i class="bi bi-person"></i>
+              <span>Employes</span>
+            </a>
+        </li>
+
+
         @else
 
         <li class="nav-item">
