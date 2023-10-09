@@ -98,7 +98,7 @@
 
         {{-- employes --}}
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('employe') }}">
+            <a class="nav-link collapsed" href="{{ route('employe.index') }}">
               <i class="bi bi-person"></i>
               <span>Employes</span>
             </a>

@@ -19,18 +19,18 @@
             <th scope="col">role</th>
             <th scope="col">zone_id</th>
             <th scope="col">photo</th>
-            <th scope="col">started_at</th>
+            <th scope="col">joined</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Brandon Jacob</td>
-            <td>example@gmail.com</td>
-            <td>072984567</td>
-            <td>22/02/2000</td>
-            <td>employe</td>
-            <td>1</td>
+            <th scope="row">{{ $employes[0]->id }}</th>
+            <td>{{ $employes[0]->name }}</td>
+            <td>{{ $employes[0]->email }}</td>
+            <td>{{ $employes[0]->phone }}</td>
+            <td>{{ $employes[0]->DoB }}</td>
+            <td>{{ $employes[0]->role }}</td>
+            <td>{{ $employes[0]->zone_id }}</td>
             <td><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                 <li
                   data-bs-toggle="tooltip"
@@ -42,7 +42,9 @@
                 </li>
               </ul>
             </td>
-            <td>2016-05-25</td>
+            <td>{{ $employes[0]->created_at }}</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+            <td><button class="btn btn-primary">Edit</button></td>
           </tr>
         </tbody>
       </table>
