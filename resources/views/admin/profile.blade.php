@@ -18,12 +18,13 @@
 
     <section class="section profile">
       <div class="row">
+        {{-- overview --}}
         <div class="col-xl-4">
 
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <img src="assets_admin/img/profile-img.jpg" alt="Profile" class="rounded-circle">
               <h2>{{ $profile[0]->name }}</h2>
               <h3>{{$profile[0]->role}}</h3>
               <div class="social-links mt-2">

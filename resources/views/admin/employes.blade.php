@@ -13,18 +13,24 @@
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
-            <th scope="col">Position</th>
-            <th scope="col">Age</th>
+            <th scope="col">Email</th>
+            <th scope="col">phone</th>
+            <th scope="col">DoB</th>
+            <th scope="col">role</th>
+            <th scope="col">zone_id</th>
             <th scope="col">photo</th>
-            <th scope="col">Start Date</th>
+            <th scope="col">started_at</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
             <td>Brandon Jacob</td>
-            <td>Designer</td>
-            <td>28</td>
+            <td>example@gmail.com</td>
+            <td>072984567</td>
+            <td>22/02/2000</td>
+            <td>employe</td>
+            <td>1</td>
             <td><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                 <li
                   data-bs-toggle="tooltip"
