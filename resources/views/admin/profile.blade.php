@@ -3,15 +3,11 @@
 @section('content')
 
 <main id="main" class="main">
-
     <div class="pagetitle">
-        @include('common.alertmessage')
-      <h1>Profile</h1>
+      <h1>Profile Page</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-          <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">Profile</li>
+          <li class="breadcrumb-item"><h5><a href="{{ route('dashboard') }}">back</a></h5></li>
         </ol>
       </nav>
     </div>

@@ -99,8 +99,32 @@
         {{-- employes --}}
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('employe.index') }}">
-              <i class="bi bi-person"></i>
+              <i class="bi bi-people"></i>
               <span>Employes</span>
+            </a>
+        </li>
+
+        {{-- warehouses --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('warehouse.index') }}">
+              <i class="bi bi-house"></i>
+              <span>Warehouses</span>
+            </a>
+        </li>
+
+        {{-- product --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('product.index') }}">
+              <i class="bi bi-pen"></i>
+              <span>Product</span>
+            </a>
+        </li>
+
+        {{-- Order --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('order.index') }}">
+              <i class="bi bi-book"></i>
+              <span>Order</span>
             </a>
         </li>
 
