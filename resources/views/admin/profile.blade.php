@@ -5,6 +5,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
+        @include('common.alertmessage')
       <h1>Profile</h1>
       <nav>
         <ol class="breadcrumb">

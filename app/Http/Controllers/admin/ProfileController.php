@@ -34,6 +34,7 @@ class ProfileController extends Controller
             'role' => $request->role,
             'zone_id' => $request->zone_id
         ]);
+        session()->flash('success','Record has been updated succesfully');
         return redirect()->back();
     }
 
