@@ -78,7 +78,7 @@
     <!-- our info End -->
 
     <!--? Categories Area Start -->
-    <div class="categories-area section-padding30">
+    {{-- <div class="categories-area section-padding30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -125,11 +125,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Categories Area End -->
 
     <!--? About Area Start -->
-    <div class="about-low-area padding-bottom">
+    {{-- <div class="about-low-area padding-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
@@ -157,11 +157,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- About Area End -->
 
     <!--? contact-form start -->
-    <section class="contact-form-area section-bg  pt-115 pb-120 fix" data-background="assets_landing/img/gallery/section_bg02.jpg">
+    {{-- <section class="contact-form-area section-bg  pt-115 pb-120 fix" data-background="assets_landing/img/gallery/section_bg02.jpg">
         <div class="container">
             <div class="row justify-content-end">
                 <!-- Contact wrapper -->
@@ -272,11 +272,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- contact-form end -->
 
     <!--Team Ara Start -->
-    <div class="team-area section-padding30">
+    {{-- <div class="team-area section-padding30">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -350,7 +350,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Team Ara End -->
 
     <!--? Testimonial Start -->
@@ -417,7 +417,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
-    
+
     <!--? Blog Area Start -->
     <div class="home-blog-area section-padding30">
         <div class="container">
