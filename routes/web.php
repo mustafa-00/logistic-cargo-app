@@ -28,6 +28,10 @@ use App\Http\Controllers\Auth\LogoutController;
 
 // lanidng controllers
 Route::get('/', [LandingController::class, 'index']);
+Route::get('home', [LandingController::class, 'index'])->name('home');
+Route::get('about', [LandingController::class, 'about'])->name('about');
+Route::get('services', [LandingController::class, 'services'])->name('services');
+Route::get('contact', [LandingController::class, 'contact'])->name('contact');
 
 // Dashboard controllers
 Route::resource('profile', ProfileController::class);

@@ -34,6 +34,7 @@
         </div>
     </div>
     <!-- slider Area End-->
+
     <!--? our info Start -->
     <div class="our-info-area pt-70 pb-40">
         <div class="container">
@@ -75,6 +76,7 @@
         </div>
     </div>
     <!-- our info End -->
+
     <!--? Categories Area Start -->
     <div class="categories-area section-padding30">
         <div class="container">
@@ -125,6 +127,7 @@
         </div>
     </div>
     <!-- Categories Area End -->
+
     <!--? About Area Start -->
     <div class="about-low-area padding-bottom">
         <div class="container">
@@ -156,6 +159,7 @@
         </div>
     </div>
     <!-- About Area End -->
+
     <!--? contact-form start -->
     <section class="contact-form-area section-bg  pt-115 pb-120 fix" data-background="assets_landing/img/gallery/section_bg02.jpg">
         <div class="container">
@@ -270,6 +274,7 @@
         </div>
     </section>
     <!-- contact-form end -->
+
     <!--Team Ara Start -->
     <div class="team-area section-padding30">
         <div class="container">
@@ -347,6 +352,7 @@
         </div>
     </div>
     <!-- Team Ara End -->
+
     <!--? Testimonial Start -->
     <div class="testimonial-area testimonial-padding section-bg" data-background="assets_landing/img/gallery/section_bg04.jpg">
         <div class="container">
@@ -411,6 +417,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
+    
     <!--? Blog Area Start -->
     <div class="home-blog-area section-padding30">
         <div class="container">
