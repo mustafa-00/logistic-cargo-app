@@ -3,7 +3,7 @@
 @section('content')
 <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Warehouse Page</h1>
+      <h1>Warehouse1 Page</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><h5><a href="{{ route('dashboard') }}">back</a></h5></li>

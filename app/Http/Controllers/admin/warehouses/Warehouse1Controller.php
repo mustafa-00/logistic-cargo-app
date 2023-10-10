@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\admin\warehouses;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class WarehouseController extends Controller
+class Warehouse1Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.warehouse');
+        return view('admin.warehouses.warehouse1');
     }
 
     /**

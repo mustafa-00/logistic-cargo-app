@@ -10,91 +10,30 @@
         </a>
       </li><!-- End Dashboard Nav -->
       @if(Auth::user()->role === "admin")
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
-            </a>
-            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-                <a href="components-alerts.html">
-                <i class="bi bi-circle"></i><span>Alerts</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-accordion.html">
-                <i class="bi bi-circle"></i><span>Accordion</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-badges.html">
-                <i class="bi bi-circle"></i><span>Badges</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-breadcrumbs.html">
-                <i class="bi bi-circle"></i><span>Breadcrumbs</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-buttons.html">
-                <i class="bi bi-circle"></i><span>Buttons</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-cards.html">
-                <i class="bi bi-circle"></i><span>Cards</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-carousel.html">
-                <i class="bi bi-circle"></i><span>Carousel</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-list-group.html">
-                <i class="bi bi-circle"></i><span>List group</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-modal.html">
-                <i class="bi bi-circle"></i><span>Modal</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-tabs.html">
-                <i class="bi bi-circle"></i><span>Tabs</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-pagination.html">
-                <i class="bi bi-circle"></i><span>Pagination</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-progress.html">
-                <i class="bi bi-circle"></i><span>Progress</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-spinners.html">
-                <i class="bi bi-circle"></i><span>Spinners</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-tooltips.html">
-                <i class="bi bi-circle"></i><span>Tooltips</span>
-                </a>
-            </li>
-            </ul>
-        </li><!-- End Components Nav -->
 
-        {{-- profile --}}
+
+        {{-- warehouses --}}
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('profile.index') }}">
-              <i class="bi bi-person"></i>
-              <span>Profile</span>
+            <a class="nav-link collapsed" data-bs-target="#Warehouses-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i><span>Warehouses</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
+            <ul id="Warehouses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{ route('warehouse1.index') }}">
+                    <i class="bi bi-circle"></i><span>warehouse1</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul id="Warehouses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{ route('warehouse2.index') }}">
+                    <i class="bi bi-circle"></i><span>warehouse2</span>
+                    </a>
+                </li>
+            </ul>
         </li>
+
 
         {{-- employes --}}
         <li class="nav-item">
@@ -104,13 +43,6 @@
             </a>
         </li>
 
-        {{-- warehouses --}}
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('warehouse.index') }}">
-              <i class="bi bi-house"></i>
-              <span>Warehouses</span>
-            </a>
-        </li>
 
         {{-- product --}}
         <li class="nav-item">
@@ -120,6 +52,7 @@
             </a>
         </li>
 
+
         {{-- Order --}}
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('order.index') }}">
@@ -127,7 +60,6 @@
               <span>Order</span>
             </a>
         </li>
-
 
         @else
 
@@ -158,6 +90,6 @@
 
         @endif
 
-    </ul>
+    </li>
 
   </aside>
