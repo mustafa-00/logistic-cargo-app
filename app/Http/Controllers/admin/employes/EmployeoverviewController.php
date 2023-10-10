@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\admin\employes;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class EmployeController extends Controller
+class EmployeoverviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class EmployeController extends Controller
     {
         $user_id = Auth::user()->id;
         $employes = User::select("*")->where("id", $user_id)->get();
-        return view('admin.employes')->with('employes',$employes);
+        return view('admin.employes.employes_overview')->with('employes',$employes);
     }
 
     /**

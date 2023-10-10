@@ -37,7 +37,7 @@
 
         {{-- employes --}}
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('employe.index') }}">
+            <a class="nav-link collapsed" href="{{ route('employe_overview.index') }}">
               <i class="bi bi-people"></i>
               <span>Employes</span>
             </a>

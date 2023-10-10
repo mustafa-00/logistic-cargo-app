@@ -1,19 +1,55 @@
-<header id="header" class="header fixed-top d-flex align-items-center">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="d-flex align-items-center justify-content-between">
-      {{-- <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
-      </a> --}}
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ asset('assets_admin/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('assets_admin/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('assets_admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/vendor/quill/quill.snow.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('assets_admin/css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="search-bar">
       <form class="search-form d-flex align-items-center" method="POST" action="#">
         <input type="text" name="query" placeholder="Search" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
       </form>
-    </div><!-- End Search Bar -->
+    </div>
+    <!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -22,14 +58,16 @@
           <a class="nav-link nav-icon search-bar-toggle " href="#">
             <i class="bi bi-search"></i>
           </a>
-        </li><!-- End Search Icon-->
+        </li>
+        <!-- End Search Icon-->
 
         <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
+          </a>
+          <!-- End Notification Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
@@ -221,8 +259,94 @@
                     @csrf
                 </form>
             </li>
+
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
+
       </ul>
     </nav><!-- End Icons Navigation -->
-  </header>
+
+  </header><!-- End Header -->
+
+  <main id="main" class="main" style="margin-left: 0px">
+
+    <div class="pagetitle">
+      <a href="{{ route('dashboard') }}"><h1>Dashboard</h1></a>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><h5><a href="{{ route('employe_overview.index') }}">back</a></h5></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Table with hoverable rows -->
+    <section>
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Table with hoverable rows</h5>
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">phone</th>
+                    <th scope="col">DoB</th>
+                    <th scope="col">role</th>
+                    <th scope="col">zone_id</th>
+                    <th scope="col">photo</th>
+                    <th scope="col">joined</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{ $employes[0]->id }}</th>
+                    <td>{{ $employes[0]->name }}</td>
+                    <td>{{ $employes[0]->email }}</td>
+                    <td>{{ $employes[0]->phone }}</td>
+                    <td>{{ $employes[0]->DoB }}</td>
+                    <td>{{ $employes[0]->role }}</td>
+                    <td>{{ $employes[0]->zone_id }}</td>
+                    <td><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                        <li
+                          data-bs-toggle="tooltip"
+                          data-popup="tooltip-custom"
+                          data-bs-placement="top"
+                          class="avatar avatar-xs pull-up"
+                          title="Lilian Fuller">
+                          <img src="../assets_employe/img/avatars/5.png" style="width: 40px" alt="Avatar" class="rounded-circle" />
+                        </li>
+                      </ul>
+                    </td>
+                    <td>{{ $employes[0]->created_at }}</td>
+                    <td><button class="btn btn-danger">Delete</button></td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </section>
+  </main>
+  <!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('assets_admin/vendor/apexcharts/apexcharts.min.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/chart.js/chart.umd.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/echarts/echarts.min.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/quill/quill.min.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/simple-datatables/simple-datatables.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/tinymce/tinymce.min.js') }}"></script>
+  <script src="{{ asset('assets_admin/vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ asset('assets_admin/js/main.js') }}"></script>
+
+</body>
+
+</html>
