@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+use function Ramsey\Uuid\v1;
+
 class EmployeoverviewController extends Controller
 {
     /**
@@ -15,8 +17,7 @@ class EmployeoverviewController extends Controller
      */
     public function index()
     {
-        $user_id = Auth::user()->id;
-        $employes = User::select("*")->where("id", $user_id)->get();
+        $employes = User::all();
         return view('admin.employes.employes_overview')->with('employes',$employes);
     }
 
@@ -41,7 +42,8 @@ class EmployeoverviewController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $empolyee = User::find($id);
+        return view("admin.employes.single_employee")->with("employee", $empolyee);
     }
 
     /**

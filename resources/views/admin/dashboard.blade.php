@@ -6,6 +6,7 @@
     <div class="pagetitle">
       <h1>Dashboard Admin</h1>
       @include('common.alertmessage')
+
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">Dashboard</li>
