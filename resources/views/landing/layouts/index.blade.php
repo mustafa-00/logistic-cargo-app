@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('assets_landing/css/slick.css')}}">
     <link rel="stylesheet" href="{{ asset('assets_landing/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{ asset('assets_landing/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets_landing/css/slider.css') }}">
 </head>
 <body>
 <!--? Preloader Start -->

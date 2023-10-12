@@ -35,47 +35,24 @@
     </div>
     <!-- slider Area End-->
 
-    <!--? our info Start -->
-    <div class="our-info-area pt-70 pb-40">
+    <!--? call to action Start -->
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-info mb-30">
-                        <div class="info-icon">
-                            <span class="flaticon-support"></span>
-                        </div>
-                        <div class="info-caption">
-                            <p>Call Us Anytime</p>
-                            <span>+ (123) 1800-567-8990</span>
-                        </div>
+            <div class="row justify-content-between">
+                <div class="col-xl-5 col-lg-5 col-md-8">
+                    <div class="testimonial-form text-center">
+                        <h3>Always listening, always understanding.</h3>
+                        <button type="button" name="submit" class="btn header-btn">Request a Quote</button>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-info mb-30">
-                        <div class="info-icon">
-                            <span class="flaticon-clock"></span>
-                        </div>
-                        <div class="info-caption">
-                            <p>Sunday CLOSED</p>
-                            <span>Mon - Sat 8.00 - 18.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-info mb-30">
-                        <div class="info-icon">
-                            <span class="flaticon-place"></span>
-                        </div>
-                        <div class="info-caption">
-                            <p>Columbia, SC 29201</p>
-                            <span>USA, New York - 10620</span>
-                        </div>
+                <div class="col-xl-5 col-lg-5 col-md-8">
+                    <div class="testimonial-form text-center">
+                        <h3>Always listening, always understanding.</h3>
+                        <button type="button" name="submit" class="btn header-btn">Ship Now</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- our info End -->
+    <!-- call to action End -->
 
     <!--? Categories Area Start -->
     {{-- <div class="categories-area section-padding30">
@@ -353,11 +330,12 @@
     </div> --}}
     <!-- Team Ara End -->
 
+
     <!--? Testimonial Start -->
     <div class="testimonial-area testimonial-padding section-bg" data-background="assets_landing/img/gallery/section_bg04.jpg">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-xl-7 col-lg-7">
+                <div class="col-xl-7 col-lg-7" style="margin: auto">
                     <!-- Section Tittle -->
                     <div class="section-tittle section-tittle2 mb-25">
                         <span>Clients Testimonials</span>
@@ -404,15 +382,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Form Start -->
-                <div class="col-xl-4 col-lg-5 col-md-8">
-                    <div class="testimonial-form text-center">
-                        <h3>Always listening, always understanding.</h3>
-                        <input type="text" placeholder="Incoterms">
-                        <button name="submit" class="submit-btn">Request a Quote</button>
-                    </div>
-                </div>
-                <!-- Form End -->
             </div>
         </div>
     </div>
