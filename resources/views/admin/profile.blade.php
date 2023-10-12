@@ -99,13 +99,13 @@
                     @if (isset($profile))
                         @method('put')
                     @endif
-                    {{-- <div class="row mb-3">
+                    <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src="assets/img/profile-img.jpg" alt="Profile">
                         <input type="file" class="form-control" id="image" accept="image/*">
                       </div>
-                    </div> --}}
+                    </div>
 
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>

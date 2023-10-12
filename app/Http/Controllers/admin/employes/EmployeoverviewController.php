@@ -42,8 +42,8 @@ class EmployeoverviewController extends Controller
      */
     public function show(string $id)
     {
-        $empolyee = User::find($id);
-        return view("admin.employes.single_employee")->with("employee", $empolyee);
+        $employee = User::find($id);
+        return view("admin.employes.single_employee")->with("employee", $employee);
     }
 
     /**
@@ -51,7 +51,7 @@ class EmployeoverviewController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
     }
 
     /**
@@ -59,7 +59,31 @@ class EmployeoverviewController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::find($id);
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'DoB' => $request->DoB,
+            'role' => $request->role,
+            'zone_id' => $request->zone_id
+        ]);
+        session()->flash('success','Record has been updatede successfuly!');
+        return redirect()->back();
+    }
+
+    public function change(Request $request, $id){
+        $user = User::find($id);
+        if(password_verify($request->password, $user->password)){
+            if($request->newpassword === $request->renewpassword){
+                $user->password = Hash::make($request->newpassword);
+                $user->save();
+            }
+        }
+
+        auth()->logout();
+        return redirect('login');
+
     }
 
     /**
