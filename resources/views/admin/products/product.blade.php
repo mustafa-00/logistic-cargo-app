@@ -38,8 +38,7 @@
                                                 <tr>
                                                     <th scope="col">Id</th>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Role</th>
+                                                    <th scope="col">Short_Description</th>
                                                     <th scope="col">Photo</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
@@ -47,9 +46,8 @@
                                             <tbody>
                                                     <tr>
                                                         <th scope="row">1</th>
-                                                        <td>mustafa</td>
-                                                        <td>mustafakarimi@gmail.com</td>
-                                                        <td>admin</td>
+                                                        <td>clothes</td>
+                                                        <td>winter clothes</td>
                                                         <td>
                                                             <ul
                                                                 class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">

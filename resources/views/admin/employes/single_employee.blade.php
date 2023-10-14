@@ -4,7 +4,6 @@
 <main class="main" id="main">
     <div class="pagetitle">
         <h1>Single Employes Page</h1>
-        @include('common.alertmessage')
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
