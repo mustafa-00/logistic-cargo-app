@@ -6,10 +6,10 @@
         <h1>Single Product Page</h1>
         @include('common.alertmessage')
         <nav>
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><h3><a href="{{ route('dashboard') }}">dashboard</a></h3></li>
-            <li class="breadcrumb-item"><h5><a href="{{ route('product.index') }}">back</a></h5></li>
-          </ul>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('product.index') }}">back</a></li>
+            </ol>
         </nav>
     </div>
 
@@ -39,7 +39,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Products</button>
                   </li>
 
                 </ul>

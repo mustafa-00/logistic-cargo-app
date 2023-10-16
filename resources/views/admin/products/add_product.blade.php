@@ -5,9 +5,10 @@
     <div class="pagetitle">
         <h1>Add New Product Here</h1>
         <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><h5><a href="{{ route('dashboard') }}">back</a></h5></li>
-          </ol>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('product.index') }}">back</a></li>
+            </ol>
         </nav>
     </div>
 

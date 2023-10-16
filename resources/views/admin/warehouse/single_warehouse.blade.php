@@ -6,9 +6,8 @@
         <h1>Single Warehouse Page</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <h5><a href="{{ route('dashboard') }}">back</a></h5>
-                </li>
+              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('warehouse.index') }}">back</a></li>
             </ol>
         </nav>
     </div>
@@ -54,17 +53,17 @@
                                             <tbody>
                                                     <tr>
                                                         <th scope="row">{{ $product->id }}</th>
-                                                        <td>{{ $product->name }}</td>
-                                                        <td>{{ $product->short_description }}</td>
-                                                        <td>{{ $product->quantity }}</td>
-                                                        <td>{{ $product->price }}</td>
-                                                        <td>{{ $product->width }}</td>
-                                                        <td>{{ $product->weight }}</td>
-                                                        <td>{{ $product->height }}</td>
-                                                        <td>{{ $product->lenght }}</td>
-                                                        <td>{{ $product->user_id }}</td>
-                                                        <td>{{ $product->warehouse_id }}</td>
-                                                        <td>
+                                                        <td scope="row">{{ $product->name }}</td>
+                                                        <td scope="row">{{ $product->short_description }}</td>
+                                                        <td scope="row">{{ $product->quantity }}</td>
+                                                        <td scope="row">{{ $product->price }}</td>
+                                                        <td scope="row">{{ $product->width }}</td>
+                                                        <td scope="row">{{ $product->weight }}</td>
+                                                        <td scope="row">{{ $product->height }}</td>
+                                                        <td scope="row">{{ $product->lenght }}</td>
+                                                        <td scope="row">{{ $product->user_id }}</td>
+                                                        <td scope="row">{{ $product->warehouse_id }}</td>
+                                                        <td scope="row">
                                                         <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="{{ route('warehouse.show', $product->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
