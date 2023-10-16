@@ -49,7 +49,7 @@ class WarehouseController extends Controller
     public function show(string $id)
     {
         $products = Product::where('warehouse', $id)->get();
-        
+
     }
 
     /**

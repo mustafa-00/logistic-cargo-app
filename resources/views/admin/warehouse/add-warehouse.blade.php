@@ -1,9 +1,10 @@
 @extends('admin.dashboard')
+
 @section('content')
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Add New Warehouse</h1>
+      <h1>Add New Warehouse Here</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
