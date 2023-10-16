@@ -8,6 +8,7 @@ use App\Http\Controllers\admin\employes\EmployeoverviewController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\admin\WarehouseController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -39,3 +40,4 @@ Route::resource('order', OrderController::class);
 
 Auth::routes();
 Route::get('/dashboard', [DashboardController:: class, 'dashboard'])->name('dashboard');
+Route::resource('warehouse', WarehouseController::class);

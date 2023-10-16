@@ -13,26 +13,25 @@
 
 
         {{-- warehouses --}}
-        {{-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#Warehouses-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-menu-button-wide"></i><span>Warehouses</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="Warehouses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{ route('warehouse1.index') }}">
-                    <i class="bi bi-circle"></i><span>warehouse1</span>
+                    <a href="{{ route('warehouse.index') }}">
+                    <i class="bi bi-circle"></i><span>All Warehouses</span>
                     </a>
                 </li>
-            </ul>
-
-            <ul id="Warehouses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                @foreach ($warehouses as $warehouse)
                 <li>
-                    <a href="{{ route('warehouse2.index') }}">
-                    <i class="bi bi-circle"></i><span>warehouse2</span>
+                    <a href="{{ route('warehouse.show', $warehouse->id) }}">
+                    <i class="bi bi-circle"></i><span>{{ $warehouse->name }}</span>
                     </a>
                 </li>
+                @endforeach
             </ul>
-        </li> --}}
+        </li>
 
 
         {{-- employes --}}
