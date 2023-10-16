@@ -13,7 +13,7 @@
 
 
         {{-- warehouses --}}
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#Warehouses-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-menu-button-wide"></i><span>Warehouses</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -31,7 +31,7 @@
                 </li>
                 @endforeach
             </ul>
-        </li>
+        </li> --}}
 
 
         {{-- employes --}}
@@ -42,6 +42,12 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('warehouse.index') }}">
+              <i class="bi bi-people"></i>
+              <span>Warehouse</span>
+            </a>
+        </li>
 
         {{-- product --}}
         <li class="nav-item">

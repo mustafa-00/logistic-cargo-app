@@ -37,7 +37,8 @@ class WarehouseController extends Controller
         ]);
 
         if($result){
-            return redirect()->back();
+            return redirect()->route('warehouse.index');
+            session()->flash('success','Warehouse Added successfuly!');
         }else{
             session()->flush();
         }
@@ -48,7 +49,9 @@ class WarehouseController extends Controller
      */
     public function show(string $id)
     {
-        $products = Product::where('warehouse', $id)->get();
+        // $products = Product::where('warehouse', $id)->get();
+        $product = Product::find($id);
+        return view('admin.warehouse.single_warehouse',compact('product'));
 
     }
 

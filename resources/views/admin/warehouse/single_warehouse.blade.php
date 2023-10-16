@@ -24,10 +24,7 @@
                             {{-- overview --}}
                             <li class="nav-item col-8">
                                 <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#profile-overview">Overview</button>
-                            </li>
-                            <li class="col-4">
-                                <a href="{{ route('warehouse.create') }}" class="nav-link"><button class="btn btn-primary">Add New Warehouse</button></a>
+                                data-bs-target="#profile-overview">Overview</button>
                             </li>
                         </ul>
                         <div class="tab-content pt-2">
@@ -42,24 +39,37 @@
                                                 <tr>
                                                     <th scope="col">Id</th>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col"></th>
-                                                    <th scope="col">Capacity</th>
+                                                    <th scope="col">Short_Description</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Price</th>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Weight</th>
+                                                    <th scope="col">Height</th>
+                                                    <th scope="col">Lenght</th>
+                                                    <th scope="col">User_id</th>
+                                                    <th scope="col">Warehouse_id</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($warehouses as $item)
                                                     <tr>
-                                                        <th scope="row">{{ $item->id }}</th>
-                                                        <td>{{ $item->name }}</td>
-                                                        <td>{{ $item->address }}</td>
-                                                        <td>{{ $item->capacity }}</td>
+                                                        <th scope="row">{{ $product->id }}</th>
+                                                        <td>{{ $product->name }}</td>
+                                                        <td>{{ $product->short_description }}</td>
+                                                        <td>{{ $product->quantity }}</td>
+                                                        <td>{{ $product->price }}</td>
+                                                        <td>{{ $product->width }}</td>
+                                                        <td>{{ $product->weight }}</td>
+                                                        <td>{{ $product->height }}</td>
+                                                        <td>{{ $product->lenght }}</td>
+                                                        <td>{{ $product->user_id }}</td>
+                                                        <td>{{ $product->warehouse_id }}</td>
                                                         <td>
-                                                        <a href="{{ route('employe_overview.update', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('employe_overview.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="{{ route('warehouse.show', $product->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>
                                                     </tr>
-                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
