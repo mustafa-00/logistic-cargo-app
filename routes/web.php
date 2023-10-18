@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\landing\LandingController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\employes\EmployeoverviewController;
+use App\Http\Controllers\admin\InvoiceController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProfileController;
@@ -37,6 +38,7 @@ Route::post('change_password/{id}', [ProfileController::class, 'change'])->name(
 Route::resource('employe_overview', EmployeoverviewController::class);
 Route::resource('product', ProductController::class);
 Route::resource('order', OrderController::class);
+Route::resource('invoice', InvoiceController::class);
 
 Auth::routes();
 Route::get('/dashboard', [DashboardController:: class, 'dashboard'])->name('dashboard');
