@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\WarehouseController;
+use App\Http\Controllers\admin\ZonesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -39,6 +40,7 @@ Route::resource('employe_overview', EmployeoverviewController::class);
 Route::resource('product', ProductController::class);
 Route::resource('order', OrderController::class);
 Route::resource('invoice', InvoiceController::class);
+Route::resource('zone', ZonesController::class);
 
 Auth::routes();
 Route::get('/dashboard', [DashboardController:: class, 'dashboard'])->name('dashboard');

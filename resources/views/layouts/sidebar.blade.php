@@ -42,6 +42,15 @@
             </a>
         </li>
 
+        {{-- zones --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('zone.index') }}">
+              <i class="bi bi-people"></i>
+              <span>Zones</span>
+            </a>
+        </li>
+
+        {{-- warehouses --}}
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('warehouse.index') }}">
               <i class="bi bi-people"></i>
@@ -74,6 +83,9 @@
             </a>
         </li>
 
+
+
+        {{-- employes part --}}
         @else
 
         <li class="nav-item">

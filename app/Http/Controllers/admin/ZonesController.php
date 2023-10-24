@@ -3,18 +3,20 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\User;
 use App\Models\Warehouse;
+use App\Models\zone;
 use Illuminate\Http\Request;
 
-class WarehouseController extends Controller
+class ZonesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.warehouse.warehouses');
+        $zone = zone::all();
+        return view('admin.zones.zone',compact('zone'));
     }
 
     /**
@@ -22,7 +24,7 @@ class WarehouseController extends Controller
      */
     public function create()
     {
-        return view('admin.warehouse.add-warehouse');
+        return view('admin.zones.add-zone');
     }
 
     /**
@@ -30,18 +32,12 @@ class WarehouseController extends Controller
      */
     public function store(Request $request)
     {
-        $result = Warehouse::create([
+        zone::create([
             'name' => $request->name,
-            'address' => $request->address,
-            'capacity' => $request->capacity,
+            'price' => $request->price
         ]);
 
-        if($result){
-            return redirect()->route('warehouse.index');
-            session()->flash('success','Warehouse Added successfuly!');
-        }else{
-            session()->flush();
-        }
+        return redirect()->route('zone.index');
     }
 
     /**
@@ -49,8 +45,9 @@ class WarehouseController extends Controller
      */
     public function show(string $id)
     {
-        $products = Product::where('warehouse_id', $id)->get();
-        return view('admin.warehouse.single_warehouse', compact('products'));
+        
+        $employes = User::where('zone_id', $id)->get();
+        return view('admin.zones.single_zone', compact('employes'));
 
     }
 
