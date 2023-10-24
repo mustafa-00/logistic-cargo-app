@@ -49,9 +49,9 @@ class WarehouseController extends Controller
      */
     public function show(string $id)
     {
-        // $products = Product::where('warehouse', $id)->get();
-        $product = Product::find($id);
-        return view('admin.warehouse.single_warehouse',compact('product'));
+        $products = Product::where('warehouse_id', $id)->get();
+        // $product = Product::find($id);
+        return view('admin.warehouse.single_warehouse', compact('products'));
 
     }
 

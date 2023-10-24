@@ -51,24 +51,32 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    <tr>
-                                                        <th scope="row">{{ $product->id }}</th>
-                                                        <td scope="row">{{ $product->name }}</td>
-                                                        <td scope="row">{{ $product->short_description }}</td>
-                                                        <td scope="row">{{ $product->quantity }}</td>
-                                                        <td scope="row">{{ $product->price }}</td>
-                                                        <td scope="row">{{ $product->width }}</td>
-                                                        <td scope="row">{{ $product->weight }}</td>
-                                                        <td scope="row">{{ $product->height }}</td>
-                                                        <td scope="row">{{ $product->lenght }}</td>
-                                                        <td scope="row">{{ $product->user_id }}</td>
-                                                        <td scope="row">{{ $product->warehouse_id }}</td>
-                                                        <td scope="row">
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('warehouse.show', $product->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
-                                                        </td>
-                                                    </tr>
+                                                @if($products)
+                                                @foreach ($products as $product)
+                                                <tr>
+                                                    <th scope="row">{{ $product->id }}</th>
+                                                    <td scope="row">{{ $product->name }}</td>
+                                                    <td scope="row">{{ $product->short_description }}</td>
+                                                    <td scope="row">{{ $product->quantity }}</td>
+                                                    <td scope="row">{{ $product->price }}</td>
+                                                    <td scope="row">{{ $product->width }}</td>
+                                                    <td scope="row">{{ $product->weight }}</td>
+                                                    <td scope="row">{{ $product->height }}</td>
+                                                    <td scope="row">{{ $product->lenght }}</td>
+                                                    <td scope="row">{{ $product->user_id }}</td>
+                                                    <td scope="row">{{ $product->warehouse_id }}</td>
+                                                    <td scope="row">
+                                                    <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                    <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+                                                    <a href="{{ route('warehouse.show', $product->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                                @else
+                                                <tr>
+                                                    <h2>There is no product in this warehouse yet.</h2>
+                                                </tr>
+                                                @endif
                                             </tbody>
                                         </table>
                                     </div>
