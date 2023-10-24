@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use App\Models\User;
 use App\Models\Warehouse;
 use App\Models\zone;
@@ -45,9 +46,13 @@ class ZonesController extends Controller
      */
     public function show(string $id)
     {
-        
+
         $employes = User::where('zone_id', $id)->get();
         return view('admin.zones.single_zone', compact('employes'));
+
+        // $orders = Order::where('zone_id', $id)->get();
+        // return view('admin.orders.single_order' ,compact('orders'));
+
 
     }
 

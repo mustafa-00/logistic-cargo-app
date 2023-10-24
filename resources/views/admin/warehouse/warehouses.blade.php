@@ -56,7 +56,7 @@
                                                             <td>{{ $item->address }}</td>
                                                             <td>{{ $item->capacity }}</td>
                                                             <td>
-                                                            <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                            {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
                                                             <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                             <a href="{{ route('warehouse.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                             </td>

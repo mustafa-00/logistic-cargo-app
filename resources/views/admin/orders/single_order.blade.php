@@ -39,14 +39,14 @@
                   </li>
 
                   <li class="nav-item">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Products</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Order</button>
                   </li>
 
                 </ul>
                 <div class="tab-content pt-2">
 
                   <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                    <h5 class="card-title">Product Details</h5>
+                    <h5 class="card-title">Order Details</h5>
 
                       <div class="row">
                           <div class="col-lg-3 col-md-4 label ">Id</div>

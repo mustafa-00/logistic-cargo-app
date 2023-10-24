@@ -38,7 +38,7 @@
                                                 <tr>
                                                     <th scope="col">Id</th>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col">Short_Description</th>
+                                                    <th scope="col">Short_Des</th>
                                                     <th scope="col">Quantity</th>
                                                     <th scope="col">Price</th>
                                                     <th scope="col">Width</th>
@@ -47,7 +47,6 @@
                                                     <th scope="col">Lenght</th>
                                                     <th scope="col">User_id</th>
                                                     <th scope="col">Warehouse_id</th>
-                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -65,11 +64,6 @@
                                                     <td scope="row">{{ $product->lenght }}</td>
                                                     <td scope="row">{{ $product->user_id }}</td>
                                                     <td scope="row">{{ $product->warehouse_id }}</td>
-                                                    <td scope="row">
-                                                    <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                    <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                    <a href="{{ route('warehouse.show', $product->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
-                                                    </td>
                                                 </tr>
                                                 @endforeach
                                                 @else

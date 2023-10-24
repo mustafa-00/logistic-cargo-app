@@ -14,16 +14,16 @@
 
     <section class="section profile">
         <div class="row">
-            {{-- overview --}}
+
 
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body pt-3">
                         <ul class="nav nav-tabs nav-tabs-bordered">
-                            {{-- overview --}}
+
                             <li class="nav-item">
                                 <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#profile-overview">Overview</button>
+                                    data-bs-target="#profile-overview">Employees Overview</button>
                             </li>
                         </ul>
                         <div class="tab-content pt-2">
@@ -63,11 +63,6 @@
                                                                 </li>
                                                             </ul>
                                                         </td>
-                                                        {{-- <td>
-                                                        <a href="{{ route('employe_overview.update', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('employe_overview.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
-                                                        </td> --}}
                                                     </tr>
                                                 @endforeach
                                             </tbody>
@@ -81,5 +76,62 @@
             </div>
         </div>
     </section>
+
+
+    {{-- order section --}}
+    {{-- <section class="section profile">
+        <div class="row">
+
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body pt-3">
+                        <ul class="nav nav-tabs nav-tabs-bordered">
+
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="tab"
+                                    data-bs-target="#profile-overview">Order Overview</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-2">
+
+                            <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <!-- Table with hoverable rows -->
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Id</th>
+                                                    <th scope="col">Sour_Addr</th>
+                                                    <th scope="col">Des_Addr</th>
+                                                    <th scope="col">Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($orders as $item)
+                                                    <tr>
+                                                        <th scope="row">{{ $item->id }}</th>
+                                                        <td>{{ $item->source_address }}</td>
+                                                        <td>{{ $item->destination_address }}</td>
+                                                        <td>{{ $item->date }}</td>
+                                                        <td>
+                                                        <a href="{{ route('employe_overview.update', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="{{ route('employe_overview.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
 </main>
 @endsection

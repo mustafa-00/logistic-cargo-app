@@ -40,7 +40,7 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Id</th>
-                                                    <th scope="col">Payment_Type</th>
+                                                    <th scope="col">Payment_Status</th>
                                                     <th scope="col">Typeof_Payment</th>
                                                     <th scope="col">Order_id</th>
                                                     <th scope="col">Action</th>
@@ -54,7 +54,7 @@
                                                         <td>{{ $item->typeof_payment }}</td>
                                                         <td>{{ $item->order_id }}</td>
                                                         <td>
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
                                                         <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="{{ route('invoice.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>

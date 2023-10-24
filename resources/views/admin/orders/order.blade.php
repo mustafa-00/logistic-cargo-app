@@ -26,7 +26,7 @@
                                 data-bs-target="#profile-overview">Overview</button>
                             </li>
                             <li class="nav-item col-4">
-                                <a href="{{ route('order.create') }}" class="nav-link"><button class="btn btn-primary">Add New Product</button></a>
+                                <a href="{{ route('order.create') }}" class="nav-link"><button class="btn btn-primary">Add New Order</button></a>
                             </li>
                         </ul>
                         <div class="tab-content pt-2">
@@ -54,7 +54,7 @@
                                                         <td>{{ $item->destination_address }}</td>
                                                         <td>{{ $item->date }}</td>
                                                         <td>
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
                                                         <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="{{ route('order.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>
