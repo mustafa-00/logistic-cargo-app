@@ -50,8 +50,8 @@ class ZonesController extends Controller
         $employes = User::where('zone_id', $id)->get();
         return view('admin.zones.single_zone', compact('employes'));
 
-        // $orders = Order::where('zone_id', $id)->get();
-        // return view('admin.orders.single_order' ,compact('orders'));
+        $order = Order::where('zone_id', $id)->get();
+        return view('admin.orders.single_order' ,compact('order'));
 
 
     }
