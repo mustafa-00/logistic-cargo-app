@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Warehouse;
 use Illuminate\Http\Request;
@@ -49,8 +50,8 @@ class WarehouseController extends Controller
      */
     public function show(string $id)
     {
-        $products = Product::where('warehouse_id', $id)->get();
-        return view('admin.warehouse.single_warehouse', compact('products'));
+        $order = Order::where('warehouse_id', $id)->get();
+        return view('admin.warehouse.single_warehouse', compact('order'));
 
     }
 
@@ -67,7 +68,7 @@ class WarehouseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+       
     }
 
     /**

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float('weight');
             $table->float('height');
             $table->float('lenght');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('source_address');
             $table->string('destination_address');
             $table->date('date');

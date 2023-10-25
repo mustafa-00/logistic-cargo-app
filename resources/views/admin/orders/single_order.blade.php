@@ -151,6 +151,69 @@
                       </div> --}}
 
                       <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="name" type="text" class="form-control" id="fullName" value="{{ $order->name }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Short_Description</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="short_description" type="text" class="form-control" id="fullName" value="{{ $order->short_description }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Quantity</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="quantity" type="number" class="form-control" id="fullName" value="{{ $order->quantity }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Price</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="price" type="number" class="form-control" id="fullName" value="{{ $order->price }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Width</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="width" type="number" class="form-control" id="fullName" value="{{ $order->width }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Weight</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="weight" type="number" class="form-control" id="fullName" value="{{ $order->weight }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Height</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="height" type="number" class="form-control" id="fullName" value="{{ $order->height }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Lenght</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="lenght" type="number" class="form-control" id="fullName" value="{{ $order->lenght }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Image</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="image" type="image" class="form-control" id="fullName" value="{{ $order->image }}">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
                         <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Source_Address</label>
                         <div class="col-md-8 col-lg-9">
                           <input name="source_address" type="text" class="form-control" id="fullName" value="{{ $order->source_address }}">
@@ -186,17 +249,24 @@
                       </div>
 
                       <div class="row mb-3">
-                          <label for="Job" class="col-md-4 col-lg-3 col-form-label">Product_id</label>
-                          <div class="col-md-8 col-lg-9">
-                            <input name="product_id" type="number" class="form-control" id="Job" value="{{$order->product_id}}">
-                          </div>
-                      </div>
-
-                      <div class="row mb-3">
                           <label for="Job" class="col-md-4 col-lg-3 col-form-label">Zone_id</label>
                           <div class="col-md-8 col-lg-9">
                             <input name="zone_id" type="number" class="form-control" id="Job" value="{{$order->zone_id}}">
                           </div>
+                      </div>
+
+                      <div class="row mb-3">
+                          <label for="Job" class="col-md-4 col-lg-3 col-form-label">User_id</label>
+                          <div class="col-md-8 col-lg-9">
+                            <input name="user_id" type="number" class="form-control" id="Job" value="{{$order->user_id}}">
+                          </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Warehouse_id</label>
+                        <div class="col-md-8 col-lg-9">
+                          <input name="warehouse_id" type="number" class="form-control" id="fullName" value="{{ $order->warehouse_id }}">
+                        </div>
                       </div>
 
                       <div class="text-center">

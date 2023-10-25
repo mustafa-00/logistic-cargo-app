@@ -72,6 +72,13 @@
                             </div>
 
                             <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                <ul class="nav nav-tabs nav-tabs-bordered">
+
+                                    <li class="nav-item">
+                                        <button class="nav-link active" data-bs-toggle="tab"
+                                        data-bs-target="#profile-overview">Orders Overview</button>
+                                    </li>
+                                </ul>
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title"></h5>
@@ -83,6 +90,7 @@
                                                     <th scope="col">Sour_Add</th>
                                                     <th scope="col">Des_Add</th>
                                                     <th scope="col">Date</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -92,11 +100,11 @@
                                                     <td>{{ $item->source_address }}</td>
                                                     <td>{{ $item->destination_address }}</td>
                                                     <td>{{ $item->date }}</td>
-                                                    {{-- <td>
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('zone.show',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
-                                                    </td> --}}
+                                                    <td>
+                                                        {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a> --}}
+                                                        <a href="{{ route('order.index',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                    </td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>

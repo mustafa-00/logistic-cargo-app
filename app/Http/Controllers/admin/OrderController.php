@@ -89,7 +89,6 @@ class OrderController extends Controller
             'date' => $request->date,
             'price' => $request->price,
             'status' => $request->status,
-            'product_id' => $request->product_id,
             'zone_id' => $request->zone_id,
             'user_id' => $request->user_id,
             'warehouse_id' => $request->warehouse_id
