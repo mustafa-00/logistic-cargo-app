@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -12,7 +13,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('admin.order');
+        $orders = Order::all();
+        return view('admin.orders.order',compact('orders'));
     }
 
     /**
@@ -20,7 +22,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.orders.add_order');
     }
 
     /**
@@ -28,7 +30,17 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Order::create([
+            'source_address' => $request->source_address,
+            'destination_address' => $request->destination_address,
+            'date' => $request->date,
+            'price' => $request->price,
+            'status' => $request->status,
+            'product_id' => $request->product_id,
+            'zone_id' => $request->zone_id
+        ]);
+        session()->flash('success','Record has been created successfuly!');
+        return redirect()->route('order.index');
     }
 
     /**
@@ -36,7 +48,8 @@ class OrderController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $order = Order::find($id);
+        return view('admin.orders.single_order',compact('order'));
     }
 
     /**
@@ -52,7 +65,18 @@ class OrderController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = Order::find($id);
+        $user->update([
+            'source_address' => $request->source_address,
+            'destination_address' => $request->destination_address,
+            'date' => $request ->date,
+            'price' => $request->price,
+            'status' => $request->status,
+            'product_id' => $request->product_id,
+            'zone_id' => $request->zone_id,
+        ]);
+        session()->flash('success','Record has been updatede successfuly!');
+        return redirect()->back();
     }
 
     /**

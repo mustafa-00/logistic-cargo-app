@@ -4,7 +4,7 @@
 
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Product Page</h1>
+        <h1>Order Page</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><h5><a href="{{ route('dashboard') }}">back</a></h5></li>
@@ -21,9 +21,12 @@
                     <div class="card-body pt-3">
                         <ul class="nav nav-tabs nav-tabs-bordered">
                             {{-- overview --}}
-                            <li class="nav-item">
+                            <li class="nav-item col-8">
                                 <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#profile-overview">Overview</button>
+                                data-bs-target="#profile-overview">Overview</button>
+                            </li>
+                            <li class="nav-item col-4">
+                                <a href="{{ route('order.create') }}" class="nav-link"><button class="btn btn-primary">Add New Order</button></a>
                             </li>
                         </ul>
                         <div class="tab-content pt-2">
@@ -37,38 +40,26 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Id</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Role</th>
-                                                    <th scope="col">Photo</th>
+                                                    <th scope="col">SorurceAddress</th>
+                                                    <th scope="col">DestinationAddress</th>
+                                                    <th scope="col">Date</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($orders as $item)
                                                     <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>mustafa</td>
-                                                        <td>mustafakarimi@gmail.com</td>
-                                                        <td>admin</td>
+                                                        <th scope="row">{{ $item->id }}</th>
+                                                        <td>{{ $item->source_address }}</td>
+                                                        <td>{{ $item->destination_address }}</td>
+                                                        <td>{{ $item->date }}</td>
                                                         <td>
-                                                            <ul
-                                                                class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                                                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                                                    data-bs-placement="top"
-                                                                    class="avatar avatar-xs pull-up"
-                                                                    title="Lilian Fuller">
-                                                                    <img src="../assets_employe/img/avatars/5.png"
-                                                                    style="width: 40px" alt="Avatar"
-                                                                    class="rounded-circle" />
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                        <td>
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
                                                         <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="{{ route('order.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>
                                                     </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -80,7 +71,6 @@
             </div>
         </div>
     </section>
-
 
 </main>
 @endsection

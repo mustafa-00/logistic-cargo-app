@@ -19,12 +19,28 @@
             </a>
             <ul id="Warehouses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
+<<<<<<< HEAD
                   <a href="">
                   <i class="bi bi-circle"></i><span>warehouses</span>
                   </a>
                 </li>
             </ul>
         </li>
+=======
+                    <a href="{{ route('warehouse.index') }}">
+                    <i class="bi bi-circle"></i><span>All Warehouses</span>
+                    </a>
+                </li>
+                @foreach ($warehouses as $warehouse)
+                <li>
+                    <a href="{{ route('warehouse.show', $warehouse->id) }}">
+                    <i class="bi bi-circle"></i><span>{{ $warehouse->name }}</span>
+                    </a>
+                </li>
+                @endforeach
+            </ul>
+        </li> --}}
+>>>>>>> 07ae4ab2e875a4e2b184675419cb7b2f618c3abb
 
 
         {{-- employes --}}
@@ -35,6 +51,21 @@
             </a>
         </li>
 
+        {{-- zones --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('zone.index') }}">
+              <i class="bi bi-people"></i>
+              <span>Zones</span>
+            </a>
+        </li>
+
+        {{-- warehouses --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('warehouse.index') }}">
+              <i class="bi bi-people"></i>
+              <span>Warehouse</span>
+            </a>
+        </li>
 
         {{-- product --}}
         <li class="nav-item">
@@ -53,6 +84,17 @@
             </a>
         </li>
 
+        {{-- invoice --}}
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('invoice.index') }}">
+              <i class="bi bi-cash"></i>
+              <span>Invoice</span>
+            </a>
+        </li>
+
+
+
+        {{-- employes part --}}
         @else
 
         <li class="nav-item">

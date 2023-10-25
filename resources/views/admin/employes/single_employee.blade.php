@@ -4,12 +4,10 @@
 <main class="main" id="main">
     <div class="pagetitle">
         <h1>Single Employes Page</h1>
-        @include('common.alertmessage')
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <h5><a href="{{ route('employe_overview.index') }}">back</a></h5>
-                </li>
+              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('employe_overview.index') }}">back</a></li>
             </ol>
         </nav>
     </div>
@@ -196,6 +194,7 @@
       </div>
     </div>
   </section>
+
   </main>
 
 @endsection

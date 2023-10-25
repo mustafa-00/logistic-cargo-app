@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class zone extends Model
 {
     use HasFactory;
+    protected $table = "zones";
+
+    protected $fillable = [
+        'name',
+        'price'
+    ];
 }
