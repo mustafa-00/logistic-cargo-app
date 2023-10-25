@@ -65,40 +65,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <!-- Table with hoverable rows -->
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Id</th>
-                                                    <th scope="col">Sour_Add</th>
-                                                    <th scope="col">Des_Add</th>
-                                                    <th scope="col">Date</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($order as $item)
-                                                <tr>
-                                                    <th scope="row">{{ $item->id }}</th>
-                                                    <td>{{ $item->source_address }}</td>
-                                                    <td>{{ $item->destination_address }}</td>
-                                                    <td>{{ $item->date }}</td>
-                                                    <td>
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('zone.show',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
