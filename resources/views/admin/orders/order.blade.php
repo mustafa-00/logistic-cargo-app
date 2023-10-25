@@ -43,6 +43,8 @@
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Quantity</th>
                                                     <th scope="col">Date</th>
+                                                    <th scope="col">Sour_Add</th>
+                                                    <th scope="col">Dest_Add</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -53,6 +55,8 @@
                                                         <td>{{ $item->name }}</td>
                                                         <td>{{ $item->quantity }}</td>
                                                         <td>{{ $item->date }}</td>
+                                                        <td>{{ $item->source_address }}</td>
+                                                        <td>{{ $item->destination_address }}</td>
                                                         <td>
                                                         {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
                                                         <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>

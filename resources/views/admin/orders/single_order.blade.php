@@ -114,7 +114,7 @@
                       </div>
 
                       <div class="row">
-                          <div class="col-lg-3 col-md-4 label">Status</div>
+                          <div class="col-lg-3 col-md-4 label">Payment Status</div>
                           <div class="col-lg-9 col-md-8">{{$order->status}}</div>
                       </div>
 
@@ -242,7 +242,7 @@
                       </div>
 
                       <div class="row mb-3">
-                          <label for="Job" class="col-md-4 col-lg-3 col-form-label">Status</label>
+                          <label for="Job" class="col-md-4 col-lg-3 col-form-label">Payment Status</label>
                           <div class="col-md-8 col-lg-9">
                             <input name="status" type="text" class="form-control" id="Job" value="{{$order->status}}">
                           </div>
