@@ -24,6 +24,69 @@
                 <form action="{{ route('order.store') }}" method="POST">
                   @csrf
                   <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="name" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Short_Description</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" name="short_description" style="height: 100px"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Quantity</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="quantity" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Price</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="price" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Width</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="width" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Weight</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="weight" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Height</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="height" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Lenght</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="lenght" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                      <input type="file" name="image" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Source_Address</label>
                     <div class="col-sm-10">
                       <input type="text" name="source_address" class="form-control">
@@ -45,23 +108,9 @@
                   </div>
 
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Price</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="price" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Status</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Payment Status</label>
                     <div class="col-sm-10">
                       <input type="text" name="status" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Product_id</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="product_id" class="form-control">
                     </div>
                   </div>
 
@@ -69,6 +118,20 @@
                     <label for="inputText" class="col-sm-2 col-form-label">Zone_id</label>
                     <div class="col-sm-10">
                       <input type="number" name="zone_id" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">User_id</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="user_id" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Warehouse_id</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="warehouse_id" class="form-control">
                     </div>
                   </div>
 

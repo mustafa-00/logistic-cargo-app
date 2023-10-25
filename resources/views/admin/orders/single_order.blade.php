@@ -54,6 +54,46 @@
                       </div>
 
                       <div class="row">
+                        <div class="col-lg-3 col-md-4 label ">Name</div>
+                        <div class="col-lg-9 col-md-8">{{ $order->name }}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Short_description</div>
+                        <div class="col-lg-9 col-md-8">{{$order->short_description}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">quantity</div>
+                        <div class="col-lg-9 col-md-8">{{$order->quantity}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Price</div>
+                        <div class="col-lg-9 col-md-8">{{$order->price}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">width</div>
+                        <div class="col-lg-9 col-md-8">{{$order->width}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">weight</div>
+                        <div class="col-lg-9 col-md-8">{{$order->weight}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">height</div>
+                        <div class="col-lg-9 col-md-8">{{$order->height}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">lenght</div>
+                        <div class="col-lg-9 col-md-8">{{$order->lenght}}</div>
+                    </div>
+
+                      <div class="row">
                           <div class="col-lg-3 col-md-4 label ">Source_Address</div>
                           <div class="col-lg-9 col-md-8">{{ $order->source_address }}</div>
                       </div>
@@ -79,14 +119,19 @@
                       </div>
 
                       <div class="row">
-                          <div class="col-lg-3 col-md-4 label">Product_id</div>
-                          <div class="col-lg-9 col-md-8">{{$order->product_id}}</div>
-                      </div>
-
-                      <div class="row">
                           <div class="col-lg-3 col-md-4 label">Zone_id</div>
                           <div class="col-lg-9 col-md-8">{{$order->zone_id}}</div>
                       </div>
+
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label">User_id</div>
+                        <div class="col-lg-9 col-md-8">{{$order->user_id}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Warehouse_id</div>
+                        <div class="col-lg-9 col-md-8">{{$order->warehouse_id}}</div>
+                    </div>
                   </div>
 
                   <!-- Profile Edit Form -->

@@ -9,13 +9,6 @@ class Warehouse extends Model
 {
     use HasFactory;
 
-<<<<<<< HEAD
-    protected $fillable = [
-        'name',
-        'capacity',
-        'address',
-    ];
-=======
     protected $table = "warehouses";
 
     protected $fillable = [
@@ -34,5 +27,4 @@ class Warehouse extends Model
     {
         return $this->hasMany(Products::class, 'warehouse_id', 'id');
     }
->>>>>>> 07ae4ab2e875a4e2b184675419cb7b2f618c3abb
 }

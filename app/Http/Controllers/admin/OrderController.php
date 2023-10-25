@@ -31,13 +31,22 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         Order::create([
+            'name' => $request->name,
+            'short_description' => $request->short_description,
+            'quantity' => $request->quantity,
+            'width' => $request->width,
+            'weight' => $request->weight,
+            'height' => $request->height,
+            'lenght' => $request->lenght,
+            'image' => $request->image,
             'source_address' => $request->source_address,
             'destination_address' => $request->destination_address,
             'date' => $request->date,
             'price' => $request->price,
             'status' => $request->status,
-            'product_id' => $request->product_id,
-            'zone_id' => $request->zone_id
+            'zone_id' => $request->zone_id,
+            'user_id' => $request->user_id,
+            'warehouse_id' => $request->warehouse_id
         ]);
         session()->flash('success','Record has been created successfuly!');
         return redirect()->route('order.index');
@@ -67,13 +76,23 @@ class OrderController extends Controller
     {
         $user = Order::find($id);
         $user->update([
+            'name' => $request->name,
+            'short_description' => $request->short_description,
+            'quantity' => $request->quantity,
+            'width' => $request->width,
+            'weight' => $request->weight,
+            'height' => $request->height,
+            'lenght' => $request->lenght,
+            'image' => $request->image,
             'source_address' => $request->source_address,
             'destination_address' => $request->destination_address,
-            'date' => $request ->date,
+            'date' => $request->date,
             'price' => $request->price,
             'status' => $request->status,
             'product_id' => $request->product_id,
             'zone_id' => $request->zone_id,
+            'user_id' => $request->user_id,
+            'warehouse_id' => $request->warehouse_id
         ]);
         session()->flash('success','Record has been updatede successfuly!');
         return redirect()->back();

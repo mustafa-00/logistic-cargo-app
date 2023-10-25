@@ -40,8 +40,8 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Id</th>
-                                                    <th scope="col">SorurceAddress</th>
-                                                    <th scope="col">DestinationAddress</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Quantity</th>
                                                     <th scope="col">Date</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
@@ -50,8 +50,8 @@
                                                 @foreach ($orders as $item)
                                                     <tr>
                                                         <th scope="row">{{ $item->id }}</th>
-                                                        <td>{{ $item->source_address }}</td>
-                                                        <td>{{ $item->destination_address }}</td>
+                                                        <td>{{ $item->name }}</td>
+                                                        <td>{{ $item->quantity }}</td>
                                                         <td>{{ $item->date }}</td>
                                                         <td>
                                                         {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
