@@ -13,12 +13,20 @@
 
 
         {{-- warehouses --}}
-        {{-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#Warehouses-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-menu-button-wide"></i><span>Warehouses</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="Warehouses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
+<<<<<<< HEAD
+                  <a href="">
+                  <i class="bi bi-circle"></i><span>warehouses</span>
+                  </a>
+                </li>
+            </ul>
+        </li>
+=======
                     <a href="{{ route('warehouse.index') }}">
                     <i class="bi bi-circle"></i><span>All Warehouses</span>
                     </a>
@@ -32,6 +40,7 @@
                 @endforeach
             </ul>
         </li> --}}
+>>>>>>> 07ae4ab2e875a4e2b184675419cb7b2f618c3abb
 
 
         {{-- employes --}}
