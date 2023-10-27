@@ -20,7 +20,7 @@
 
             <div class="card">
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                <img src="assets_admin/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                {{-- <img src="assets_admin/img/profile-img.jpg" alt="Profile" class="rounded-circle"> --}}
                 <h2>{{ $order->name }}</h2>
               </div>
             </div>
