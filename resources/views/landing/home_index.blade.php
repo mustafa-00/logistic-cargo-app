@@ -36,26 +36,77 @@
     <!-- slider Area End-->
 
     <!--? call to action Start -->
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-xl-5 col-lg-5 col-md-8">
+                <div class="testimonial-form text-center">
+                    <h3>Always listening, always understanding.</h3>
+                    <button type="button" name="submit" class="btn header-btn">Request a Quote</button>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-8">
+                <div class="testimonial-form text-center">
+                    <h3>Always listening, always understanding.</h3>
+                    <button type="button" name="submit" class="btn header-btn">Ship Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- call to action End -->
+
+    <!--? About Area Start -->
+    <div class="categories-area section-padding30">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-xl-5 col-lg-5 col-md-8">
-                    <div class="testimonial-form text-center">
-                        <h3>Always listening, always understanding.</h3>
-                        <button type="button" name="submit" class="btn header-btn">Request a Quote</button>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <h2 style="color: orangered">About Our Company</h2>
+                        {{-- <span>About Our Company</span> --}}
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-5 col-md-8">
-                    <div class="testimonial-form text-center">
-                        <h3>Always listening, always understanding.</h3>
-                        <button type="button" name="submit" class="btn header-btn">Ship Now</button>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        {{-- <div class="cat-icon">
+                            <span class="flaticon-shipped"></span>
+                        </div> --}}
+                        <div class="cat-cap">
+                            <h5 ><a href="services.html">Our History</a></h5>
+                            <p>The sea freight service has grown conside rably in recent years. We spend timetting to know your processes to.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        {{-- <div class="cat-icon">
+                            <span class="flaticon-ship"></span>
+                        </div> --}}
+                        <div class="cat-cap">
+                            <h5 ><a href="services.html">Growth Proccess</a></h5>
+                            <p>The sea freight service has grown conside rably in recent years. We spend timetting to know your processes to.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        {{-- <div class="cat-icon">
+                            <span class="flaticon-plane"></span>
+                        </div> --}}
+                        <div class="cat-cap">
+                            <h5 ><a href="services.html">Our Milestone</a></h5>
+                            <p>The sea freight service has grown conside rably in recent years. We spend timetting to know your processes to.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    <!-- call to action End -->
+    </div>
+    <!-- About Area End -->
 
     <!--? Categories Area Start -->
-    {{-- <div class="categories-area section-padding30">
+    <div class="categories-area section-padding30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -102,21 +153,24 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- Categories Area End -->
 
-    <!--? About Area Start -->
-    {{-- <div class="about-low-area padding-bottom">
+    {{-- Our mission strat --}}
+    <div class="about-low-area padding-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="about-caption mb-50">
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-35">
-                            <span>About Our Company</span>
-                            <h2>Safe Logistic & Transport  Solutions That Saves our Valuable Time!</h2>
+                            <h2>Our Mission And Values</h2>
+                            <span>Mission</span>
                         </div>
                         <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for cular ts with unlimited ustomization possibilities. Pixel-perfect replication of the designers is intended.</p>
+                        <div class="section-tittle mb-35">
+                            <span>Values</span>
+                        </div>
                         <p>Brook presents your services with flexible, convefnient and chient anipurpose layouts. You can select your favorite layouts.</p>
                         <a href="about.html" class="btn">More About Us</a>
                     </div>
@@ -134,126 +188,11 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-    <!-- About Area End -->
-
-    <!--? contact-form start -->
-    {{-- <section class="contact-form-area section-bg  pt-115 pb-120 fix" data-background="assets_landing/img/gallery/section_bg02.jpg">
-        <div class="container">
-            <div class="row justify-content-end">
-                <!-- Contact wrapper -->
-                <div class="col-xl-8 col-lg-9">
-                    <div class="contact-form-wrapper">
-                        <!-- From tittle -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <!-- Section Tittle -->
-                                <div class="section-tittle mb-50">
-                                    <span>Get a Qote For Free</span>
-                                    <h2>Request a Free Quote</h2>
-                                    <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- form -->
-                        <form action="#" class="contact-form">
-                            <div class="row ">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Contact Number">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="select-items">
-                                        <select name="select" id="select1">
-                                            <option value="">Freight Type</option>
-                                            <option value="">Catagories One</option>
-                                            <option value="">Catagories Two</option>
-                                            <option value="">Catagories Three</option>
-                                            <option value="">Catagories Four</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="City of Departure">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Incoterms">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Weight">
-                                    </div>
-                                </div>
-                                <!-- Height Width length -->
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Height">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="Width">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="input-form">
-                                        <input type="text" placeholder="length">
-                                    </div>
-                                </div>
-                                <!-- Radio Button -->
-                                <div class="col-lg-12">
-                                    <div class="radio-wrapper mb-30 mt-15">
-                                        <label>Extra services:</label>
-                                        <div class="select-radio">
-                                            <div class="radio">
-                                                <input id="radio-1" name="radio" type="radio" checked="">
-                                                <label for="radio-1" class="radio-label">Freight</label>
-                                            </div>
-                                            <div class="radio">
-                                                <input id="radio-2" name="radio" type="radio">
-                                                <label for="radio-2" class="radio-label">Express Delivery</label>
-                                            </div>
-                                            <div class="radio">
-                                                <input id="radio-4" name="radio" type="radio">
-                                                <label for="radio-4" class="radio-label">Insurance</label>
-                                            </div>
-                                            <div class="radio">
-                                                <input id="radio-5" name="radio" type="radio">
-                                                <label for="radio-5" class="radio-label">Packaging</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Button -->
-                                <div class="col-lg-12">
-                                    <button name="submit" class="submit-btn">Request a Quote</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- contact-form end -->
+    </div>
+    {{-- Our mission end --}}
 
     <!--Team Ara Start -->
-    {{-- <div class="team-area section-padding30">
+    <div class="team-area section-padding30">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -327,9 +266,8 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- Team Ara End -->
-
 
     <!--? Testimonial Start -->
     <div class="testimonial-area testimonial-padding section-bg" data-background="assets_landing/img/gallery/section_bg04.jpg">
@@ -470,6 +408,68 @@
         </div>
     </div>
     <!-- Blog Area End -->
+
+    {{-- contact start --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-title" style="color: orangered">Get in Touch</h2>
+            </div>
+            <div class="col-lg-8">
+                <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                    <div class="media-body">
+                        <h3>Buttonwood, California.</h3>
+                        <p>Rosemead, CA 91770</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h3>+1 253 565 2365</h3>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                    <div class="media-body">
+                        <h3>support@colorlib.com</h3>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- contact end --}}
 </main>
 
 @endsection
