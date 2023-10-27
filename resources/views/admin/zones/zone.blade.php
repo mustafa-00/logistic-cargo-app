@@ -53,9 +53,12 @@
                                                     <th scope="row">{{ $item->id }}</th>
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->price }}</td>
-                                                    <td>
-                                                        <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+                                                    <td class="d-flex">
+                                                        <form action="{{ route('zone.destroy', $item->id) }}" method="POST">
+                                                            @csrf
+                                                            @method('delete')
+                                                            <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+                                                        </form>
                                                         <a href="{{ route('zone.show',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                     </td>
                                                 </tr>

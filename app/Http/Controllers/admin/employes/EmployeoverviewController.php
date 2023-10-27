@@ -15,8 +15,9 @@ class EmployeoverviewController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        // dd($request)->all();
         $employes = User::all();
         return view('admin.employes.employes_overview')->with('employes',$employes);
     }
@@ -91,6 +92,7 @@ class EmployeoverviewController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        User::find($id)->delete();
+        return back();
     }
 }
