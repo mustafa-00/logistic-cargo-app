@@ -29,7 +29,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="{{ route('home') }}"><img src="assets_landing/img/logo/logo.png" alt="logo"></a>
+                                <a href="{{ route('home') }}"><img src="assets_landing/img/logo/new.png" style="width:120px" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10">
