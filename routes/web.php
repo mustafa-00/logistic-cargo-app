@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\ZonesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Website_Custom\CalltoactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,7 @@ Route::get('about', [LandingController::class, 'about'])->name('about');
 Route::get('services', [LandingController::class, 'services'])->name('services');
 Route::get('contact', [LandingController::class, 'contact'])->name('contact');
 
-// Dashboard controllers
+/* Dashboard controllers */
 Route::resource('profile', ProfileController::class);
 Route::post('change_password/{id}', [ProfileController::class, 'change'])->name('change');
 Route::resource('employe_overview', EmployeoverviewController::class);
@@ -41,7 +42,11 @@ Route::resource('product', ProductController::class);
 Route::resource('order', OrderController::class);
 Route::resource('invoice', InvoiceController::class);
 Route::resource('zone', ZonesController::class);
+Route::resource('warehouse', WarehouseController::class);
+//website customization routes
+Route::resource('calltoaction', CalltoactionController::class );
+
+
 
 Auth::routes();
 Route::get('/dashboard', [DashboardController:: class, 'dashboard'])->name('dashboard');
-Route::resource('warehouse', WarehouseController::class);
