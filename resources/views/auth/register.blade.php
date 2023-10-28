@@ -41,7 +41,7 @@
                         @enderror
                       </div>
                     </div>
-                    
+
                   </div>
 
                   <div class="col-12">
@@ -72,20 +72,20 @@
                       <div class="col-6">
                       <div class="col-12">
                     <label for="yourEmail" class="form-label">zone_id</label>
-                    <input type="text" name="zone_id" class="form-control" id="yourEmail" value="{{ old('zone_id') }}">
+                    <input type="number" name="zone_id" class="form-control" id="yourEmail" value="{{ old('zone_id') }}">
                     @error('zone_id')
                         <div class="alert alert-danger">
                             {{ $message }}
                         </div>
                     @enderror
                   </div>
-                      
+
                       </div>
                       <div class="col-6">
-                      
+
                       </div>
                     </div>
-                    
+
                   </div>
 
                   <div class="col-12">
@@ -105,7 +105,7 @@
                     <div class="invalid-feedback">Please enter your password!</div>
                       </div>
                     </div>
-                    
+
                   </div>
 
                   <div class="col-6">

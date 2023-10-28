@@ -61,10 +61,10 @@
                                                                     <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
                                                                         data-bs-placement="top"
                                                                         class="avatar avatar-xs pull-up"
-                                                                        title="Lilian Fuller">
-                                                                        <img src="../assets_employe/img/avatars/5.png"
-                                                                            style="width: 40px" alt="Avatar"
-                                                                            class="rounded-circle" />
+                                                                        title="{{ $item->name }}">
+                                                                        <img src="{{ asset('images/users') }}/{{ $item->profile_photo_path }}"
+                                                                        style="width: 35px" alt="Avatar"
+                                                                        class="rounded-circle" />
                                                                     </li>
                                                                 </ul>
                                                             </td>

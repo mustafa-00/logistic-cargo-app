@@ -21,7 +21,7 @@
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="assets_admin/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <img src="{{ asset('images/users') }}/{{ $profile[0]->profile_photo_path }}" alt="Profile" class="rounded-circle">
               <h2>{{ $profile[0]->name }}</h2>
               <h3>{{$profile[0]->role}}</h3>
               <div class="social-links mt-2">
@@ -102,7 +102,7 @@
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="{{ asset('images/users') }}/{{ $profile[0]->profile_photo_path }}" alt="Profile">
+                        <img src="{{ asset('images/users') }}/{{ $profile[0]->profile_photo_path }}" alt="Profile" style="margin: 10px">
                         <input type="file" class="form-control" name="image" id="image" accept="image/*">
                       </div>
                     </div>
