@@ -94,7 +94,7 @@
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form method="POST" action="{{ route('profile.update', $profile[0]->id) }}">
+                  <form method="POST" action="{{ route('profile.update', $profile[0]->id) }}" enctype="multipart/form-data">
                     @csrf
                     @if (isset($profile))
                         @method('put')
@@ -102,8 +102,8 @@
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <input type="file" class="form-control" id="image" accept="image/*">
+                        <img src="{{ asset('images/users') }}/{{ $profile[0]->profile_photo_path }}" alt="Profile">
+                        <input type="file" class="form-control" name="image" id="image" accept="image/*">
                       </div>
                     </div>
 

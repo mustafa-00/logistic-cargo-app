@@ -80,6 +80,7 @@ class RegisterController extends Controller
             'DoB' => $data['DoB'],
             // 'role' => $data['role'],
             'zone_id' => $data['zone_id'],
+            'profile_photo_path' => 'default_image.png',
             'password' => Hash::make($data['password']),
         ]);
 

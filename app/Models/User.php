@@ -25,6 +25,7 @@ class User extends Authenticatable
         'role',
         'zone_id',
         'password',
+        'profile_photo_path',
     ];
 
     /**

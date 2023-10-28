@@ -24,16 +24,28 @@ class ProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        // $request->validate([
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'image' => ['required', 'mimes:jpg, jpeg'],
+        // ]);
         $user = User::find($id);
-        // dd($request->name);
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'DoB' => $request->DoB,
-            'role' => $request->role,
-            'zone_id' => $request->zone_id
-        ]);
+      
+
+        $filename = uniqid().'.'. $request->image->extension();
+        $out = $request->image->storeAs('images/users', $filename);
+
+        if($out){
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'DoB' => $request->DoB,
+                'role' => $request->role,
+                'zone_id' => $request->zone_id,
+                'profile_photo_path' => $filename,
+            ]);
+        }
+       
         session()->flash('success','Record has been updated succesfully');
         return redirect()->back();
     }
