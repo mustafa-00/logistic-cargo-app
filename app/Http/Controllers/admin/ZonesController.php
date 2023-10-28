@@ -75,10 +75,9 @@ class ZonesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request, string $id)
+    public function destroy(string $id)
     {
-        dd($request)->all();
-        // zone::find($id)->delete();
-        // return back();
+        zone::find($id)->delete();
+        return back();
     }
 }

@@ -46,9 +46,12 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @php
+                                                        $count = 1;
+                                                    @endphp
                                                     @foreach ($employes as $item)
                                                         <tr>
-                                                            <th scope="row">{{ $item->id }}</th>
+                                                            <th scope="row">{{ $count }}</th>
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->email }}</td>
                                                             <td>{{ $item->role }}</td>
@@ -60,20 +63,28 @@
                                                                         class="avatar avatar-xs pull-up"
                                                                         title="Lilian Fuller">
                                                                         <img src="../assets_employe/img/avatars/5.png"
-                                                                        style="width: 40px" alt="Avatar"
-                                                                        class="rounded-circle" />
+                                                                            style="width: 40px" alt="Avatar"
+                                                                            class="rounded-circle" />
                                                                     </li>
                                                                 </ul>
                                                             </td>
                                                             <td>
-                                                            <form action="{{ route('employe_overview.destroy', $item->id) }}" method="POST">
+                                                                <a href="{{ route('employe_overview.destroy', $item->id) }}"
+                                                                    onclick="event.preventDefault(); document.getElementById('User-{{ $item->id }}').submit();"
+                                                                    title="Delete"><i class="bx bx-trash-alt me-1"
+                                                                        style="font-size: 20px"></i></a>
+                                                                <a href="{{ route('employe_overview.show', $item->id) }}"
+                                                                    title="View"><i class="bx bx-show-alt me-1"
+                                                                        style="font-size: 20px"></i></a>
+                                                            </td>
+                                                            <form id="User-{{ $item->id }}"
+                                                                action="{{ route('employe_overview.destroy', $item->id) }}"
+                                                                method="POST">
                                                                 @csrf
                                                                 @method('delete')
-                                                                <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                             </form>
-                                                            <a href="{{ route('employe_overview.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
-                                                            </td>
                                                         </tr>
+                                                        @php $count++ @endphp
                                                     @endforeach
                                                 </tbody>
                                             </table>

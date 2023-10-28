@@ -1,5 +1,5 @@
 @extends('layouts.guest')
-
+@php $title = "Register"; @endphp
 @section('content')
 
 <div class="container">

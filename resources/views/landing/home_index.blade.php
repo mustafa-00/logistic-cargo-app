@@ -55,7 +55,7 @@
     <!-- call to action End -->
 
     <!--? About Area Start -->
-    <div class="categories-area section-padding30">
+    <div id="about" class="categories-area section-padding30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -106,7 +106,7 @@
     <!-- About Area End -->
 
     <!--? Categories Area Start -->
-    <div class="categories-area section-padding30">
+    <div id="service" class="categories-area section-padding30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -167,7 +167,9 @@
                             <h2>Our Mission And Values</h2>
                             <span>Mission</span>
                         </div>
-                        <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for cular ts with unlimited ustomization possibilities. Pixel-perfect replication of the designers is intended.</p>
+                        <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for cular ts with unlimited ustomization possibilities. Pixel-perfect replication of the designers is intended.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, illo. Nemo, molestiae obcaecati facere sint pariatur soluta incidunt cum fuga dolores, perspiciatis ea distinctio eveniet velit a necessitatibus aliquam perferendis.
+                        </p>
                         <div class="section-tittle mb-35">
                             <span>Values</span>
                         </div>
@@ -410,7 +412,7 @@
     <!-- Blog Area End -->
 
     {{-- contact start --}}
-    <div class="container">
+    <div id="contact" class="container">
         <div class="row">
             <div class="col-12">
                 <h2 class="contact-title" style="color: orangered">Get in Touch</h2>

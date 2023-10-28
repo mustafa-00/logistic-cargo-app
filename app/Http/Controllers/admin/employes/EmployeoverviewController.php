@@ -92,6 +92,7 @@ class EmployeoverviewController extends Controller
      */
     public function destroy(string $id)
     {
+        // dd($id);
         User::find($id)->delete();
         return back();
     }

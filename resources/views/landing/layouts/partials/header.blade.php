@@ -39,9 +39,9 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="{{ route('home') }}">Home</a></li>
-                                            <li><a href="{{ route('home') }}">About</a></li>
-                                            <li><a href="{{ route('home') }}">Services</a></li>
-                                            <li><a href="{{ route('home') }}">Contact</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#service">Services</a></li>
+                                            <li><a href="#contact">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>

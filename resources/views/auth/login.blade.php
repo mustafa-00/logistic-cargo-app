@@ -1,3 +1,4 @@
+@php $title = "Login"; @endphp
 @extends('layouts.guest')
 
 @section('content')
