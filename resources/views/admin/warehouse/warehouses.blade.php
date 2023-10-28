@@ -59,7 +59,7 @@
                                                             <td>{{ $item->address }}</td>
                                                             <td>{{ $item->capacity }}</td>
                                                             <td>
-                                                            {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
+                                                            <a href="{{ route('warehouse.edit', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
                                                             <a href="{{ route('warehouse.destroy', $item->id) }}"
                                                                  onclick="event.preventDefault(); document.getElementById('warehouse-{{ $item->id }}').submit();"
                                                                  title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>

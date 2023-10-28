@@ -29,8 +29,6 @@ class ProfileController extends Controller
         //     'image' => ['required', 'mimes:jpg, jpeg'],
         // ]);
         $user = User::find($id);
-
-
         $filename = uniqid().'.'. $request->image->extension();
         $out = $request->image->storeAs('images/users', $filename);
 

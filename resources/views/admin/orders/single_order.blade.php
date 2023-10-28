@@ -4,7 +4,6 @@
 <main class="main" id="main">
     <div class="pagetitle">
         <h1>Single Order Page</h1>
-        @include('common.alertmessage')
         <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
@@ -20,7 +19,7 @@
 
             <div class="card">
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                {{-- <img src="assets_admin/img/profile-img.jpg" alt="Profile" class="rounded-circle"> --}}
+                <img src="{{ asset('images/users') }}/{{ $order->order_photo_path }}" alt="Profile" class="rounded-circle">
                 <h2>{{ $order->name }}</h2>
               </div>
             </div>
@@ -48,12 +47,20 @@
                   <div class="tab-pane fade show active profile-overview" id="profile-overview">
                     <h5 class="card-title">Order Details</h5>
 
-                      <div class="row">
-                          <div class="col-lg-3 col-md-4 label ">Id</div>
-                          <div class="col-lg-9 col-md-8">{{ $order->id }}</div>
-                      </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Id</div>
+                        <div class="col-lg-9 col-md-8">{{ $order->id }}</div>
+                    </div>
 
-                      <div class="row">
+                    <div class="row">
+                        <label for="profileImage" class="col-lg-3 col-md-4 label">Product Image</label>
+                        <div class="col-md-8 col-lg-9">
+                          <img src="{{ asset('images/users') }}/{{ $order->order_photo_path }}" alt="Profile" style="margin: 10px">
+                          {{-- <input type="file" class="form-control" name="image" id="image" accept="image/*"> --}}
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-lg-3 col-md-4 label ">Name</div>
                         <div class="col-lg-9 col-md-8">{{ $order->name }}</div>
                     </div>
@@ -137,18 +144,18 @@
                   <!-- Profile Edit Form -->
                   <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                    <form method="POST" action="{{ route('order.update', $order->id) }}">
+                    <form method="POST" action="{{ route('order.update', $order->id) }}" enctype="multipart/form-data>
                       @csrf
                       @if (isset($order))
                           @method('put')
                       @endif
-                      {{-- <div class="row mb-3">
-                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                      <div class="row">
+                        <label for="profileImage" class="col-lg-3 col-md-4 label">Product Image</label>
                         <div class="col-md-8 col-lg-9">
-                          <img src="assets/img/profile-img.jpg" alt="Profile">
-                          <input type="file" class="form-control" id="image" accept="image/*">
+                          <img src="{{ asset('images/users') }}/{{ $order->order_photo_path }}" alt="Profile" style="margin: 10px">
+                          <input type="file" class="form-control" name="image" id="image" accept="image/*">
                         </div>
-                      </div> --}}
+                      </div>
 
                       <div class="row mb-3">
                         <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>

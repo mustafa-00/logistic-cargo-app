@@ -60,7 +60,11 @@ class WarehouseController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $warehouses = Warehouse::all();
+        return view('admin.warehouse.edit_warehouse',compact('warehouses'));
+
+        // $warehouses = Warehouse::where('warehouse_id', $id)->get();
+        // return view('admin.warehouse.edit_warehouse', compact('warehouses'));
     }
 
     /**
@@ -68,7 +72,14 @@ class WarehouseController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $user = Warehouse::find($id);
+        $user->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'capacity' => $request->capacity
+        ]);
 
+        return redirect()->back();
     }
 
     /**

@@ -75,24 +75,31 @@ class OrderController extends Controller
     public function update(Request $request, string $id)
     {
         $user = Order::find($id);
-        $user->update([
-            'name' => $request->name,
-            'short_description' => $request->short_description,
-            'quantity' => $request->quantity,
-            'width' => $request->width,
-            'weight' => $request->weight,
-            'height' => $request->height,
-            'lenght' => $request->lenght,
-            'image' => $request->image,
-            'source_address' => $request->source_address,
-            'destination_address' => $request->destination_address,
-            'date' => $request->date,
-            'price' => $request->price,
-            'status' => $request->status,
-            'zone_id' => $request->zone_id,
-            'user_id' => $request->user_id,
-            'warehouse_id' => $request->warehouse_id
-        ]);
+        $filename = uniqid().'.'. $request->image->extension();
+        $out = $request->image->storeAs('images/users', $filename);
+
+        if($out){
+            $user->update([
+                'name' => $request->name,
+                'short_description' => $request->short_description,
+                'quantity' => $request->quantity,
+                'width' => $request->width,
+                'weight' => $request->weight,
+                'height' => $request->height,
+                'lenght' => $request->lenght,
+                // 'image' => $request->image,
+                'order_photo_path' => $filename,
+                'source_address' => $request->source_address,
+                'destination_address' => $request->destination_address,
+                'date' => $request->date,
+                'price' => $request->price,
+                'status' => $request->status,
+                'zone_id' => $request->zone_id,
+                'user_id' => $request->user_id,
+                'warehouse_id' => $request->warehouse_id
+            ]);
+        }
+
         session()->flash('success','Record has been updatede successfuly!');
         return redirect()->back();
     }
