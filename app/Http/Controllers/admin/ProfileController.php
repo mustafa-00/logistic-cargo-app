@@ -24,10 +24,16 @@ class ProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'image' => ['required', 'mimes:jpg, jpeg'],
-        // ]);
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'image' => ['required', 'mimes:jpg, jpeg'],
+            'email' => 'required|email',
+            'phone' => 'required|numeric|min:9',
+            'DoB' => 'required',
+            'role' => 'required',
+            'zone_id' => 'required|numeric'
+        ]);
+
         $user = User::find($id);
         $filename = uniqid().'.'. $request->image->extension();
         $out = $request->image->storeAs('images/users', $filename);
