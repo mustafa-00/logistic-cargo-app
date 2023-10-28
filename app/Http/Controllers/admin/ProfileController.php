@@ -29,7 +29,7 @@ class ProfileController extends Controller
         //     'image' => ['required', 'mimes:jpg, jpeg'],
         // ]);
         $user = User::find($id);
-      
+
 
         $filename = uniqid().'.'. $request->image->extension();
         $out = $request->image->storeAs('images/users', $filename);
@@ -45,7 +45,7 @@ class ProfileController extends Controller
                 'profile_photo_path' => $filename,
             ]);
         }
-       
+
         session()->flash('success','Record has been updated succesfully');
         return redirect()->back();
     }

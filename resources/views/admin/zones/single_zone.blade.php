@@ -14,8 +14,6 @@
 
     <section class="section profile">
         <div class="row">
-
-
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body pt-3">
@@ -56,8 +54,8 @@
                                                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
                                                                     data-bs-placement="top"
                                                                     class="avatar avatar-xs pull-up"
-                                                                    title="Lilian Fuller">
-                                                                    <img src="../assets_employe/img/avatars/5.png"
+                                                                    title="{{ $item->name }}">
+                                                                    <img src="{{ asset('images/users') }}/{{ $item->profile_photo_path }}"
                                                                     style="width: 40px" alt="Avatar"
                                                                     class="rounded-circle" />
                                                                 </li>

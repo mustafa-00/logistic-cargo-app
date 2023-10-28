@@ -23,7 +23,7 @@
                             {{-- overview --}}
                             <li class="nav-item col-8">
                                 <button class="nav-link active" data-bs-toggle="tab"
-                                data-bs-target="#profile-overview">Overview</button>
+                                data-bs-target="#profile-overview">OrderOverview</button>
                             </li>
                             <li class="nav-item col-4">
                                 <a href="{{ route('order.create') }}" class="nav-link"><button class="btn btn-primary">Add New Order</button></a>
@@ -49,9 +49,12 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @php
+                                                    $count = 1;
+                                                @endphp
                                                 @foreach ($orders as $item)
                                                     <tr>
-                                                        <th scope="row">{{ $item->id }}</th>
+                                                        <th scope="row">{{ $count }}</th>
                                                         <td>{{ $item->name }}</td>
                                                         <td>{{ $item->quantity }}</td>
                                                         <td>{{ $item->date }}</td>
@@ -59,10 +62,22 @@
                                                         <td>{{ $item->destination_address }}</td>
                                                         <td>
                                                         {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
-                                                        <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="{{ route('order.destroy',$item->id) }}"
+                                                            onclick="event.preventDefault(); document.getElementById('order-{{ $item->id }}').submit();"
+                                                            title="Delete"><i class="bx bx-trash-alt me-1"
+                                                            style="font-size: 20px"></i></a>
                                                         <a href="{{ route('order.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>
+                                                        <form id="order-{{ $item->id }}"
+                                                            action="{{ route('order.destroy',$item->id) }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('delete')
+                                                        </form>
                                                     </tr>
+                                                @php
+                                                    $count++;
+                                                @endphp
                                                 @endforeach
                                             </tbody>
                                         </table>

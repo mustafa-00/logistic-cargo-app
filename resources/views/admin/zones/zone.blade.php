@@ -25,7 +25,7 @@
                             {{-- overview --}}
                             <li class="nav-item col-8">
                                 <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#profile-overview">Overview</button>
+                                    data-bs-target="#profile-overview">Zone Overview</button>
                             </li>
                             <li class="col-4">
                                 <a href="{{ route('zone.create') }}" class="nav-link"><button class="btn btn-primary">Add New Zone</button></a>

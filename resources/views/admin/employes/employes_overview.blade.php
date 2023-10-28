@@ -24,7 +24,7 @@
                                 {{-- overview --}}
                                 <li class="nav-item">
                                     <button class="nav-link active" data-bs-toggle="tab"
-                                        data-bs-target="#profile-overview">Overview</button>
+                                        data-bs-target="#profile-overview">Employes Overview</button>
                                 </li>
                             </ul>
                             <div class="tab-content pt-2">

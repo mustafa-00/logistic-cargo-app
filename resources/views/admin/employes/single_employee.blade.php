@@ -21,7 +21,7 @@
         <div class="card">
           <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-            <img src="assets_admin/img/avatars-1.png" alt="Profile" class="rounded-circle">
+            <img src="{{ asset('images/users') }}/{{ $employee->profile_photo_path }}" alt="Profile" class="rounded-circle">
             <h2>{{ $employee->name }}</h2>
             <h3>{{$employee->role}}</h3>
             <div class="social-links mt-2">
@@ -59,7 +59,6 @@
 
               <div class="tab-pane fade show active profile-overview" id="profile-overview">
                 <h5 class="card-title">Profile Details</h5>
-
                   <div class="row">
                       <div class="col-lg-3 col-md-4 label ">Name</div>
                       <div class="col-lg-9 col-md-8">{{ $employee->name }}</div>
@@ -94,18 +93,18 @@
               <!-- Profile Edit Form -->
               <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                <form method="POST" action="{{ route('profile.update', $employee->id) }}">
+                <form method="POST" action="{{ route('profile.update', $employee->id) }}" enctype="multipart/form-data">
                   @csrf
                   @if (isset($employee))
                       @method('put')
                   @endif
-                  {{-- <div class="row mb-3">
+                  <div class="row mb-3">
                     <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                     <div class="col-md-8 col-lg-9">
-                      <img src="assets/img/profile-img.jpg" alt="Profile">
-                      <input type="file" class="form-control" id="image" accept="image/*">
+                      <img src="{{ asset('images/users') }}/{{ $employee->profile_photo_path }}" alt="Profile" style="margin: 10px">
+                      <input type="file" class="form-control" name="image" id="image" accept="image/*">
                     </div>
-                  </div> --}}
+                  </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>

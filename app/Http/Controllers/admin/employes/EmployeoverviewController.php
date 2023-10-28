@@ -61,14 +61,22 @@ class EmployeoverviewController extends Controller
     public function update(Request $request, string $id)
     {
         $user = User::find($id);
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'DoB' => $request->DoB,
-            'role' => $request->role,
-            'zone_id' => $request->zone_id
-        ]);
+
+        $filename = uniqid().'.'. $request->image->extension();
+        $out = $request->image->storeAs('images/users', $filename);
+
+        if($out){
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'DoB' => $request->DoB,
+                'role' => $request->role,
+                'zone_id' => $request->zone_id,
+                'profile_photo_path' => $filename,
+            ]);
+        }
+
         session()->flash('success','Record has been updatede successfuly!');
         return redirect()->back();
     }

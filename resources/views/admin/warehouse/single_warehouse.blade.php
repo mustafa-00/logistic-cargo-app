@@ -23,7 +23,7 @@
 
                             <li class="nav-item">
                                 <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#profile-overview">Employees Overview</button>
+                                    data-bs-target="#profile-overview">Order Overview</button>
                             </li>
                         </ul>
                         <div class="tab-content pt-2">

@@ -68,7 +68,7 @@ class WarehouseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-       
+
     }
 
     /**
@@ -76,6 +76,7 @@ class WarehouseController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Warehouse::find($id)->delete();
+        return back();
     }
 }

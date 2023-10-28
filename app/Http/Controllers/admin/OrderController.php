@@ -102,6 +102,7 @@ class OrderController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Order::find($id)->delete();
+        return back();
     }
 }

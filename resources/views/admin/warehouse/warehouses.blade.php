@@ -25,7 +25,7 @@
                                 {{-- overview --}}
                                 <li class="nav-item col-8">
                                     <button class="nav-link active" data-bs-toggle="tab"
-                                        data-bs-target="#profile-overview">Overview</button>
+                                        data-bs-target="#profile-overview">Warehouse Overview</button>
                                 </li>
                                 <li class="col-4">
                                     <a href="{{ route('warehouse.create') }}" class="nav-link"><button class="btn btn-primary">Add New Warehouse</button></a>
@@ -49,18 +49,30 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @php
+                                                        $count = 1;
+                                                    @endphp
                                                     @foreach ($warehouses as $item)
                                                         <tr>
-                                                            <th scope="row">{{ $item->id }}</th>
+                                                            <th scope="row">{{ $count }}</th>
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->address }}</td>
                                                             <td>{{ $item->capacity }}</td>
                                                             <td>
                                                             {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
-                                                            <a href="" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+                                                            <a href="{{ route('warehouse.destroy', $item->id) }}"
+                                                                 onclick="event.preventDefault(); document.getElementById('warehouse-{{ $item->id }}').submit();"
+                                                                 title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                             <a href="{{ route('warehouse.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                             </td>
+                                                            <form id="warehouse-{{ $item->id }}"
+                                                                action="{{ route('warehouse.destroy',$item->id) }}"
+                                                                method="POST">
+                                                                @csrf
+                                                                @method('delete')
+                                                            </form>
                                                         </tr>
+                                                        @php $count++ @endphp
                                                     @endforeach
                                                 </tbody>
                                             </table>
