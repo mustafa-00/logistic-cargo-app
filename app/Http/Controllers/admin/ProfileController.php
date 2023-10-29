@@ -24,19 +24,18 @@ class ProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'image' => ['required', 'mimes:jpg, jpeg'],
-            'email' => 'required|email',
-            'phone' => 'required|numeric|min:9',
-            'DoB' => 'required',
-            'role' => 'required',
-            'zone_id' => 'required|numeric'
-        ]);
-
         $user = User::find($id);
-        $filename = uniqid().'.'. $request->image->extension();
-        $out = $request->image->storeAs('images/users', $filename);
+        $filename = 'default_image.png';
+        $out = '';
+
+        if($user->profile_photo_path === $filename){
+            $filename = uniqid().'.'. $request->image->extension();
+            $out = $request->image->storeAs('images/users', $filename);
+        }else {
+            $filename = uniqid().'.'. $request->image->extension();
+            $out = $request->image->storeAs('images/users', $filename);
+            unlink(public_path('images/users/').$user->profile_photo_path);
+        }
 
         if($out){
             $user->update([
