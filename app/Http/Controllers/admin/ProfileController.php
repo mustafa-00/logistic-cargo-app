@@ -28,26 +28,27 @@ class ProfileController extends Controller
         $filename = 'default_image.png';
         $out = '';
 
-        if($user->profile_photo_path === $filename){
+        if($user->profile_photo_path === $filename && $_FILES['image']['name'] !== ""){
             $filename = uniqid().'.'. $request->image->extension();
             $out = $request->image->storeAs('images/users', $filename);
-        }else {
+        } else if($_FILES['image']['name']) {
             $filename = uniqid().'.'. $request->image->extension();
             $out = $request->image->storeAs('images/users', $filename);
-            unlink(public_path('images/users/').$user->profile_photo_path);
+            if($out && $user->profile_photo_path !== 'default_image.png'){
+                unlink(public_path('images/users/').$user->profile_photo_path);
+            }
         }
 
-        if($out){
-            $user->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'phone' => $request->phone,
-                'DoB' => $request->DoB,
-                'role' => $request->role,
-                'zone_id' => $request->zone_id,
-                'profile_photo_path' => $filename,
-            ]);
-        }
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'DoB' => $request->DoB,
+            'role' => $request->role,
+            'zone_id' => $request->zone_id,
+            'profile_photo_path' => $filename,
+        ]);
+
 
         session()->flash('success','Record has been updated succesfully');
         return redirect()->back();

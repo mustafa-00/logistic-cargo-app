@@ -15,9 +15,9 @@
     <!-- Profile Edit Form -->
     <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-        <form method="POST" action="{{ route('warehouse.edit', $warehouses[0]->id) }}">
+        <form method="POST" action="{{ route('warehouse.edit', $warehouse->id) }}">
           @csrf
-          @if (isset($warehouses))
+          @if (isset($warehouse))
               @method('put')
           @endif
 
@@ -25,21 +25,21 @@
           <div class="row mb-3">
             <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>
             <div class="col-md-8 col-lg-9">
-              <input name="name" type="text" class="form-control" id="fullName" value="{{ $warehouses[0]->name }}">
+              <input name="name" type="text" class="form-control" id="fullName" value="{{ $warehouse->name }}">
             </div>
           </div>
 
           <div class="row mb-3">
               <label for="Email" class="col-md-4 col-lg-3 col-form-label">Address</label>
               <div class="col-md-8 col-lg-9">
-                <input name="address" type="text" class="form-control" id="Email" value="{{$warehouses[0]->address}}">
+                <input name="address" type="text" class="form-control" id="Email" value="{{$warehouse->address}}">
               </div>
           </div>
 
           <div class="row mb-3">
               <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Capacity</label>
               <div class="col-md-8 col-lg-9">
-                <input name="capacity" type="number" class="form-control" id="Phone" value="{{$warehouses[0]->capacity}}">
+                <input name="capacity" type="number" class="form-control" id="Phone" value="{{$warehouse->capacity}}">
               </div>
           </div>
 

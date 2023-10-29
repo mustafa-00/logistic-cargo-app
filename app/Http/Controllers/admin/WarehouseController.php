@@ -60,8 +60,8 @@ class WarehouseController extends Controller
      */
     public function edit(string $id)
     {
-        $warehouses = Warehouse::all();
-        return view('admin.warehouse.edit_warehouse',compact('warehouses'));
+        $warehouse = Warehouse::find($id);
+        return view('admin.warehouse.edit_warehouse',compact('warehouse'));
 
         // $warehouses = Warehouse::where('warehouse_id', $id)->get();
         // return view('admin.warehouse.edit_warehouse', compact('warehouses'));

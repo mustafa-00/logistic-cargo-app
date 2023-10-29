@@ -144,15 +144,13 @@
                   <!-- Profile Edit Form -->
                   <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                    <form method="POST" action="{{ route('order.update', $order->id) }}" enctype="multipart/form-data>
+                    <form method="POST" action="{{ route('order.update', $order->id) }}" enctype="multipart/form-data">
                       @csrf
-                      @if (isset($order))
-                          @method('put')
-                      @endif
+                      @method('put')
                       <div class="row">
                         <label for="profileImage" class="col-lg-3 col-md-4 label">Product Image</label>
                         <div class="col-md-8 col-lg-9">
-                          <img src="{{ asset('images/users') }}/{{ $order->order_photo_path }}" alt="Profile" style="margin: 10px">
+                          <img src="{{ asset('images/orders') }}/{{ $order->image }}" alt="Profile" style="margin: 10px">
                           <input type="file" class="form-control" name="image" id="image" accept="image/*">
                         </div>
                       </div>
