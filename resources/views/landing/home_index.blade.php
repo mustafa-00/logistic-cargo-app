@@ -88,18 +88,14 @@
     <!--? call to action Start -->
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-xl-5 col-lg-5 col-md-8">
-                <div class="testimonial-form text-center">
-                    <h3>Always listening, always understanding.</h3>
-                    <button type="button" name="submit" class="btn header-btn">Request a Quote</button>
+            @foreach ($calltoaction as $item)
+                <div class="col-xl-5 col-lg-5 col-md-8">
+                    <div class="testimonial-form text-center">
+                        <h3>{{ $item->tittle }}</h3>
+                        <button type="button" name="submit" class="btn header-btn">{{ $item->button }}</button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-5 col-lg-5 col-md-8">
-                <div class="testimonial-form text-center">
-                    <h3>Always listening, always understanding.</h3>
-                    <button type="button" name="submit" class="btn header-btn">Ship Now</button>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <!-- call to action End -->

@@ -19,26 +19,39 @@
             <div class="card-body">
                 <h5 class="card-title">Store your data here</h5>
 
-                <form class="row g-3" action="{{ route('calltoaction.store') }}" method="POST">
+                <form class="row g-3" action="{{ isset($calltoaction) ? route('calltoaction.update', $calltoaction->id) : route('calltoaction.store') }}" method="POST">
                     @csrf
+                    @if (isset($calltoaction))
+                        @method('put')
+                    @endif
                     <div class="col-md-6">
                         <div class="form-floating">
                             <input type="text" name="tittle" class="form-control" id="floatingName"
-                                placeholder="Your Tittle">
+                                placeholder="Your Tittle" value="{{ isset($calltoaction) ? $calltoaction->tittle : null }}">
                             <label for="floatingName">Tittle</label>
+                            @error('tittle')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-floating">
                             <input type="text" name="button" class="form-control" id="floatingButton"
-                                placeholder="Your Button">
+                                placeholder="Your Button" value="{{ isset($calltoaction) ? $calltoaction->button : null }}">
                             <label for="floatingButton">Button</label>
+                            @error('button')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn {{ isset($calltoaction) ? "btn-success" : "btn-primary" }}">{{ isset($calltoaction) ?'UPDATE' : 'STORE'}}</button>
                         <button type="reset" class="btn btn-secondary">Reset</button>
                     </div>
                 </form>
@@ -61,15 +74,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>
-                                <button class="btn btn-danger rounded-pill">Delete</button>
-                                <button class="btn btn-success rounded-pill">Edit</button>
-                            </td>
-                        </tr>
+                        @php
+                            $count = 1;
+                        @endphp
+                        @foreach ($calltoactions as $item)
+                            <tr>
+                                <th scope="row">{{ $count }}</th>
+                                <td>{{ $item->tittle }}</td>
+                                <td>{{ $item->button }}</td>
+                                <td class="d-flex">
+                                    <form action="{{ route('calltoaction.destroy', $item->id) }}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger rounded-pill">Delete</button>
+                                    </form>
+                                    <a href="{{ route('calltoaction.edit', $item->id) }}"><button class="btn btn-success rounded-pill">Edit</button></a>
+                                </td>
+                            </tr>
+                        @php
+                            $count++;
+                        @endphp
+                        @endforeach
                     </tbody>
                 </table>
             </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Website_Custom;
 
 use App\Http\Controllers\Controller;
+use App\Models\Calltoaction;
 use Illuminate\Http\Request;
 
 class CalltoactionController extends Controller
@@ -12,7 +13,8 @@ class CalltoactionController extends Controller
      */
     public function index()
     {
-        return view('admin.Website_Custom.calltoaction');
+        $calltoactions = Calltoaction::all();
+        return view('admin.Website_Custom.calltoaction',compact('calltoactions'));
     }
 
     /**
@@ -28,7 +30,17 @@ class CalltoactionController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'tittle' => 'required|min:10|max:255',
+            'button' => 'required|min:5|max:100'
+        ]);
 
+        Calltoaction::create([
+            'tittle' => $request->tittle,
+            'button' => $request->button,
+        ]);
+
+        return back();
     }
 
     /**
@@ -42,17 +54,24 @@ class CalltoactionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Calltoaction $calltoaction)
     {
-        //
+        $calltoactions = Calltoaction::all();
+        return view('admin.Website_Custom.calltoaction',compact('calltoaction','calltoactions'));
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Calltoaction $calltoaction)
     {
-        //
+        $calltoaction->update([
+            'tittle' => $request->tittle,
+            'button' => $request->button
+        ]);
+
+        return redirect()->route('calltoaction.index');
     }
 
     /**
@@ -60,6 +79,7 @@ class CalltoactionController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Calltoaction::find($id)->delete();
+        return redirect()->back();
     }
 }
