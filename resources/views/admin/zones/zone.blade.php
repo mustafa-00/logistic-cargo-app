@@ -58,8 +58,9 @@
                                                         <form id="zone-{{ $item->id }}" action="{{ route('zone.destroy', $item->id) }}" method="POST">
                                                             @csrf
                                                             @method('delete')
-                                                            <a href="{{ route('zone.destroy', $item->id) }}" onclick="event.preventDefault(); document.getElementById('zone-{{ $item->id }}').submit();" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                         </form>
+                                                        <a href="{{ route('zone.edit', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="{{ route('zone.destroy', $item->id) }}" onclick="event.preventDefault(); document.getElementById('zone-{{ $item->id }}').submit();" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="{{ route('zone.show',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                     </td>
                                                 </tr>

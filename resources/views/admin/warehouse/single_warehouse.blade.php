@@ -61,7 +61,7 @@
                                                                 data-bs-placement="top"
                                                                 class="avatar avatar-xs pull-up"
                                                                 title="Lilian Fuller">
-                                                                <img src="../assets_employe/img/avatars/5.png"
+                                                                <img src="{{ asset('images/orders') }}/{{ $item->order_photo_path }}"
                                                                 style="width: 40px" alt="Avatar"
                                                                 class="rounded-circle" />
                                                             </li>

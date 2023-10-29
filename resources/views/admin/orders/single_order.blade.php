@@ -19,7 +19,7 @@
 
             <div class="card">
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                <img src="{{ asset('images/users') }}/{{ $order->order_photo_path }}" alt="Profile" class="rounded-circle">
+                <img src="{{ asset('images/orders') }}/{{ $order->order_photo_path }}" alt="Profile" class="rounded-circle">
                 <h2>{{ $order->name }}</h2>
               </div>
             </div>
@@ -73,11 +73,6 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">quantity</div>
                         <div class="col-lg-9 col-md-8">{{$order->quantity}}</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 label">Price</div>
-                        <div class="col-lg-9 col-md-8">{{$order->price}}</div>
                     </div>
 
                     <div class="row">

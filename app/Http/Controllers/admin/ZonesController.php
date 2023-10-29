@@ -59,9 +59,11 @@ class ZonesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request, string $id)
     {
-        //
+        // dd($id);
+        $zone = zone::find($id);
+        return view('admin.zones.edit-zone',compact('zone'));
     }
 
     /**
