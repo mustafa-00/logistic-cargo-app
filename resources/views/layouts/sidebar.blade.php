@@ -23,8 +23,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="tables-data.html">
-                            <i class="bi bi-circle"></i><span>Call To Action</span>
+                        <a href="{{ route('aboutus.index') }}">
+                            <i class="bi bi-circle"></i><span>About Us</span>
                         </a>
                     </li>
                 </ul>

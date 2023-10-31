@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Landing;
 
 use App\Http\Controllers\Controller;
+use App\Models\Aboutus;
 use App\Models\Calltoaction;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class LandingController extends Controller
     public function index()
     {
         $calltoaction = Calltoaction::all();
-        return view('landing.home_index',compact('calltoaction'));
+        $aboutus = Aboutus::all();
+        return view('landing.home_index',compact('calltoaction','aboutus'));
     }
 
     public function about(){
