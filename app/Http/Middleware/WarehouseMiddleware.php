@@ -19,7 +19,7 @@ class WarehouseMiddleware
     {
         $warehouses = Warehouse::all();
         View::share('warehouses', $warehouses);
-        
+
         return $next($request);
     }
 }

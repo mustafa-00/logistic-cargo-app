@@ -71,7 +71,13 @@ class ZonesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $zone = zone::find($id);
+        $zone->update([
+            'name' => $request->name,
+            'price' => $request->price,
+        ]);
+
+        return redirect()->route('zone.index');
     }
 
     /**

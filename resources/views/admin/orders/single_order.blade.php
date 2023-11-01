@@ -19,7 +19,7 @@
 
             <div class="card">
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                <img src="{{ asset('images/orders') }}/{{ $order->order_photo_path }}" alt="Profile" class="rounded-circle">
+                <img src="{{ asset('images/orders') }}/{{ $order->image }}" alt="Profile" class="rounded-circle">
                 <h2>{{ $order->name }}</h2>
               </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="row">
                         <label for="profileImage" class="col-lg-3 col-md-4 label">Product Image</label>
                         <div class="col-md-8 col-lg-9">
-                          <img src="{{ asset('images/users') }}/{{ $order->order_photo_path }}" alt="Profile" style="margin: 10px">
+                          <img src="{{ asset('images/orders') }}/{{ $order->image }}" width="90px" height="100px" alt="Profile" class="rounded-circle" style="margin: 10px">
                           {{-- <input type="file" class="form-control" name="image" id="image" accept="image/*"> --}}
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                       <div class="row">
                         <label for="profileImage" class="col-lg-3 col-md-4 label">Product Image</label>
                         <div class="col-md-8 col-lg-9">
-                          <img src="{{ asset('images/orders') }}/{{ $order->image }}" alt="Profile" style="margin: 10px">
+                          <img src="{{ asset('images/orders') }}/{{ $order->image }}" alt="Profile" class="rounded-circle" style="margin: 10px">
                           <input type="file" class="form-control" name="image" id="image" accept="image/*">
                         </div>
                       </div>

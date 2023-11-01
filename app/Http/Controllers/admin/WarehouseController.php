@@ -76,7 +76,7 @@ class WarehouseController extends Controller
             'capacity' => $request->capacity
         ]);
 
-        return redirect()->back();
+        return redirect()->route('warehouse.index');
     }
 
     /**

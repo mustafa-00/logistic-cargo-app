@@ -48,22 +48,22 @@
                     <h5 class="card-title">Product Details</h5>
 
                       <div class="row">
-                          <div class="col-lg-3 col-md-4 label">Id</div>
+                          <div class="col-lg-3 col-md-4 label">ID</div>
                           <div class="col-lg-9 col-md-8">{{ $invoice->id }}</div>
                       </div>
 
                       <div class="row">
-                          <div class="col-lg-3 col-md-4 label">Payment_Status</div>
+                          <div class="col-lg-3 col-md-4 label">Payment Status</div>
                           <div class="col-lg-9 col-md-8">{{ $invoice->payment_status }}</div>
                       </div>
 
                       <div class="row">
-                          <div class="col-lg-3 col-md-4 label">Typeof_Payment</div>
+                          <div class="col-lg-3 col-md-4 label">Type Of Payment</div>
                           <div class="col-lg-9 col-md-8">{{$invoice->typeof_payment}}</div>
                       </div>
 
                       <div class="row">
-                          <div class="col-lg-3 col-md-4 label">Order_id</div>
+                          <div class="col-lg-3 col-md-4 label">Order ID</div>
                           <div class="col-lg-9 col-md-8">{{$invoice->order_id}}</div>
                       </div>
                   </div>
@@ -85,21 +85,21 @@
                       </div> --}}
 
                       <div class="row mb-3">
-                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Payment_Status</label>
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Payment Status</label>
                         <div class="col-md-8 col-lg-9">
                           <input name="payment_status" type="text" class="form-control" id="fullName" value="{{ $invoice->payment_status }}">
                         </div>
                       </div>
 
                       <div class="row mb-3">
-                          <label for="Email" class="col-md-4 col-lg-3 col-form-label">Typeof_Payment</label>
+                          <label for="Email" class="col-md-4 col-lg-3 col-form-label">Type Of Payment</label>
                           <div class="col-md-8 col-lg-9">
                             <input name="typeof_payment" type="text" class="form-control" id="Email" value="{{$invoice->typeof_payment}}">
                           </div>
                       </div>
 
                       <div class="row mb-3">
-                          <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Order_id</label>
+                          <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Order ID</label>
                           <div class="col-md-8 col-lg-9">
                             <input name="order_id" type="number" class="form-control" id="Phone" value="{{$invoice->order_id}}">
                           </div>

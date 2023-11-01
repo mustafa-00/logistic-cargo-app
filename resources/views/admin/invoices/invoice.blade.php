@@ -39,10 +39,10 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Id</th>
-                                                    <th scope="col">Payment_Status</th>
-                                                    <th scope="col">Typeof_Payment</th>
-                                                    <th scope="col">Order_id</th>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Payment Status</th>
+                                                    <th scope="col">Type of Payment</th>
+                                                    <th scope="col">Order id</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>

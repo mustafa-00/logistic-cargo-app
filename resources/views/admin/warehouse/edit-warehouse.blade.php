@@ -19,7 +19,7 @@
             <h5 class="card-title">Vertical Form</h5>
 
             <!-- Vertical Form -->
-            <form class="row g-3" action="{{ route('warehouse.edit', $warehouse->id) }}" method="POST">
+            <form class="row g-3" action="{{ route('warehouse.update', $warehouse->id) }}" method="POST">
                 @csrf
                 @if (isset($warehouse))
                     @method('put')
@@ -43,8 +43,8 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
               </div>
-            </form><!-- Vertical Form -->
-
+            </form>
+            <!-- Vertical Form -->
           </div>
         </div>
     </div>

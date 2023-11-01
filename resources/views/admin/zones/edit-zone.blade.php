@@ -19,7 +19,7 @@
             <h5 class="card-title">Vertical Form</h5>
 
             <!-- Vertical Form -->
-            <form class="row g-3" action="{{ route('zone.edit', $zone->id) }}" method="POST">
+            <form class="row g-3" action="{{ route('zone.update', $zone->id) }}" method="POST">
                 @csrf
                 @if (isset($zone))
                     @method('put')

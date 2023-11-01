@@ -99,30 +99,34 @@
         </div>
         <!-- call to action End -->
 
-        <!--? About Area Start -->
+        <!-- About Area Start -->
         <div id="about" class="categories-area section-padding30">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-tittle text-center mb-80">
-                        <h2 style="color: orangered">About Our Company</h2>
-                    </div>
-                </div>
-            </div>
-
-            @foreach ($aboutus as $item)
-                <div class="container">
-                    <div class="justify-content-between">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-cat text-center mb-20">
-                                <div class="cat-cap">
-                                    <h5><a href="#">{{ $item->subtittle }}</a></h5>
-                                    <p>{{ $item->description }}</p>
-                                </div>
-                            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-80">
+                            <span>About Us</span>
+                            <h2>About Our Company</h2>
                         </div>
                     </div>
                 </div>
-            @endforeach
+                <div class="row">
+                    @foreach ($aboutus as $item)
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            {{-- <div class="cat-icon">
+                                <span class="flaticon-shipped"></span>
+                            </div> --}}
+                            <div class="cat-cap">
+                                <h5><a href="services.html">{{ $item->subtittle }}</a></h5>
+                                <p>{{ $item->description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
         <!-- About Area End -->
 
