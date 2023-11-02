@@ -10,6 +10,7 @@
             </a>
         </li><!-- End Dashboard Nav -->
         @if (Auth::user()->role === 'admin')
+
             {{-- website custmoziation --}}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -33,6 +34,12 @@
                     <li>
                         <a href="{{ route('ourservices.index') }}">
                             <i class="bi bi-circle"></i><span>Our Services</span>
+                        </a>
+                    </li>
+                    {{-- Our Mission --}}
+                    <li>
+                        <a href="{{ route('ourmission.index') }}">
+                            <i class="bi bi-circle"></i><span>Our Mission</span>
                         </a>
                     </li>
                 </ul>

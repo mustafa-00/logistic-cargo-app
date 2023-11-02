@@ -165,30 +165,25 @@
         <div class="about-low-area padding-bottom">
             <div class="container">
                 <div class="row">
+                    @foreach ($ourmission as $item)
                     <div class="col-lg-6 col-md-12">
                         <div class="about-caption mb-50">
                             <!-- Section Tittle -->
                             <div class="section-tittle mb-35">
-                                <h2>Our Mission And Values</h2>
-                                <span>Mission</span>
+                                <h2>{{ $item->tittle }}</h2>
+                                <span>{{ $item->subtittle }}</span>
                             </div>
-                            <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select
-                                your favorite layouts & elements for cular ts with unlimited ustomization possibilities.
-                                Pixel-perfect replication of the designers is intended.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, illo. Nemo, molestiae
-                                obcaecati facere sint pariatur soluta incidunt cum fuga dolores, perspiciatis ea distinctio
-                                eveniet velit a necessitatibus aliquam perferendis.
-                            </p>
+                            <p>{{ $item->description }}</p>
                             <div class="section-tittle mb-35">
-                                <span>Values</span>
+                                <span>{{ $item->secondsubtittle }}</span>
                             </div>
-                            <p>Brook presents your services with flexible, convefnient and chient anipurpose layouts. You
-                                can select your favorite layouts.</p>
-                            <a href="about.html" class="btn">More About Us</a>
+                            <p>{{ $item->seconddescription }}</p>
+                            <a href="about.html" class="btn">{{ $item->button }}</a>
                         </div>
                     </div>
+                    @endforeach
+                    <!-- about-img -->
                     <div class="col-lg-6 col-md-12">
-                        <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img">
                                 <img src="assets_landing/img/gallery/about2.png" alt="">
@@ -199,6 +194,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         {{-- Our mission end --}}

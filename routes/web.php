@@ -16,6 +16,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Website_Custom\AboutusController;
 use App\Http\Controllers\Website_Custom\CalltoactionController;
+use App\Http\Controllers\Website_Custom\OurmissionController;
 use App\Http\Controllers\Website_Custom\OurservicesController;
 
 /*
@@ -49,6 +50,7 @@ Route::resource('warehouse', WarehouseController::class);
 Route::resource('calltoaction', CalltoactionController::class );
 Route::resource('aboutus', AboutusController::class);
 Route::resource('ourservices', OurservicesController::class);
+Route::resource('ourmission', OurmissionController::class);
 
 
 
