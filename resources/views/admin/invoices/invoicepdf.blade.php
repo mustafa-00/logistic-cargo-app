@@ -4,12 +4,11 @@
 <main class="main" id="main">
     <div class="pagetitle">
         <h1>Invoice PDF</h1>
-        @include('common.alertmessage')
         <nav>
-          <ol class="breadcrumb">
-              <li class="breadcrumb-item"><h5><a href="{{ route('dashboard') }}">Dashboard</a></h5></li>
-              <li class="breadcrumb-item"><h5><a href="{{ route('invoice.index') }}">back</a></h5></li>
-        </ol>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('invoice.index') }}">back</a></li>
+            </ol>
         </nav>
     </div>
 
@@ -138,7 +137,7 @@
                                 </span>
                                 <span>Print</span>
                             </button>
-                            <button type = "button" class = "invoice-btn">
+                            <button type = "button" class = "invoice-btn" onclick="downloadPDF()">
                                 <span>
                                     <i class="fa-solid fa-download"></i>
                                 </span>
@@ -150,7 +149,7 @@
             </div>
         </div>
 
-        <script src = "script.js"></script>
+        <script src = "invoice.js"></script>
     </body>
 </html>
 </main>

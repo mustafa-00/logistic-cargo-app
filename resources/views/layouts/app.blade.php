@@ -64,6 +64,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets_admin/js/main.js') }}"></script>
+  <script src="{{ asset('assets_admin/js/invoice.js') }}"></script>
 
 </body>
 

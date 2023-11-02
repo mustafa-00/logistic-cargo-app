@@ -40,7 +40,7 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Id</th>
-                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Product Name</th>
                                                     <th scope="col">Quantity</th>
                                                     <th scope="col">Date</th>
                                                     <th scope="col">Sour_Add</th>
