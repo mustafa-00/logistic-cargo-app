@@ -18,6 +18,7 @@ use App\Http\Controllers\Website_Custom\AboutusController;
 use App\Http\Controllers\Website_Custom\CalltoactionController;
 use App\Http\Controllers\Website_Custom\OurmissionController;
 use App\Http\Controllers\Website_Custom\OurservicesController;
+use App\Http\Controllers\Website_Custom\TeammemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,7 @@ Route::resource('calltoaction', CalltoactionController::class );
 Route::resource('aboutus', AboutusController::class);
 Route::resource('ourservices', OurservicesController::class);
 Route::resource('ourmission', OurmissionController::class);
+Route::resource('teammember', TeammemberController::class);
 
 
 

@@ -39,7 +39,7 @@
                 <div class="col-md-6">
                     <div class="form-floating">
                         <textarea  name="description" class="form-control" id="floatingButton"
-                            placeholder="Your Description" value="{{ isset($ourservice) ? $ourservice->description : null }}"></textarea>
+                            placeholder="Your Description">{{ isset($ourservice) ? $ourservice->description : null }}</textarea>
                         <label for="floatingButton">Description</label>
                         @error('description')
                             <div class="alert alert-danger">

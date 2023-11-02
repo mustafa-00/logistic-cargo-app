@@ -7,6 +7,7 @@ use App\Models\Aboutus;
 use App\Models\Calltoaction;
 use App\Models\Ourmission;
 use App\Models\Ourservice;
+use App\Models\Ourteammemeber;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -17,7 +18,8 @@ class LandingController extends Controller
         $aboutus = Aboutus::all();
         $ourservice = Ourservice::all();
         $ourmission = Ourmission::all();
-        return view('landing.home_index',compact('calltoaction','aboutus','ourservice','ourmission'));
+        $teammember = Ourteammemeber::all();
+        return view('landing.home_index',compact('calltoaction','aboutus','ourservice','ourmission','teammember'));
     }
 
     public function about(){

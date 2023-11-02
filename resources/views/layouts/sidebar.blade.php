@@ -42,6 +42,12 @@
                             <i class="bi bi-circle"></i><span>Our Mission</span>
                         </a>
                     </li>
+                    {{-- Team Members --}}
+                    <li>
+                        <a href="{{ route('teammember.index') }}">
+                            <i class="bi bi-circle"></i><span>Team Members</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
 
