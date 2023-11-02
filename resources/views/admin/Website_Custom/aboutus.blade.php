@@ -19,7 +19,7 @@
             <div class="card-body">
                 <h5 class="card-title">Store your data here</h5>
 
-                <form class="row g-3" action="{{ isset($aboutus) ? route('aboutus.update', $aboutus->id) : route('aboutus.store') }}" method="POST">
+                <form class="row g-3" action="{{ isset($aboutus) ? route('aboutus.update',['aboutus' => $aboutus->id]) : route('aboutus.store') }}" method="POST">
                     @csrf
                     @if (isset($aboutus))
                         @method('put')

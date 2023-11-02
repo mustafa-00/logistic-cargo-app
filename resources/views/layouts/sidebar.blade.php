@@ -76,30 +76,24 @@
             {{-- employes part --}}
         @else
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="tables-general.html">
-                            <i class="bi bi-circle"></i><span>General Tables</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tables-data.html">
-                            <i class="bi bi-circle"></i><span>Data Tables</span>
-                        </a>
-                    </li>
-                </ul>
-                {{-- profile --}}
-            <li class="nav-item">
-                <a class="nav-link " href="{{ route('profile.index') }}">
-                    <i class="bi bi-person"></i>
-                    <span>Profile</span>
-                </a>
+
+                {{-- warehouses --}}
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{{ route('warehouse.index') }}">
+                        <i class="bi bi-people"></i>
+                        <span>Warehouse</span>
+                    </a>
+                </li>
+
+                {{-- Order --}}
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{{ route('order.index') }}">
+                        <i class="bi bi-book"></i>
+                        <span>Order</span>
+                    </a>
+                </li>
             </li>
-            </li><!-- End Tables Nav -->
+            <!-- End Tables Nav -->
         @endif
 
         </li>
