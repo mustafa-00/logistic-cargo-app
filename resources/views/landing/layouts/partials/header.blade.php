@@ -7,8 +7,8 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left">
                                 <ul>
-                                    <li>Phone: +99 (0) 101 0000 888</li>
-                                    <li>Email: noreply@yourdomain.com</li>
+                                    <li>Phone: +93729848903</li>
+                                    <li>Email: Kayhancargo@gmail.com</li>
                                 </ul>
                             </div>
                             <div class="header-info-right">

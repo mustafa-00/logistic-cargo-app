@@ -26,7 +26,7 @@
                 <div class="col-md-6">
                     <div class="form-floating">
                         <input type="text" name="tittle" class="form-control" id="floatingName"
-                            placeholder="Your Tittle" value="{{ isset($ourservice) ? $ourservice->tittle : null }}">
+                            placeholder="Your Tittle" value="{{ isset($ourservice) ? $ourservice->tittle : old('tittle') }}">
                         <label for="floatingName">Tittle</label>
                         @error('tittle')
                             <div class="alert alert-danger">
@@ -39,7 +39,7 @@
                 <div class="col-md-6">
                     <div class="form-floating">
                         <textarea  name="description" class="form-control" id="floatingButton"
-                            placeholder="Your Description">{{ isset($ourservice) ? $ourservice->description : null }}</textarea>
+                            placeholder="Your Description">{{ isset($ourservice) ? $ourservice->description : old('description') }}</textarea>
                         <label for="floatingButton">Description</label>
                         @error('description')
                             <div class="alert alert-danger">

@@ -48,10 +48,16 @@
                             <i class="bi bi-circle"></i><span>Team Members</span>
                         </a>
                     </li>
-                    {{-- Team Members --}}
+                    {{-- Testimonial --}}
                     <li>
                         <a href="{{ route('testimonial.index') }}">
                             <i class="bi bi-circle"></i><span>Testimonial</span>
+                        </a>
+                    </li>
+                    {{-- Contact --}}
+                    <li>
+                        <a href="{{ route('contact.index') }}">
+                            <i class="bi bi-circle"></i><span>Contact</span>
                         </a>
                     </li>
                 </ul>

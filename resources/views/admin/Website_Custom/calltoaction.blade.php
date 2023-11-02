@@ -27,7 +27,7 @@
                     <div class="col-md-6">
                         <div class="form-floating">
                             <input type="text" name="tittle" class="form-control" id="floatingName"
-                                placeholder="Your Tittle" value="{{ isset($calltoaction) ? $calltoaction->tittle : null }}">
+                                placeholder="Your Tittle" value="{{ isset($calltoaction) ? $calltoaction->tittle : old('tittle') }}">
                             <label for="floatingName">Tittle</label>
                             @error('tittle')
                                 <div class="alert alert-danger">
@@ -40,7 +40,7 @@
                     <div class="col-md-6">
                         <div class="form-floating">
                             <input type="text" name="button" class="form-control" id="floatingButton"
-                                placeholder="Your Button" value="{{ isset($calltoaction) ? $calltoaction->button : null }}">
+                                placeholder="Your Button" value="{{ isset($calltoaction) ? $calltoaction->button : old('button') }}">
                             <label for="floatingButton">Button</label>
                             @error('button')
                                 <div class="alert alert-danger">

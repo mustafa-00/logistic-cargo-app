@@ -1,9 +1,9 @@
 @extends('admin.dashboard')
 
 @section('content')
-<main id="main" id="main">
+<main class="main" id="main">
     <div class="pagetitle">
-        <h1>Our Mission Page</h1>
+        <h1>Contact Page</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -18,17 +18,17 @@
         <div class="card-body">
             <h5 class="card-title">Store your data here</h5>
 
-            <form class="row g-3" action="{{ isset($ourmission) ? route('ourmission.update', $ourmission->id) : route('ourmission.store') }}" method="POST">
+            <form class="row g-3" action="{{ isset($contact) ? route('contact.update', $contact->id) : route('contact.store') }}" method="POST">
                 @csrf
-                @if (isset($ourmission))
+                @if (isset($contact))
                     @method('put')
                 @endif
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" name="tittle" class="form-control" id="floatingName"
-                            placeholder="Your Tittle" value="{{ isset($ourmission) ? $ourmission->tittle : old('tittle') }}">
-                        <label for="floatingName">Tittle</label>
-                        @error('tittle')
+                        <input type="text" name="city" class="form-control" id="floatingName"
+                            placeholder="City" value="{{ isset($contact) ? $contact->city : old('city') }}">
+                        <label for="floatingName">City</label>
+                        @error('city')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
@@ -38,10 +38,10 @@
 
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" name="subtittle" class="form-control" id="floatingName"
-                            placeholder="Your Subtittle" value="{{ isset($ourmission) ? $ourmission->subtittle : old('subtittle') }}">
-                        <label for="floatingName">SubTittle</label>
-                        @error('subtittle')
+                        <input type="text" name="address" class="form-control" id="floatingName"
+                            placeholder="Address" value="{{ isset($contact) ? $contact->address : old('address') }}">
+                        <label for="floatingName">Address</label>
+                        @error('address')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
@@ -51,10 +51,10 @@
 
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <textarea  name="description" class="form-control" id="floatingButton"
-                            placeholder="Your Description">{{ isset($ourmission) ? $ourmission->description : old('description') }}</textarea>
-                        <label for="floatingButton">Description</label>
-                        @error('description')
+                        <input type="number" name="phone" class="form-control" id="floatingName"
+                            placeholder="Phone" value="{{ isset($contact) ? $contact->phone : old('phone') }}">
+                        <label for="floatingName">Phone</label>
+                        @error('phone')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
@@ -64,10 +64,10 @@
 
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" name="secondsubtittle" class="form-control" id="floatingName"
-                            placeholder="Your Secondsubtittle" value="{{ isset($ourmission) ? $ourmission->secondsubtittle : old('secondsubtittle') }}">
-                        <label for="floatingName">Second Subtittle</label>
-                        @error('secondsubtittle')
+                        <input type="text" name="worktime" class="form-control" id="floatingName"
+                            placeholder="Work Time" value="{{ isset($contact) ? $contact->worktime : old('worktime') }}">
+                        <label for="floatingName">Work Time</label>
+                        @error('worktime')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
@@ -77,10 +77,10 @@
 
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <textarea  name="seconddescription" class="form-control" id="floatingButton"
-                            placeholder="Your SecondDescription">{{ isset($ourmission) ? $ourmission->seconddescription : old('seconddescription') }}</textarea>
-                        <label for="floatingButton">Second Description</label>
-                        @error('seconddescription')
+                        <input type="email" name="email" class="form-control" id="floatingName"
+                            placeholder="Email" value="{{ isset($contact) ? $contact->email : old('contact') }}">
+                        <label for="floatingName">Email</label>
+                        @error('email')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
@@ -90,10 +90,10 @@
 
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" name="button" class="form-control" id="floatingName"
-                            placeholder="Your button" value="{{ isset($ourmission) ? $ourmission->button : old('button') }}">
-                        <label for="floatingName">Button</label>
-                        @error('button')
+                        <input type="text" name="emailmessage" class="form-control" id="floatingName"
+                            placeholder="Email Message" value="{{ isset($contact) ? $contact->emailmessage : old('emailmessage') }}">
+                        <label for="floatingName">Email Message</label>
+                        @error('emailmessage')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="text-center">
-                    <button type="submit" class="btn {{ isset($ourmission) ? "btn-success" : "btn-primary" }}">{{ isset($ourmission) ?'UPDATE' : 'STORE'}}</button>
+                    <button type="submit" class="btn {{ isset($contact) ? "btn-success" : "btn-primary" }}">{{ isset($contact) ?'UPDATE' : 'STORE'}}</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
             </form>
@@ -119,8 +119,12 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Tittle</th>
-                        <th scope="col">Description</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Worktime</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Emailmessage</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -128,21 +132,22 @@
                     @php
                         $count = 1;
                     @endphp
-                    @foreach ($ourmissions as $item)
+                    @foreach ($contacts as $item)
                         <tr>
                             <th scope="row">{{ $count }}</th>
-                            <td>{{ $item->tittle }}</td>
-                            <td>{{ $item->subtittle }}</td>
-                            <td>{{ $item->description }}</td>
-                            <td>{{ $item->secondsubtittle }}</td>
-                            <td>{{ $item->seconddescription }}</td>
+                            <td>{{ $item->city }}</td>
+                            <td>{{ $item->address }}</td>
+                            <td>{{ $item->phone }}</td>
+                            <td>{{ $item->worktime }}</td>
+                            <td>{{ $item->email }}</td>
+                            <td>{{ $item->emailmessage }}</td>
                             <td class="d-flex">
-                                <form action="{{ route('ourmission.destroy', $item->id) }}" method="POST">
+                                <form action="{{ route('contact.destroy', $item->id) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger rounded-pill">Delete</button>
                                 </form>
-                                <a href="{{ route('ourmission.edit', $item->id) }}"><button class="btn btn-success rounded-pill">Edit</button></a>
+                                <a href="{{ route('contact.edit', $item->id) }}"><button class="btn btn-success rounded-pill">Edit</button></a>
                             </td>
                         </tr>
                     @php

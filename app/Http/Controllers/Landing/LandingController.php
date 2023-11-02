@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Landing;
 use App\Http\Controllers\Controller;
 use App\Models\Aboutus;
 use App\Models\Calltoaction;
+use App\Models\Contact;
 use App\Models\Ourmission;
 use App\Models\Ourservice;
 use App\Models\Ourteammemeber;
@@ -21,7 +22,8 @@ class LandingController extends Controller
         $ourmission = Ourmission::all();
         $teammember = Ourteammemeber::all();
         $testimonial = Testimonial::all();
-        return view('landing.home_index',compact('calltoaction','aboutus','ourservice','ourmission','teammember','testimonial'));
+        $contact = Contact::all();
+        return view('landing.home_index',compact('calltoaction','aboutus','ourservice','ourmission','teammember','testimonial','contact'));
     }
 
     public function about(){

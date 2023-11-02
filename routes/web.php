@@ -16,6 +16,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Website_Custom\AboutusController;
 use App\Http\Controllers\Website_Custom\CalltoactionController;
+use App\Http\Controllers\Website_Custom\ContactController;
 use App\Http\Controllers\Website_Custom\OurmissionController;
 use App\Http\Controllers\Website_Custom\OurservicesController;
 use App\Http\Controllers\Website_Custom\TeammemberController;
@@ -55,7 +56,7 @@ Route::resource('ourservices', OurservicesController::class);
 Route::resource('ourmission', OurmissionController::class);
 Route::resource('teammember', TeammemberController::class);
 Route::resource('testimonial', TestimonialController::class);
-
+Route::resource('contact', ContactController::class);
 
 
 
