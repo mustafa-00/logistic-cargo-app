@@ -54,10 +54,11 @@ class AboutusController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Aboutus $aboutus)
+    public function edit(string $id, Aboutus $aboutus)
     {
+        // dd($id);
         $aboutuses = Aboutus::all();
-        return view('admin.Website_Custom.aboutus',compact('aboutus','aboutuses'));
+        return view('admin.Website_Custom.aboutus', compact('aboutus', 'aboutuses'));
     }
 
     /**
