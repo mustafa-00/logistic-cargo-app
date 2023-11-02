@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Landing;
 use App\Http\Controllers\Controller;
 use App\Models\Aboutus;
 use App\Models\Calltoaction;
+use App\Models\Ourservice;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -13,7 +14,8 @@ class LandingController extends Controller
     {
         $calltoaction = Calltoaction::all();
         $aboutus = Aboutus::all();
-        return view('landing.home_index',compact('calltoaction','aboutus'));
+        $ourservice = Ourservice::all();
+        return view('landing.home_index',compact('calltoaction','aboutus','ourservice'));
     }
 
     public function about(){

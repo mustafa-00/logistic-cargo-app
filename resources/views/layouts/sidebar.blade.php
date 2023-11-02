@@ -17,14 +17,22 @@
                         class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    {{-- Call to Action --}}
                     <li>
                         <a href="{{ route('calltoaction.index') }}">
                             <i class="bi bi-circle"></i><span>Call To Action</span>
                         </a>
                     </li>
+                    {{-- About Us --}}
                     <li>
                         <a href="{{ route('aboutus.index') }}">
                             <i class="bi bi-circle"></i><span>About Us</span>
+                        </a>
+                    </li>
+                    {{-- Our Services --}}
+                    <li>
+                        <a href="{{ route('ourservices.index') }}">
+                            <i class="bi bi-circle"></i><span>Our Services</span>
                         </a>
                     </li>
                 </ul>

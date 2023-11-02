@@ -143,42 +143,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-cat text-center mb-50">
-                            <div class="cat-icon">
-                                <span class="flaticon-shipped"></span>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">Land Transport</a></h5>
-                                <p>The sea freight service has grown conside rably in recent years. We spend timetting to
-                                    know your processes to.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-cat text-center mb-50">
-                            <div class="cat-icon">
-                                <span class="flaticon-ship"></span>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">Ship Transport</a></h5>
-                                <p>The sea freight service has grown conside rably in recent years. We spend timetting to
-                                    know your processes to.</p>
+                    @foreach ($ourservice as $item)
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-cat text-center mb-50">
+                                {{-- <div class="cat-icon">
+                                    <span class="flaticon-shipped"></span>
+                                </div> --}}
+                                <div class="cat-cap">
+                                    <h5><a href="services.html">{{ $item->tittle }}</a></h5>
+                                    <p>{{ $item->description }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-cat text-center mb-50">
-                            <div class="cat-icon">
-                                <span class="flaticon-plane"></span>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">Air Transport</a></h5>
-                                <p>The sea freight service has grown conside rably in recent years. We spend timetting to
-                                    know your processes to.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -16,6 +16,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Website_Custom\AboutusController;
 use App\Http\Controllers\Website_Custom\CalltoactionController;
+use App\Http\Controllers\Website_Custom\OurservicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,9 @@ Route::resource('zone', ZonesController::class);
 Route::resource('warehouse', WarehouseController::class);
 //website customization routes
 Route::resource('calltoaction', CalltoactionController::class );
-ROute::resource('aboutus', AboutusController::class);
+Route::resource('aboutus', AboutusController::class);
+Route::resource('ourservices', OurservicesController::class);
+
 
 
 
