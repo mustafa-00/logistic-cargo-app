@@ -44,8 +44,8 @@ class InvoiceController extends Controller
      */
     public function show(string $id)
     {
-        $invoice = Invoice::find($id);
-        return view('admin.invoices.single_invoice',compact('invoice'));
+        return view('admin.invoices.invoicepdf');
+
     }
 
     /**
@@ -53,7 +53,8 @@ class InvoiceController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $invoice = Invoice::find($id);
+        return view('admin.invoices.single_invoice',compact('invoice'));
     }
 
     /**

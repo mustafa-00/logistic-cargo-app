@@ -29,6 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets_admin/css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets_admin/css/invoice.css') }}" rel="stylesheet">
 </head>
 
 <body>
