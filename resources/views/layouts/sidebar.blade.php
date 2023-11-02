@@ -48,6 +48,12 @@
                             <i class="bi bi-circle"></i><span>Team Members</span>
                         </a>
                     </li>
+                    {{-- Team Members --}}
+                    <li>
+                        <a href="{{ route('testimonial.index') }}">
+                            <i class="bi bi-circle"></i><span>Testimonial</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
 

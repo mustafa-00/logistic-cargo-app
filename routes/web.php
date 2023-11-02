@@ -19,6 +19,7 @@ use App\Http\Controllers\Website_Custom\CalltoactionController;
 use App\Http\Controllers\Website_Custom\OurmissionController;
 use App\Http\Controllers\Website_Custom\OurservicesController;
 use App\Http\Controllers\Website_Custom\TeammemberController;
+use App\Http\Controllers\Website_Custom\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,7 @@ Route::resource('aboutus', AboutusController::class);
 Route::resource('ourservices', OurservicesController::class);
 Route::resource('ourmission', OurmissionController::class);
 Route::resource('teammember', TeammemberController::class);
+Route::resource('testimonial', TestimonialController::class);
 
 
 

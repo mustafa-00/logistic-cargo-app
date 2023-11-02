@@ -8,6 +8,7 @@ use App\Models\Calltoaction;
 use App\Models\Ourmission;
 use App\Models\Ourservice;
 use App\Models\Ourteammemeber;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -19,7 +20,8 @@ class LandingController extends Controller
         $ourservice = Ourservice::all();
         $ourmission = Ourmission::all();
         $teammember = Ourteammemeber::all();
-        return view('landing.home_index',compact('calltoaction','aboutus','ourservice','ourmission','teammember'));
+        $testimonial = Testimonial::all();
+        return view('landing.home_index',compact('calltoaction','aboutus','ourservice','ourmission','teammember','testimonial'));
     }
 
     public function about(){
