@@ -61,12 +61,15 @@
                                                         <td>{{ $item->source_address }}</td>
                                                         <td>{{ $item->destination_address }}</td>
                                                         <td>
-                                                        {{-- <a href="" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a> --}}
+                                                        @if(Auth::user()->role === 'admin')
+                                                        <a href="{{ route('order.edit', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="{{ route('order.destroy',$item->id) }}"
                                                             onclick="event.preventDefault(); document.getElementById('order-{{ $item->id }}').submit();"
                                                             title="Delete"><i class="bx bx-trash-alt me-1"
                                                             style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('order.show', $item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                        @endif
+
+                                                        <a href="{{ route('order.show', $item->id) }}" title="View Invoice"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>
                                                         <form id="order-{{ $item->id }}"
                                                             action="{{ route('order.destroy',$item->id) }}"

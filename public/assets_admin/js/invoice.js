@@ -1,5 +1,22 @@
 function printInvoice(){
-    window.print();
+    // window.print();
+    var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+
+    mywindow.document.write('<html>');
+    mywindow.document.write('<body>');
+    mywindow.document.write(document.getElementById('print-area').innerHTML);
+    mywindow.document.write('</body></html>');
+    
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.print();
+    mywindow.close();
+
+    return true;
+    // window.frames["print_frame"].document.body.innerHTML = document.getElementByIdI('print-area').innerHTML;
+    // window.frames["print_frame"].window.focus();
+    // window.frames["print_frame"].window.print();
 }
 
 // function downloadPDF() {

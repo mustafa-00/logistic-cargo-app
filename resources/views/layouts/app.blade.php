@@ -29,7 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets_admin/css/style.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets_admin/css/invoice.css') }}" rel="stylesheet">
+  @yield('invoice-styles')
 </head>
 
 <body>
@@ -64,7 +64,6 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets_admin/js/main.js') }}"></script>
-  <script src="{{ asset('assets_admin/js/invoice.js') }}"></script>
 
 </body>
 

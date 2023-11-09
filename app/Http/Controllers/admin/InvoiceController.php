@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Invoice;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
@@ -44,7 +45,8 @@ class InvoiceController extends Controller
      */
     public function show(string $id)
     {
-        return view('admin.invoices.invoicepdf');
+        $order = Order::find($id);
+        return view('admin.invoices.invoicepdf', ['order'=> $order]);
 
     }
 

@@ -44,7 +44,7 @@ class ProfileController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'DoB' => $request->DoB,
-            'role' => $request->role,
+            // 'role' => $request->role,
             'zone_id' => $request->zone_id,
             'profile_photo_path' => $filename,
         ]);
