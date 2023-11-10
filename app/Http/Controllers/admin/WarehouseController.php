@@ -75,7 +75,7 @@ class WarehouseController extends Controller
             'address' => $request->address,
             'capacity' => $request->capacity
         ]);
-
+        session()->flash('success','Record has been updated successfuly!');
         return redirect()->route('warehouse.index');
     }
 
@@ -85,6 +85,7 @@ class WarehouseController extends Controller
     public function destroy(string $id)
     {
         Warehouse::find($id)->delete();
+        session()->flash('error','Record has been deleted successfuly!');
         return back();
     }
 }

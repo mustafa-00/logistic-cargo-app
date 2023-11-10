@@ -39,7 +39,7 @@ class CalltoactionController extends Controller
             'tittle' => $request->tittle,
             'button' => $request->button,
         ]);
-
+        session()->flash('success','Record has been created successfuly!');
         return back();
     }
 
@@ -71,6 +71,7 @@ class CalltoactionController extends Controller
             'button' => $request->button
         ]);
 
+        session()->flash('success','Record has been updated successfuly!');
         return redirect()->route('calltoaction.index');
     }
 
@@ -80,6 +81,7 @@ class CalltoactionController extends Controller
     public function destroy(string $id)
     {
         Calltoaction::find($id)->delete();
+        session()->flash('error','Record has been deleted successfuly!');
         return redirect()->back();
     }
 }

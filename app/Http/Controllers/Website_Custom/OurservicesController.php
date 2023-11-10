@@ -40,6 +40,7 @@ class OurservicesController extends Controller
             'description' => $request->description,
         ]);
 
+        session()->flash('success','Record has been created successfuly!');
         return back();
     }
 
@@ -70,6 +71,7 @@ class OurservicesController extends Controller
             'description' => $request->description,
         ]);
 
+        session()->flash('success','Record has been updated successfuly!');
         return redirect()->route('ourservices.index');
     }
 
@@ -79,6 +81,7 @@ class OurservicesController extends Controller
     public function destroy(string $id)
     {
         Ourservice::find($id)->delete();
+        session()->flash('error','Record has been deleted successfuly!');
         return back();
     }
 }

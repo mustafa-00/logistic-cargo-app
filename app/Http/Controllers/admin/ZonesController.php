@@ -38,6 +38,7 @@ class ZonesController extends Controller
             'price' => $request->price
         ]);
 
+        session()->flash('success','Record has been created successfuly!');
         return redirect()->route('zone.index');
     }
 
@@ -77,6 +78,7 @@ class ZonesController extends Controller
             'price' => $request->price,
         ]);
 
+        session()->flash('success','Record has been updated successfuly!');
         return redirect()->route('zone.index');
     }
 
@@ -86,6 +88,7 @@ class ZonesController extends Controller
     public function destroy(string $id)
     {
         zone::find($id)->delete();
+        session()->flash('error','Record has been deleted succesfuly!');
         return back();
     }
 }

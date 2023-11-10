@@ -102,6 +102,7 @@ class EmployeoverviewController extends Controller
     {
         // dd($id);
         User::find($id)->delete();
+        session()->flash('error','Record has been deleted succesfuly!');
         return back();
     }
 }

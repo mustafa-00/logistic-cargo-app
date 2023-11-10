@@ -117,6 +117,7 @@ class OrderController extends Controller
     public function destroy(string $id)
     {
         Order::find($id)->delete();
+        session()->flash('error','Record has been deleted successfuly!');
         return back();
     }
 }

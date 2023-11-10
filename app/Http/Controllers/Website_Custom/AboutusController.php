@@ -40,6 +40,7 @@ class AboutusController extends Controller
             'description' => $request->description
         ]);
 
+        session()->flash('success','Record has been created successfuly!');
         return back();
     }
 
@@ -71,6 +72,7 @@ class AboutusController extends Controller
             'description' => $request->description
         ]);
 
+        session()->flash('success','Record has been updated successfuly!');
         return redirect()->route('aboutus.index');
     }
 
@@ -80,6 +82,7 @@ class AboutusController extends Controller
     public function destroy(string $id)
     {
         Aboutus::find($id)->delete();
+        session()->flash('error','Record has been deleted successfuly!');
         return redirect()->back();
     }
 }

@@ -37,7 +37,6 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        session()->flash('success','Welcome to dashboard');
     }
 
     protected function validator(array $data)
