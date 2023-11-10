@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Invoice;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -62,7 +63,8 @@ class OrderController extends Controller
     public function show(string $id)
     {
         $order = Order::find($id);
-        return view('admin.orders.single_order',compact('order'));
+        $invoices = Invoice::find($id);
+        return view('admin.orders.single_order',compact('order','invoices'));
     }
 
     /**

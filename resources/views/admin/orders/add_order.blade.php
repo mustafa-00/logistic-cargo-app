@@ -21,7 +21,7 @@
                 <h5 class="card-title">General Form Elements</h5>
 
                 <!-- General Form Elements -->
-                <form action="{{ route('order.store') }}" method="POST">
+                <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Name</label>
