@@ -28,19 +28,34 @@
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control" value="{{ old('name') }}">
+                    @error('name')
+                        <div class="btn btn-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Capacity</label>
                   <div class="col-sm-10">
-                    <input type="number" name="capacity" class="form-control">
+                    <input type="number" name="capacity" class="form-control" value="{{ old('capacity') }}">
+                    @error('capacity')
+                        <div class="btn btn-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Address</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" name="address" style="height: 100px"></textarea>
+                    <textarea class="form-control" name="address" style="height: 100px">{{ old('address') }}</textarea>
+                    @error('address')
+                        <div class="btn btn-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
 

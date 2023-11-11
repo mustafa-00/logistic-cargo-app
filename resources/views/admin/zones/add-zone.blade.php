@@ -26,14 +26,24 @@
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                      <input type="text" name="name" class="form-control">
+                      <input type="text" name="name" class="form-control" value="{{ old('name') }}">
+                      @error('name')
+                            <div class="btn btn-danger">
+                                {{ $message }}
+                            </div>
+                      @enderror
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="inputNumber" class="col-sm-2 col-form-label">Price</label>
                     <div class="col-sm-10">
-                      <input type="number" name="price" class="form-control">
+                      <input type="number" name="price" class="form-control" value="{{ old('price') }}">
+                      @error('price')
+                            <div class="btn btn-danger">
+                                {{ $message }}
+                            </div>
+                      @enderror
                     </div>
                   </div>
 
@@ -44,7 +54,7 @@
                     </div>
                   </div>
 
-                </form><!-- End General Form Elements -->
+                </form>
 
               </div>
             </div>

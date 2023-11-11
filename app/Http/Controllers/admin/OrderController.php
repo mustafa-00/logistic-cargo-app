@@ -31,6 +31,25 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'short_description' => 'required',
+            'quantity' => 'required',
+            'width' => 'required',
+            'weight' => 'required',
+            'height' => 'required',
+            'lenght' => 'required',
+            'image' => 'required',
+            'source_address' => 'required',
+            'destination_address' => 'required',
+            'date' => 'required',
+            'price' => 'required',
+            'status' => 'required',
+            'zone_id' => 'required',
+            'user_id' => 'required',
+            'warehouse_id' => 'required'
+        ]);
+
         $filename = uniqid().'.'. $request->image->extension();
         $out = $request->image->storeAs('images/orders', $filename);
 

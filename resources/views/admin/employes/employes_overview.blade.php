@@ -24,7 +24,10 @@
                                 {{-- overview --}}
                                 <li class="nav-item">
                                     <button class="nav-link active" data-bs-toggle="tab"
-                                        data-bs-target="#profile-overview">Employes Overview</button>
+                                    data-bs-target="#profile-overview">Employes Overview</button>
+                                </li>
+                                <li class="col-4">
+                                    <a href="{{ route('employe_overview.create') }}" class="nav-link"><button class="btn btn-primary">Add New Employee</button></a>
                                 </li>
                             </ul>
                             <div class="tab-content pt-2">

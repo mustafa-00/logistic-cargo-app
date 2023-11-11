@@ -33,6 +33,12 @@ class ZonesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:5|max:100',
+            'price' => 'required',
+
+        ]);
+
         zone::create([
             'name' => $request->name,
             'price' => $request->price
