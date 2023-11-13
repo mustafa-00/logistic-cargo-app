@@ -159,6 +159,7 @@
                     <label for="inputText" class="col-sm-2 col-form-label">Date</label>
                     <div class="col-sm-10">
                       <input type="date" name="date" class="form-control" value="{{ old('date') }}">
+                      
                       @error('date')
                         <div class="btn btn-danger">
                             {{ $message }}

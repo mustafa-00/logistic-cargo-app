@@ -40,7 +40,7 @@ class EmployeoverviewController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
             'DoB' => 'required|date',
-            'role' =>'required',
+            // 'role' =>'required',
             'zone_id' => 'required',
             'password' => 'required|confirmed'
         ]);
@@ -50,7 +50,7 @@ class EmployeoverviewController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'DoB' => $request->DoB,
-            'role' => $request->role,
+            // 'role' => $request->role,
             'zone_id' => $request->zone_id,
             'password' => bcrypt($request->password)
         ]);
