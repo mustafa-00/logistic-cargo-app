@@ -64,10 +64,6 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets_admin/js/main.js') }}"></script>
-  <script>
-    var today = new Date().toISOString().split('T')[0];
-    document.getElementsById("date-input").setAttribute("max",today);
-  </script>
 
 </body>
 
