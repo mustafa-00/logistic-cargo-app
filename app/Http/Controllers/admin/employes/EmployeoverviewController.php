@@ -38,11 +38,11 @@ class EmployeoverviewController extends Controller
         $request->validate([
             'name' => 'required|min:5|max:100',
             'email' => 'required|email',
-            // 'phone' => 'required',
+            'phone' => 'required',
             'DoB' => 'required|date',
             'role' =>'required',
             'zone_id' => 'required',
-            'password' => 'required',
+            'password' => 'required|confirmed'
         ]);
 
         User::create([
@@ -52,7 +52,7 @@ class EmployeoverviewController extends Controller
             'DoB' => $request->DoB,
             'role' => $request->role,
             'zone_id' => $request->zone_id,
-            'password' => encrypt($request->password),
+            'password' => bcrypt($request->password)
         ]);
 
         return redirect()->route('employe_overview.index');

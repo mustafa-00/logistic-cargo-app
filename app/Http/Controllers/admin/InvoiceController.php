@@ -36,7 +36,7 @@ class InvoiceController extends Controller
             'typeof_payment' => $request->typeof_payment,
             'order_id' => $request->order_id
         ]);
-        session('success','Record has been saved successfuly!');
+        session('success','Record has been created successfuly!');
         return redirect()->route('invoice.index');
     }
 
@@ -80,6 +80,7 @@ class InvoiceController extends Controller
     public function destroy(string $id)
     {
         Invoice::find($id)->delete();
+        session()->flash('error','Record has been deleted successfuly!');
         return back();
     }
 }

@@ -81,9 +81,8 @@ class OrderController extends Controller
      */
     public function show(string $id)
     {
-        $order = Order::find($id);
-        $invoices = Invoice::find($id);
-        return view('admin.orders.single_order',compact('order','invoices'));
+        // $order = Order::find($id);
+        // return view('admin.orders.single_order',compact('order'));
     }
 
     /**

@@ -35,10 +35,10 @@
                     <div class = "hr"></div>
                     <div class = "invoice-head-middle">
                         <div class = "invoice-head-middle-left text-start">
-                            <p><span class = "text-bold">Date</span>: 05/12/2020</p>
+                            <p><span class = "text-bold">Date:</span>{{ $order->date }}</p>
                         </div>
                         <div class = "invoice-head-middle-right text-end">
-                            <p><span class = "text-bold">Invoice No:</span>16789</p>
+                            <p><span class = "text-bold">Invoice No:</span>{{ $order->id }}</p>
                         </div>
                     </div>
                     <div class = "hr"></div>
@@ -47,18 +47,18 @@
                             <ul>
                                 <li class = 'text-bold'>Invoiced To:</li>
                                 <li>. . . . . . . . . . . . . . . . </li>
-                                <li>15 Hodges Mews, High Wycombe</li>
-                                <li>HP12 3JL</li>
-                                <li>United Kingdom</li>
+                                <li>. . . . . . . . . . . . . . . . . . . . . . . . .</li>
+                                <li>. . . . . . . . . . . . . . . .</li>
+                                <li>. . . . . . . . . . . . . . . . . . . . . . . . .</li>
                             </ul>
                         </div>
                         <div class = "invoice-head-bottom-right">
                             <ul class = "text-end">
                                 <li class = 'text-bold'>Pay To:</li>
                                 <li>{{ $order->user->name }}</li>
-                                <li>2705 N. Enterprise</li>
-                                <li>Orange, CA 89438</li>
-                                <li>contact@koiceinc.com</li>
+                                <li>Kayhan Cargo</li>
+                                <li>Shahrnaw-Kabul</li>
+                                <li>KayhanCargo@gmail.com</li>
                             </ul>
                         </div>
                     </div>
@@ -81,22 +81,9 @@
                                     <td>{{ $order->short_description }}</td>
                                     <td>{{ $order->price }} $</td>
                                     <td>{{ $order->quantity }}</td>
-                                    <td class = "text-end">{{ $order->quantity * $order->price }}</td>
+                                    <td class = "text-end">{{ $order->quantity * $order->price }}$</td>
                                 </tr>
-                                <tr>
-                                    <td>Development</td>
-                                    <td>Website Development</td>
-                                    <td>$50.00</td>
-                                    <td>10</td>
-                                    <td class = "text-end">$500.00</td>
-                                </tr>
-                                <tr>
-                                    <td>SEO</td>
-                                    <td>Optimize the site for search engines (SEO)</td>
-                                    <td>$50.00</td>
-                                    <td>10</td>
-                                    <td class = "text-end">$500.00</td>
-                                </tr>
+
                                 <!-- <tr>
                                     <td colspan="4">10</td>
                                     <td>$500.00</td>
@@ -106,15 +93,15 @@
                         <div class = "invoice-body-bottom">
                             <div class = "invoice-body-info-item border-bottom">
                                 <div class = "info-item-td text-end text-bold">Sub Total:</div>
-                                <div class = "info-item-td text-end">$2150.00</div>
+                                <div class = "info-item-td text-end">{{ $order->quantity * $order->price }}$</div>
                             </div>
                             <div class = "invoice-body-info-item border-bottom">
                                 <div class = "info-item-td text-end text-bold">Tax:</div>
-                                <div class = "info-item-td text-end">$215.00</div>
+                                <div class = "info-item-td text-end">$0</div>
                             </div>
                             <div class = "invoice-body-info-item">
                                 <div class = "info-item-td text-end text-bold">Total:</div>
-                                <div class = "info-item-td text-end">$21365.00</div>
+                                <div class = "info-item-td text-end">{{ $order->quantity * $order->price }}$</div>
                             </div>
                         </div>
                     </div>
