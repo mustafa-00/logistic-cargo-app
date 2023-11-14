@@ -21,33 +21,48 @@
                 <h5 class="card-title">General Form Elements</h5>
 
                 <!-- General Form Elements -->
-                <form action="{{ route('invoice.store') }}" method="POST">
+                <form action="{{ route('customer.store') }}" method="POST">
                   @csrf
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Payment_Status</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Name </label>
                     <div class="col-sm-10">
-                      <input type="text" name="payment_status" class="form-control" placeholder="paid,pending">
+                      <input type="text" name="name" class="form-control" placeholder="paid,pending">
+                      @error('name')
+                          <div class="text-danger">
+                            {{ $message }}
+                          </div>
+                      @enderror
                     </div>
                   </div>
 
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Typeof_Payment</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Phone </label>
                     <div class="col-sm-10">
-                      <input type="text" name="typeof_payment" class="form-control" placeholder="cash,card">
+                      <input type="text" name="phone" class="form-control" placeholder="cash,card">
+                      @error('phone')
+                      <div class="text-danger">
+                        {{ $message }}
+                      </div>
+                      @enderror
                     </div>
                   </div>
 
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Order_id</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Email </label>
                     <div class="col-sm-10">
-                      <input type="number" name="order_id" class="form-control">
+                      <input type="email" name="email" class="form-control">
+                      @error('email')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                      @enderror
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label class="col-sm-2 col-form-label">Submit Button</label>
                     <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary">Submit Form</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
 

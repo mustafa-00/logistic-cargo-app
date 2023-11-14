@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\ZonesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Website_Custom\AboutusController;
 use App\Http\Controllers\Website_Custom\CalltoactionController;
 use App\Http\Controllers\Website_Custom\ContactController;
@@ -47,6 +48,8 @@ Route::resource('employe_overview', EmployeoverviewController::class);
 Route::resource('product', ProductController::class);
 Route::resource('order', OrderController::class);
 Route::resource('invoice', InvoiceController::class);
+Route::resource('customer', CustomerController::class);
+Route::get('order/customer/{customer_id}', [OrderController::class, 'createOrderCustomer'])->name('order.customer.create');
 Route::resource('zone', ZonesController::class);
 Route::resource('warehouse', WarehouseController::class);
 //website customization routes

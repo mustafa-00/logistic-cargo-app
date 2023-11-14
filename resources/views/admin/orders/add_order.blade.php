@@ -23,6 +23,7 @@
                 <!-- General Form Elements -->
                 <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
+                  <input type="hidden" name="customer_id">
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
@@ -159,7 +160,7 @@
                     <label for="inputText" class="col-sm-2 col-form-label">Date</label>
                     <div class="col-sm-10">
                       <input type="date" name="date" class="form-control" value="{{ old('date') }}">
-                      
+
                       @error('date')
                         <div class="btn btn-danger">
                             {{ $message }}
@@ -192,7 +193,7 @@
                     </div>
                   </div>
 
-                  <div class="row mb-3">
+                  {{-- <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">User_id</label>
                     <div class="col-sm-10">
                       <input type="number" name="user_id" class="form-control" value="{{ old('user_id') }}">
@@ -202,11 +203,14 @@
                         </div>
                       @enderror
                     </div>
-                  </div>
+                  </div> --}}
 
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Warehouse_id</label>
                     <div class="col-sm-10">
+                        {{-- @foreach ($warehouses as )
+
+                        @endforeach --}}
                       <input type="number" name="warehouse_id" class="form-control" value="{{ old('warehouse_id') }}">
                       @error('warehouse_id')
                         <div class="btn btn-danger">

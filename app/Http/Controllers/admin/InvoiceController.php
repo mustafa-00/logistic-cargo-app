@@ -23,7 +23,7 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        return view('admin.invoices.add_invoice');
+        
     }
 
     /**
@@ -31,11 +31,6 @@ class InvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        Invoice::create([
-            'payment_status' => $request->payment_status,
-            'typeof_payment' => $request->typeof_payment,
-            'order_id' => $request->order_id
-        ]);
         session('success','Record has been created successfuly!');
         return redirect()->route('invoice.index');
     }

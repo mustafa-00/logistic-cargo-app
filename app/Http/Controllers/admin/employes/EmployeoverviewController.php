@@ -52,6 +52,7 @@ class EmployeoverviewController extends Controller
             'DoB' => $request->DoB,
             // 'role' => $request->role,
             'zone_id' => $request->zone_id,
+            'profile_photo_path' => 'default_image.png',
             'password' => bcrypt($request->password)
         ]);
 

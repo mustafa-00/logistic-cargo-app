@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Invoice;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use App\Models\Customer;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -18,13 +20,17 @@ class OrderController extends Controller
         return view('admin.orders.order',compact('orders'));
     }
 
+    public function createOrderCustomer(string $customer_id)
+    {
+        return view('admin.orders.add_order', ['customer_id'=> $customer_id]);
+    }
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        return view('admin.orders.add_order');
-    }
+    // public function create()
+    // {
+    //     return view('admin.orders.add_order');
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -46,7 +52,6 @@ class OrderController extends Controller
             'price' => 'required',
             'status' => 'required',
             'zone_id' => 'required',
-            'user_id' => 'required',
             'warehouse_id' => 'required'
         ]);
 
@@ -68,7 +73,8 @@ class OrderController extends Controller
             'price' => $request->price,
             'status' => $request->status,
             'zone_id' => $request->zone_id,
-            'user_id' => $request->user_id,
+            'user_id' => Auth::user()->id,
+            'customer_id' => $request->customer_id,
             'warehouse_id' => $request->warehouse_id
         ]);
 
