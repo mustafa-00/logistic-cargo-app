@@ -21,14 +21,14 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-body pt-3">
-                            <ul class="nav nav-tabs nav-tabs-bordered row">
+                            <ul class="nav nav-tabs nav-tabs-bordered row pb-3">
                                 {{-- overview --}}
                                 <li class="nav-item col-8">
                                     <button class="nav-link active" data-bs-toggle="tab"
                                         data-bs-target="#profile-overview">Warehouse Overview</button>
                                 </li>
                                 <li class="col-4">
-                                    <a href="{{ route('warehouse.create') }}" class="nav-link"><button class="btn btn-primary">Add New Warehouse</button></a>
+                                    <a href="{{ route('warehouse.create') }}" class="nav-link"><button class="btn btn-primary float-end">Add New Warehouse</button></a>
                                 </li>
                             </ul>
                             <div class="tab-content pt-2">

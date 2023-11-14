@@ -96,13 +96,13 @@
                 </a>
             </li>
 
-            {{-- invoice --}}
+            {{-- invoice
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('invoice.index') }}">
                     <i class="bi bi-cash"></i>
                     <span>Invoice</span>
                 </a>
-            </li>
+            </li> --}}
 
 
 
@@ -129,12 +129,12 @@
             <!-- End Tables Nav -->
 
             {{-- invoice --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('invoice.index') }}">
                     <i class="bi bi-cash"></i>
                     <span>Invoice</span>
                 </a>
-            </li>
+            </li> --}}
         @endif
 
         </li>
