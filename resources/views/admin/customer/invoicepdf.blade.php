@@ -35,10 +35,12 @@
                     <div class = "hr"></div>
                     <div class = "invoice-head-middle">
                         <div class = "invoice-head-middle-left text-start">
-                            <p><span class = "text-bold">Date:</span>{{ $order->date }}</p>
+                            <p><span class = "text-bold">Date:  </span>{{ $customer->created_at }}</p>
                         </div>
                         <div class = "invoice-head-middle-right text-end">
-                            <p><span class = "text-bold">Invoice No:</span>{{ $order->id }}</p>
+                            <p><span class = "text-bold">Invoice No:</span>
+                                {{ $customer->id }}
+                            </p>
                         </div>
                     </div>
                     <div class = "hr"></div>
@@ -46,16 +48,16 @@
                         <div class = "invoice-head-bottom-left">
                             <ul>
                                 <li class = 'text-bold'>Invoiced To:</li>
-                                <li>. . . . . . . . . . . . . . . . </li>
-                                <li>. . . . . . . . . . . . . . . . . . . . . . . . .</li>
-                                <li>. . . . . . . . . . . . . . . .</li>
+                                <li>{{ $customer->name }} </li>
+                                <li>{{ $customer->phone }}</li>
+                                <li>{{ $customer->email }}</li>
                                 <li>. . . . . . . . . . . . . . . . . . . . . . . . .</li>
                             </ul>
                         </div>
                         <div class = "invoice-head-bottom-right">
                             <ul class = "text-end">
                                 <li class = 'text-bold'>Pay To:</li>
-                                <li>{{ $order->user->name }}</li>
+                                <li>{{ Auth::user()->name }}</li>
                                 <li>Kayhan Cargo</li>
                                 <li>Shahrnaw-Kabul</li>
                                 <li>KayhanCargo@gmail.com</li>
@@ -76,6 +78,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($orders as $order)
                                 <tr>
                                     <td>{{ $order->name }}</td>
                                     <td>{{ $order->short_description }}</td>
@@ -83,7 +86,7 @@
                                     <td>{{ $order->quantity }}</td>
                                     <td class = "text-end">{{ $order->quantity * $order->price }}$</td>
                                 </tr>
-
+                                @endforeach
                                 <!-- <tr>
                                     <td colspan="4">10</td>
                                     <td>$500.00</td>

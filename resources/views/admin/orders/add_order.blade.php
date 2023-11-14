@@ -23,11 +23,19 @@
                 <!-- General Form Elements -->
                 <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
-                  <input type="hidden" name="customer_id">
+                  <input type="hidden" name="customer_id" value="{{ $customer[0]->id }}">
+
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                      <input type="text" name="name" class="form-control">
+                      <input type="text" name="customer-name" readonly value="{{ $customer[0]->name }}"  class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="name"  class="form-control">
                       @error('name')
                         <div class="btn btn-danger">
                             {{ $message }}

@@ -49,7 +49,6 @@ Route::resource('product', ProductController::class);
 Route::resource('order', OrderController::class);
 Route::resource('invoice', InvoiceController::class);
 Route::resource('customer', CustomerController::class);
-Route::get('order/customer/{customer_id}', [OrderController::class, 'createOrderCustomer'])->name('order.customer.create');
 Route::resource('zone', ZonesController::class);
 Route::resource('warehouse', WarehouseController::class);
 //website customization routes

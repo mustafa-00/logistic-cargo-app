@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 
+use function PHPUnit\Framework\isEmpty;
+
 class CustomerController extends Controller
 {
     /**
@@ -28,20 +30,24 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        //     'email' => 'required|email',
-        //     'phone' => 'required',
-        // ]);
+        // $customer_id = Customer::where('email', $request->email)->orWhere('name', $request->name)
+        // ->orWhere('phone', $request->phone)->first();
 
-        // Customer::create([
-        //     'name' => $request->name,
-        //     'email' => $request->email,
-        //     'phone' => $request->phone,
-        // ]);
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
 
-        $customer_id = Customer::select('id')->where('email', $request->email)->get();
-        return redirect()->route('order.customer.create', ['customer_id'=> $customer_id]);
+        
+        Customer::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ]);
+
+        $customer_id = Customer::where('email', $request->email)->get();
+        return view('admin.orders.add_order', ['customer'=>  $customer_id]);
     }
 
     /**

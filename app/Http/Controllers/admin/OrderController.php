@@ -50,10 +50,10 @@ class OrderController extends Controller
             'destination_address' => 'required',
             'date' => 'required',
             'price' => 'required',
-            'status' => 'required',
             'zone_id' => 'required',
             'warehouse_id' => 'required'
         ]);
+
 
         $filename = uniqid().'.'. $request->image->extension();
         $out = $request->image->storeAs('images/orders', $filename);
@@ -71,7 +71,6 @@ class OrderController extends Controller
             'destination_address' => $request->destination_address,
             'date' => $request->date,
             'price' => $request->price,
-            'status' => $request->status,
             'zone_id' => $request->zone_id,
             'user_id' => Auth::user()->id,
             'customer_id' => $request->customer_id,
@@ -87,8 +86,9 @@ class OrderController extends Controller
      */
     public function show(string $id)
     {
-        $order = Order::find($id);
-        return view('admin.orders.single_order',compact('order'));
+        $customer = Customer::find($id);
+        $orders = Order::where('customer_id', $customer->id)->get();
+        return view('admin.customer.invoicepdf',compact('orders', 'customer'));
     }
 
     /**

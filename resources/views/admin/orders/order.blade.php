@@ -70,7 +70,7 @@
                                                         @endif
 
                                                         <a href="{{ route('order.edit', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
-                                                        <a href="{{ route('order.show', $item->id) }}" title="View Invoice"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
+                                                        <a href="{{ route('order.show', $item->customer_id) }}" title="View Invoice"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                         </td>
                                                         <form id="order-{{ $item->id }}"
                                                             action="{{ route('order.destroy',$item->id) }}"
