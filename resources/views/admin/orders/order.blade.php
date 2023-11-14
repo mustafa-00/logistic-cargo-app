@@ -50,12 +50,12 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @php
+                                                {{-- @php
                                                     $count = 1;
-                                                @endphp
+                                                @endphp --}}
                                                 @foreach ($orders as $item)
                                                     <tr>
-                                                        <th scope="row">{{ $count }}</th>
+                                                        <th scope="row">{{ $item->id }}</th>
                                                         <td>{{ $item->name }}</td>
                                                         <td>{{ $item->quantity }}</td>
                                                         <td>{{ $item->date }}</td>
@@ -79,9 +79,9 @@
                                                             @method('delete')
                                                         </form>
                                                     </tr>
-                                                @php
+                                                {{-- @php
                                                     $count++;
-                                                @endphp
+                                                @endphp --}}
                                                 @endforeach
                                             </tbody>
                                         </table>

@@ -49,12 +49,12 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @php
+                                                    {{-- @php
                                                         $count = 1;
-                                                    @endphp
+                                                    @endphp --}}
                                                     @foreach ($warehouses as $item)
                                                         <tr>
-                                                            <th scope="row">{{ $count }}</th>
+                                                            <th scope="row">{{ $item->id }}</th>
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->address }}</td>
                                                             <td>{{ $item->capacity }}</td>
@@ -75,7 +75,7 @@
                                                                 @method('delete')
                                                             </form>
                                                         </tr>
-                                                        @php $count++ @endphp
+                                                        {{-- @php $count++ @endphp --}}
                                                     @endforeach
                                                 </tbody>
                                             </table>

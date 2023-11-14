@@ -43,7 +43,7 @@
                                                 <tr>
                                                     <th scope="col">Id</th>
                                                     <th scope="col">Zone-Name</th>
-                                                    <th scope="col">Price</th>
+                                                    {{-- <th scope="col">Price</th> --}}
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -53,14 +53,17 @@
                                                 <tr>
                                                     <th scope="row">{{ $count }}</th>
                                                     <td>{{ $item->name }}</td>
-                                                    <td>{{ $item->price }}</td>
+                                                    {{-- <td>{{ $item->price }}</td> --}}
                                                     <td class="d-flex">
                                                         <form id="zone-{{ $item->id }}" action="{{ route('zone.destroy', $item->id) }}" method="POST">
                                                             @csrf
                                                             @method('delete')
                                                         </form>
+                                                        @if(Auth::user()->role === 'admin')
                                                         <a href="{{ route('zone.edit', $item->id) }}" title="Edite"><i class="bx bx-edit-alt me-1" style="font-size: 20px"></i></a>
                                                         <a href="{{ route('zone.destroy', $item->id) }}" onclick="event.preventDefault(); document.getElementById('zone-{{ $item->id }}').submit();" title="Delete"><i class="bx bx-trash-alt me-1" style="font-size: 20px"></i></a>
+
+                                                        @endif
                                                         <a href="{{ route('zone.show',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                     </td>
                                                 </tr>

@@ -127,7 +127,7 @@ class OrderController extends Controller
             'price' => $request->price,
             'status' => $request->status,
             'zone_id' => $request->zone_id,
-            'user_id' => $request->user_id,
+            // 'user_id' => $request->user_id,
             'warehouse_id' => $request->warehouse_id
         ]);
 

@@ -36,9 +36,11 @@
                     @enderror
                   </div>
                 </div>
-                <div class="row mb-3">
+
+                {{-- <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Capacity</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-2">
+                    <span class="input-group-text" style="display:block">Kg</span>
                     <input type="number" name="capacity" class="form-control" value="{{ old('capacity') }}">
                     @error('capacity')
                         <div class="btn btn-danger">
@@ -46,7 +48,19 @@
                         </div>
                     @enderror
                   </div>
+                </div> --}}
+
+                <div class="input-group mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Capacity</label>
+                    <span class="input-group-text">Kg</span>
+                    <input type="number" name="capacity" class="form-control" aria-label="Amount (to the nearest dollar)" value="{{ old('capacity') }}">
+                    @error('capacity')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Address</label>
                   <div class="col-sm-10">

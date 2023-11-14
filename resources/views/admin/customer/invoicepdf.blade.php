@@ -14,7 +14,7 @@
         <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-              <li class="breadcrumb-item"><a href="{{ route('invoice.index') }}">back</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('order.index') }}">back</a></li>
             </ol>
         </nav>
     </div>

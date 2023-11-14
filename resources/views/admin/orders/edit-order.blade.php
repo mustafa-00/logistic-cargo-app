@@ -120,20 +120,17 @@
                                         <div class="col-lg-9 col-md-8">{{ $order->price }}</div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-4 label">Payment Status</div>
-                                        <div class="col-lg-9 col-md-8">{{ $order->status }}</div>
-                                    </div>
+
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Zone_id</div>
                                         <div class="col-lg-9 col-md-8">{{ $order->zone_id }}</div>
                                     </div>
 
-                                    <div class="row">
+                                    {{-- <div class="row">
                                         <div class="col-lg-3 col-md-4 label">User_id</div>
                                         <div class="col-lg-9 col-md-8">{{ $order->user_id }}</div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Warehouse_id</div>
@@ -226,13 +223,6 @@
                                             </div>
                                         </div>
 
-                                        {{-- <div class="row mb-3">
-                                            <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Image</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input name="image" type="image" class="form-control" id="fullName"
-                                                    value="{{ $order->image }}">
-                                            </div>
-                                        </div> --}}
 
                                         <div class="row mb-3">
                                             <label for="fullName"
@@ -268,14 +258,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mb-3">
-                                            <label for="Job" class="col-md-4 col-lg-3 col-form-label">Payment
-                                                Status</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input name="status" type="text" class="form-control" id="Job"
-                                                    value="{{ $order->status }}">
-                                            </div>
-                                        </div>
+
                                         @if (Auth::user()->role === 'admin')
                                             <div class="row mb-3">
                                                 <label for="Job"
@@ -286,14 +269,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row mb-3">
+                                            {{-- <div class="row mb-3">
                                                 <label for="Job"
                                                     class="col-md-4 col-lg-3 col-form-label">User_id</label>
                                                 <div class="col-md-8 col-lg-9">
                                                     <input name="user_id" type="number" class="form-control"
                                                         id="Job" value="{{ $order->user_id }}">
                                                 </div>
-                                            </div>
+                                            </div> --}}
 
                                             <div class="row mb-3">
                                                 <label for="fullName"

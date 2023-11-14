@@ -23,6 +23,7 @@ class Order extends Model
         'source_address',
         'destination_address',
         'date',
+        'image',
         'price',
         'zone_id',
         'user_id',

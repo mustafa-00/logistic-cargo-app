@@ -96,14 +96,6 @@
                 </a>
             </li>
 
-            {{-- invoice
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('invoice.index') }}">
-                    <i class="bi bi-cash"></i>
-                    <span>Invoice</span>
-                </a>
-            </li> --}}
-
 
 
             {{-- employes part --}}
@@ -118,6 +110,14 @@
                     </a>
                 </li>
 
+                {{-- zones --}}
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{{ route('zone.index') }}">
+                        <i class="bi bi-people"></i>
+                        <span>Zones</span>
+                    </a>
+                </li>
+
                 {{-- Order --}}
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="{{ route('order.index') }}">
@@ -126,15 +126,7 @@
                     </a>
                 </li>
             </li>
-            <!-- End Tables Nav -->
 
-            {{-- invoice --}}
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('invoice.index') }}">
-                    <i class="bi bi-cash"></i>
-                    <span>Invoice</span>
-                </a>
-            </li> --}}
         @endif
 
         </li>

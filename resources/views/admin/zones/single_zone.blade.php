@@ -34,7 +34,7 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Id</th>
+                                                    {{-- <th scope="col">Id</th> --}}
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Role</th>
@@ -42,9 +42,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                {{-- @php $count = 1 @endphp --}}
                                                 @foreach ($employes as $item)
                                                     <tr>
-                                                        <th scope="row">{{ $item->id }}</th>
+                                                        {{-- <th scope="row">{{ $count }}</th> --}}
                                                         <td>{{ $item->name }}</td>
                                                         <td>{{ $item->email }}</td>
                                                         <td>{{ $item->role }}</td>
@@ -92,6 +93,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                {{-- @php $count = 1 @endphp --}}
                                                 @foreach ($order as $item)
                                                 <tr>
                                                     <th scope="row">{{ $item->id }}</th>

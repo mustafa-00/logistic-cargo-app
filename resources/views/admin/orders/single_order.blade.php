@@ -115,20 +115,17 @@
                                         <div class="col-lg-9 col-md-8">{{ $order->price }}</div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-4 label">Payment Status</div>
-                                        <div class="col-lg-9 col-md-8">{{ $order->status }}</div>
-                                    </div>
+
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Zone_id</div>
                                         <div class="col-lg-9 col-md-8">{{ $order->zone_id }}</div>
                                     </div>
 
-                                    <div class="row">
+                                    {{-- <div class="row">
                                         <div class="col-lg-3 col-md-4 label">User_id</div>
                                         <div class="col-lg-9 col-md-8">{{ $order->user_id }}</div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Warehouse_id</div>

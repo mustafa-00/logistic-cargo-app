@@ -46,6 +46,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{-- @php
+                                                $count = 1
+                                            @endphp --}}
                                             @foreach ($order as $item)
                                                 <tr>
                                                     <th scope="row">{{ $item->id }}</th>
@@ -67,7 +70,11 @@
                                                         </ul>
                                                     </td>
                                                 </tr>
+                                            {{-- @php
+                                                $count++;
+                                            @endphp --}}
                                             @endforeach
+
                                         </tbody>
                                     </table>
                                 </div>

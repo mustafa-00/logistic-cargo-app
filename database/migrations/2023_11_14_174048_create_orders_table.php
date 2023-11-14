@@ -27,7 +27,7 @@ return new class extends Migration
             $table->float('price');
             $table->string('status');
             $table->foreignId('zone_id');
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->nullable();
             $table ->foreignId('customer_id');
             $table->foreignId('warehouse_id')->nullable();
             $table->timestamps();

@@ -96,7 +96,7 @@
 
                   <div class="input-group mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Weight</label>
-                    <span class="input-group-text">cm</span>
+                    <span class="input-group-text">Kg</span>
                     <input type="number" name="weight" class="form-control" aria-label="Amount (to the nearest dollar)" value="{{ old('weight') }}">
                     {{-- <span class="input-group-text">.00</span> --}}
                     @error('weight')
@@ -191,7 +191,7 @@
                     </div>
                   </div>
 
-                  
+
 
                   {{-- <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">User_id</label>
