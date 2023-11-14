@@ -142,7 +142,6 @@
                           <input name="role" type="text" class="form-control" id="Job" value="{{$profile[0]->role}}">
                         </div>
                     </div>
-                    @endif
 
                     <div class="row mb-3">
                         <label for="Job" class="col-md-4 col-lg-3 col-form-label">zone_id</label>
@@ -150,6 +149,7 @@
                           <input name="zone_id" type="text" class="form-control" id="Job" value="{{$profile[0]->zone_id}}">
                         </div>
                     </div>
+                    @endif
 
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Save Changes</button>

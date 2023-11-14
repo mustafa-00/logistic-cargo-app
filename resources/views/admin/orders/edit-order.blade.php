@@ -258,37 +258,33 @@
                                             </div>
                                         </div>
 
-
-                                        @if (Auth::user()->role === 'admin')
-                                            <div class="row mb-3">
-                                                <label for="Job"
-                                                    class="col-md-4 col-lg-3 col-form-label">Zone_id</label>
-                                                <div class="col-md-8 col-lg-9">
-                                                    <input name="zone_id" type="number" class="form-control"
-                                                        id="Job" value="{{ $order->zone_id }}">
-                                                </div>
+                                        <div class="row mb-3">
+                                            <label for="Job"
+                                                class="col-md-4 col-lg-3 col-form-label">Zone_id</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="zone_id" type="number" class="form-control"
+                                                    id="Job" value="{{ $order->zone_id }}">
                                             </div>
+                                        </div>
 
-                                            {{-- <div class="row mb-3">
-                                                <label for="Job"
-                                                    class="col-md-4 col-lg-3 col-form-label">User_id</label>
-                                                <div class="col-md-8 col-lg-9">
-                                                    <input name="user_id" type="number" class="form-control"
-                                                        id="Job" value="{{ $order->user_id }}">
-                                                </div>
-                                            </div> --}}
-
-                                            <div class="row mb-3">
-                                                <label for="fullName"
-                                                    class="col-md-4 col-lg-3 col-form-label">Warehouse_id</label>
-                                                <div class="col-md-8 col-lg-9">
-                                                    <input name="warehouse_id" type="number" class="form-control"
-                                                        id="fullName" value="{{ $order->warehouse_id }}">
-                                                </div>
+                                        {{-- <div class="row mb-3">
+                                            <label for="Job"
+                                                class="col-md-4 col-lg-3 col-form-label">User_id</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="user_id" type="number" class="form-control"
+                                                    id="Job" value="{{ $order->user_id }}">
                                             </div>
-                                        @endif
+                                        </div> --}}
 
-
+                                        <div class="row mb-3">
+                                            <label for="fullName"
+                                                class="col-md-4 col-lg-3 col-form-label">Warehouse_id</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="warehouse_id" type="number" class="form-control"
+                                                    id="fullName" value="{{ $order->warehouse_id }}">
+                                            </div>
+                                        </div>
+                                        
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary">Save Changes</button>
                                         </div>

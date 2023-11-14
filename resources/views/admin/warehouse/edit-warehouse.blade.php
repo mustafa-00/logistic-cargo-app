@@ -34,9 +34,10 @@
                 <input type="text" name="address" class="form-control" id="inputEmail4" value="{{ $warehouse->address }}">
               </div>
 
-              <div class="col-12">
-                <label for="inputPassword4" class="form-label">Capacity</label>
-                <input type="number" name="capacity" class="form-control" id="inputPassword4" value="{{ $warehouse->capacity }}">
+              <div class="input-group mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Capacity</label>
+                <span class="input-group-text">Kg</span>
+                <input type="number" name="capacity" class="form-control" aria-label="Amount (to the nearest dollar)" id="inputPassword4" value="{{ $warehouse->capacity }}">
               </div>
 
               <div class="text-center">
@@ -49,10 +50,6 @@
         </div>
     </div>
 
-
-
-    <!-- Profile Edit Form -->
-    {{-- <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
         <form method="POST" action="{{ route('warehouse.edit', $warehouse->id) }}">
           @csrf
