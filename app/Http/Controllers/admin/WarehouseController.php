@@ -15,7 +15,8 @@ class WarehouseController extends Controller
      */
     public function index()
     {
-        return view('admin.warehouse.warehouses');
+        $warehouses = Warehouse::paginate(5);
+        return view('admin.warehouse.warehouses',compact('warehouses'));
     }
 
     /**
@@ -37,7 +38,7 @@ class WarehouseController extends Controller
             'address' => 'required',
             'capacity' => 'required'
         ]);
-        
+
         $result = Warehouse::create([
             'name' => $request->name,
             'address' => $request->address,

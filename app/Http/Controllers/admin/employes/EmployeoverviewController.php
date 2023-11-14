@@ -18,7 +18,8 @@ class EmployeoverviewController extends Controller
     public function index(Request $request)
     {
         // dd($request)->all();
-        $employes = User::all();
+        // $employes = User::all();
+        $employes = User::paginate(5);
         return view('admin.employes.employes_overview')->with('employes',$employes);
     }
 

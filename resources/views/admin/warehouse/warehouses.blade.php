@@ -79,6 +79,7 @@
                                                     @endforeach
                                                 </tbody>
                                             </table>
+                                            {{ $warehouses->links() }}
                                         </div>
                                     </div>
                                 </div>

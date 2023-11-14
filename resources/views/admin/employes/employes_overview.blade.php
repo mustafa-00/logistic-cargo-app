@@ -49,12 +49,12 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @php
+                                                    {{-- @php
                                                         $count = 1;
-                                                    @endphp
+                                                    @endphp --}}
                                                     @foreach ($employes as $item)
                                                         <tr>
-                                                            <th scope="row">{{ $count }}</th>
+                                                            <th scope="row">{{ $item->id }}</th>
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->email }}</td>
                                                             <td>{{ $item->role }}</td>
@@ -87,10 +87,11 @@
                                                                 @method('delete')
                                                             </form>
                                                         </tr>
-                                                        @php $count++ @endphp
+                                                        {{-- @php $count++ @endphp --}}
                                                     @endforeach
                                                 </tbody>
                                             </table>
+                                            {{ $employes->links() }}
                                         </div>
                                     </div>
                                 </div>

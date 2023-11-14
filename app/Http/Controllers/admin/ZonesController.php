@@ -16,7 +16,8 @@ class ZonesController extends Controller
      */
     public function index()
     {
-        $zone = Zone::all();
+        // $zone = Zone::all();
+        $zone = Zone::paginate(5);
         return view('admin.zones.zone',compact('zone'));
     }
 

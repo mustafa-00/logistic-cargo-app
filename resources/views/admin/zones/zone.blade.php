@@ -48,10 +48,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @php $count = 1 @endphp
+                                                {{-- @php $count = 1 @endphp --}}
                                                 @foreach ($zone as $item)
                                                 <tr>
-                                                    <th scope="row">{{ $count }}</th>
+                                                    <th scope="row">{{ $item->id }}</th>
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->address }}</td>
                                                     <td class="d-flex">
@@ -67,10 +67,11 @@
                                                         <a href="{{ route('zone.show',$item->id) }}" title="View"><i class="bx bx-show-alt me-1" style="font-size: 20px"></i></a>
                                                     </td>
                                                 </tr>
-                                                @php $count++ @endphp
+                                                {{-- @php $count++ @endphp --}}
                                                 @endforeach
                                             </tbody>
                                         </table>
+                                        {{ $zone->links() }}
                                     </div>
                                 </div>
                             </div>
