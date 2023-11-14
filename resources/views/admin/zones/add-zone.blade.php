@@ -36,10 +36,10 @@
                   </div>
 
                   <div class="row mb-3">
-                    <label for="inputNumber" class="col-sm-2 col-form-label">Price</label>
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Address</label>
                     <div class="col-sm-10">
-                      <input type="number" name="price" class="form-control" value="{{ old('price') }}">
-                      @error('price')
+                      <input type="text" name="address" class="form-control" value="{{ old('address') }}">
+                      @error('address')
                             <div class="btn btn-danger">
                                 {{ $message }}
                             </div>

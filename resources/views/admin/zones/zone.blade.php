@@ -43,7 +43,7 @@
                                                 <tr>
                                                     <th scope="col">Id</th>
                                                     <th scope="col">Zone-Name</th>
-                                                    {{-- <th scope="col">Price</th> --}}
+                                                    <th scope="col">Address</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -53,7 +53,7 @@
                                                 <tr>
                                                     <th scope="row">{{ $count }}</th>
                                                     <td>{{ $item->name }}</td>
-                                                    {{-- <td>{{ $item->price }}</td> --}}
+                                                    <td>{{ $item->address }}</td>
                                                     <td class="d-flex">
                                                         <form id="zone-{{ $item->id }}" action="{{ route('zone.destroy', $item->id) }}" method="POST">
                                                             @csrf

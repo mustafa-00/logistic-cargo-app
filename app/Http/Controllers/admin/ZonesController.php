@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Warehouse;
-use App\Models\zone;
+use App\Models\Zone;
 use Illuminate\Http\Request;
 
 class ZonesController extends Controller
@@ -16,7 +16,7 @@ class ZonesController extends Controller
      */
     public function index()
     {
-        $zone = zone::all();
+        $zone = Zone::all();
         return view('admin.zones.zone',compact('zone'));
     }
 
@@ -35,13 +35,13 @@ class ZonesController extends Controller
     {
         $request->validate([
             'name' => 'required|min:5|max:100',
-            'price' => 'required',
+            'address' => 'required',
 
         ]);
 
-        zone::create([
+        Zone::create([
             'name' => $request->name,
-            'price' => $request->price
+            'address' => $request->address
         ]);
 
         session()->flash('success','Record has been created successfuly!');
@@ -69,7 +69,7 @@ class ZonesController extends Controller
     public function edit(Request $request, string $id)
     {
         // dd($id);
-        $zone = zone::find($id);
+        $zone = Zone::find($id);
         return view('admin.zones.edit-zone',compact('zone'));
     }
 
@@ -78,10 +78,11 @@ class ZonesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $zone = zone::find($id);
+        $zone = Zone::find($id);
         $zone->update([
             'name' => $request->name,
-            'price' => $request->price,
+            // 'price' => $request->price,
+            'address' => $request->address
         ]);
 
         session()->flash('success','Record has been updated successfuly!');
@@ -93,7 +94,7 @@ class ZonesController extends Controller
      */
     public function destroy(string $id)
     {
-        zone::find($id)->delete();
+        Zone::find($id)->delete();
         session()->flash('error','Record has been deleted succesfuly!');
         return back();
     }

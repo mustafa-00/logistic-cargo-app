@@ -7,8 +7,8 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left">
                                 <ul>
-                                    <li>Phone: +93729848903</li>
-                                    <li>Email: Kayhancargo@gmail.com</li>
+                                    <li>Phone: +93797777990</li>
+                                    <li>Email: KabulKayhanExpress@gmail.com</li>
                                 </ul>
                             </div>
                             <div class="header-info-right">
@@ -46,10 +46,10 @@
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
-                                <div class="main-menu d-none d-lg-block ml-150">
+                                <div class="main-menu d-none d-lg-block ml-200">
                                     <ul>
                                         <li><a href="{{ route('login') }}">login</a></li>
-                                        <li><a href="{{ route('register') }}">register</a></li>
+                                        {{-- <li><a href="{{ route('register') }}">register</a></li> --}}
                                     </ul>
                                 </div>
                             </div>

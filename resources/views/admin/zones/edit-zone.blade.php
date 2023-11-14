@@ -29,10 +29,10 @@
                 <input type="text" name="name" class="form-control" id="inputNanme4" value="{{ $zone->name }}">
               </div>
 
-              {{-- <div class="col-12">
-                <label for="inputEmail4" class="form-label">Price</label>
-                <input type="number" name="price" class="form-control" id="inputEmail4" value="{{ $zone->price }}">
-              </div> --}}
+              <div class="col-12">
+                <label for="inputEmail4" class="form-label">Address</label>
+                <input type="text" name="address" class="form-control" id="inputEmail4" value="{{ $zone->address }}">
+              </div>
 
               <div class="text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
