@@ -19,9 +19,35 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">register your customer information here:</h5>
+                <style>
+                    #new-customer{
+                        display: none;
+                    }
+                </style>
 
-                <!-- General Form Elements -->
                 <form action="{{ route('customer.store') }}" method="POST">
+                    @csrf
+                    <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">Customer Name</label>
+                        <div class="col-sm-10">
+                            <select name="customer" id="customer" class="form-control">
+                                @foreach ($customers as $customer)
+                                    <option value="{{ $customer->id }}">{{ $customer->name }}</option>
+                                @endforeach
+                            </select>
+                          @error('customer')
+                              <div class="alert alert-danger">
+                                {{ $message }}
+                              </div>
+                          @enderror
+                        </div>
+                      </div>
+                      <input type="submit" class="btn btn-success mb-3" value="Add Customer order">
+                </form>
+
+                <button class="btn btn-info" onclick="newCustomer()">New Customer</button>
+                <!-- General Form Elements -->
+                <form id="new-customer" action="{{ route('customer.store') }}" method="POST">
                   @csrf
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Customer Name</label>
@@ -75,4 +101,10 @@
         </div>
       </section>
 </main>
+
+<script>
+    function newCustomer() {
+        document.getElementById("new-customer").style.display = "block";
+    }
+</script>
 @endsection

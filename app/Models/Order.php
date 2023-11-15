@@ -51,4 +51,25 @@ class Order extends Model
     {
         return $this->belongsTo(Customer::class, 'customer_id');
     }
+
+
+    /**
+     * Get the zone that owns the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function zone()
+    {
+        return $this->belongsTo(Zone::class, 'zone_id', 'id');
+    }
+
+    /**
+     * Get the warehouse that owns the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function warehouse()
+    {
+        return $this->belongsTo(Warehouse::class, 'warehouse_id', 'id');
+    }
 }

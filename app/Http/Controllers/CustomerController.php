@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\Warehouse;
+use App\Models\Zone;
 
 use function PHPUnit\Framework\isEmpty;
 
@@ -22,7 +24,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('admin.customer.add_customer');
+        $customers = Customer::all();
+        return view('admin.customer.add_customer', ['customers' => $customers]);
     }
 
     /**
@@ -30,24 +33,30 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        // $customer_id = Customer::where('email', $request->email)->orWhere('name', $request->name)
-        // ->orWhere('phone', $request->phone)->first();
+        $customer_id = '';
+        if($request->customer){
+            $customer_id = $request->customer;
+        }else{
+            $request->validate([
+                'name' => 'required',
+                'email' => 'required|email',
+                'phone' => 'required',
+            ]);
 
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-        ]);
 
-        
-        Customer::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-        ]);
+            Customer::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+            ]);
+            $customer = Customer::where('email', $request->email)->first();
+            $customer_id = $customer->id;
+        }
 
-        $customer_id = Customer::where('email', $request->email)->get();
-        return view('admin.orders.add_order', ['customer'=>  $customer_id]);
+        $warehouses = Warehouse::all();
+        $zones = Zone::all();
+
+        return view('admin.orders.add_order', ['customer'=>  $customer_id,  'zones' => $zones, 'warehouses' => $warehouses]);
     }
 
     /**

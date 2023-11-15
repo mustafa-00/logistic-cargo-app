@@ -27,4 +27,14 @@ class Warehouse extends Model
     {
         return $this->hasMany(Products::class, 'warehouse_id', 'id');
     }
+
+    /**
+     * Get all of the orders for the Warehouse
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'warehouse_id', 'id');
+    }
 }

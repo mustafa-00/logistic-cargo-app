@@ -23,14 +23,14 @@
                 <!-- General Form Elements -->
                 <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
-                  <input type="hidden" name="customer_id" value="{{ $customer[0]->id }}">
+                  <input type="hidden" name="customer_id" value="{{ $customer }}">
 
-                  <div class="row mb-3">
+                  {{-- <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Customer Name</label>
                     <div class="col-sm-10">
                       <input type="text" name="customer-name" readonly value="{{ $customer[0]->name }}"  class="form-control">
                     </div>
-                  </div>
+                  </div> --}}
 
                   <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Product Name</label>
@@ -180,10 +180,14 @@
                   </div>
 
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Zone_id</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Zone</label>
                     <div class="col-sm-10">
-                      <input type="number" name="zone_id" class="form-control" value="{{ old('zone_id') }}">
-                      @error('zone_id')
+                        <select name="zone_id" id="zone" class="form-control">
+                            @foreach ($zones as $zone)
+                                <option value="{{ $zone->id }}">{{ $zone->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('zone_id')
                         <div class="btn btn-danger">
                             {{ $message }}
                         </div>
@@ -206,9 +210,13 @@
                   </div> --}}
 
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Warehouse_id</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Warehouse</label>
                     <div class="col-sm-10">
-                      <input type="number" name="warehouse_id" class="form-control" value="{{ old('warehouse_id') }}">
+                        <select name="warehouse_id" id="zone" class="form-control">
+                            @foreach ($warehouses as $warehouse)
+                                <option value="{{ $warehouse->id }}">{{ $warehouse->name }}</option>
+                            @endforeach
+                        </select>
                       @error('warehouse_id')
                         <div class="btn btn-danger">
                             {{ $message }}

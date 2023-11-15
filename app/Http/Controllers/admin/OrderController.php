@@ -7,6 +7,8 @@ use App\Models\Invoice;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\Warehouse;
+use App\Models\Zone;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -17,7 +19,13 @@ class OrderController extends Controller
     public function index()
     {
         // $orders = Order::all();
-        $orders = Order::paginate(5);
+        $orders = '';
+        if(Auth::user()->role === 'admin'){
+            $orders = Order::paginate(5);
+        }else{
+            $orders = Order::where('user_id', Auth::user()->id)->paginate(5);
+        }
+
         return view('admin.orders.order',compact('orders'));
     }
 
@@ -89,7 +97,8 @@ class OrderController extends Controller
     {
         $customer = Customer::find($id);
         $orders = Order::where('customer_id', $customer->id)->get();
-        return view('admin.customer.invoicepdf',compact('orders', 'customer'));
+        $user = Order::where('user_id', Auth::user()->id)->select('user_id')->first();
+        return view('admin.customer.invoicepdf',compact('orders', 'customer', 'user'));
     }
 
     /**
@@ -98,7 +107,9 @@ class OrderController extends Controller
     public function edit(string $id)
     {
         $order = Order::find($id);
-        return view('admin.orders.edit-order',compact('order'));
+        $warehouses = Warehouse::all();
+        $zones = Zone::all();
+        return view('admin.orders.edit-order',compact('order', 'warehouses', 'zones'));
     }
 
     /**

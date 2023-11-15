@@ -57,7 +57,7 @@
                         <div class = "invoice-head-bottom-right">
                             <ul class = "text-end">
                                 <li class = 'text-bold'>Pay To:</li>
-                                <li>{{ Auth::user()->name }}</li>
+                                <li>{{ $user->user->name }}</li>
                                 <li>Kayhan Cargo</li>
                                 <li>Shahrnaw-Kabul</li>
                                 <li>KayhanCargo@gmail.com</li>

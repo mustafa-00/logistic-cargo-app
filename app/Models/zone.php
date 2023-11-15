@@ -12,4 +12,15 @@ class Zone extends Model
         'name',
         'address'
     ];
+
+
+    /**
+     * Get all of the orders for the Zone
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'zone_id' ,'id');
+    }
 }
